@@ -1,3 +1,3 @@
-# ERAU_EagleWallet
+# Product Vision
 
-Product Vision: Develop an app that allows Embry-Riddle faculty, staff, and students to access their Eagle card and dining account
+Develop an app that allows Embry-Riddle faculty, staff, and students to access their Eagle card and dining account.
