@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">EagleWallet</string>
+    <string name = "prompt_Email">Email</string>
+    <string name  = "prompt_Password">Password</string>
+    <string name  = "login_button"> Login</string>
+
 </resources>
