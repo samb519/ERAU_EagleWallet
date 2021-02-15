@@ -2,8 +2,8 @@
 
 systemctl stop EagleWalletAPI.service
 
-#git clean -df
-#git checkout main
+git clean -df
+git checkout main
 git pull
 dotnet build
 
