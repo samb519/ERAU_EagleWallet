@@ -53,7 +53,11 @@ namespace EagleWalletAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
+            app.UseSwagger(c => {
+			c.PreSerializeFilters.Add((swagger, httpReq) => {
+				swagger.Servers = new List<OpenApiServer> { new OpenApiServer { Url = "https://eaglewallet.wise-net.xyz"}};	
+				});
+			    });
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
@@ -64,7 +68,7 @@ namespace EagleWalletAPI
                 c.RoutePrefix = string.Empty;
             });
 
-	    app.UseHttpsRedirection();
+		// app.UseHttpsRedirection();
 
             app.UseRouting();
 
