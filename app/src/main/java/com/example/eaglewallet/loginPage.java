@@ -16,13 +16,5 @@ public class loginPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
 
-        loginButton =(Button)findViewById(R.id.loginButton);
-
-        loginButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(loginPage.this,homePage.class);
-                startActivity(intent);
-            }
-        });
     }
 }
