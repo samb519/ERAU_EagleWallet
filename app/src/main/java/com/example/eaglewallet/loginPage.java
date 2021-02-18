@@ -10,6 +10,7 @@ import android.widget.TextView;
 public class loginPage extends AppCompatActivity {
 
     Button loginButton;
+    TextView CreateAccountTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,14 @@ public class loginPage extends AppCompatActivity {
             }
         });
 
+        CreateAccountTxt = (TextView)findViewById(R.id.CreateAccountTxt);
+        CreateAccountTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(loginPage.this, CreateAccount.class );
+                startActivity(intent);
+            }
+        });
 
 
     }
