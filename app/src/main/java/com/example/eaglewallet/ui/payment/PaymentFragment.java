@@ -1,4 +1,4 @@
-package com.example.eaglewallet.ui.notifications;
+package com.example.eaglewallet.ui.payment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.eaglewallet.R;
 
-public class NotificationsFragment extends Fragment {
+public class PaymentFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private PaymentViewModel paymentViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
+        paymentViewModel =
+                new ViewModelProvider(this).get(PaymentViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_payment, container, false);
         final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        paymentViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

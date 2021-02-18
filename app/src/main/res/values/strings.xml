@@ -8,7 +8,7 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="title_activity_home_page">MainActivity</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_calender">Calender</string>
+    <string name="title_payment">Payment</string>
 
 </resources>

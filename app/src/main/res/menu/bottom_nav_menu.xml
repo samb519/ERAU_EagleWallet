@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_calender"
         android:icon="@android:drawable/ic_menu_my_calendar"
-        android:title="@string/title_dashboard" />
+        android:title="@string/title_calender" />
 
     <item
         android:id="@+id/navigation_home"
@@ -12,8 +12,8 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_payment"
         android:icon="@drawable/icons8_us_dollar_24"
-        android:title="@string/title_notifications" />
+        android:title="@string/title_payment" />
 
 </menu>
