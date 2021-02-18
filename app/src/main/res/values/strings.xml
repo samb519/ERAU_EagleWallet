@@ -3,5 +3,12 @@
     <string name="prompt_Email">Email</string>
     <string name="prompt_Password">Password</string>
     <string name="login_button"> Login</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_home_page">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_calender">Calender</string>
+    <string name="title_payment">Payment</string>
 
 </resources>

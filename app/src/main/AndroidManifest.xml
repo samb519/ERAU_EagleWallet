@@ -12,6 +12,10 @@
         <activity android:name=".CreateAccountAddPayment"></activity>
         <activity android:name=".CreateAccount" />
         <activity android:name=".MainActivity">
+        <activity
+            android:name=".homePage"
+            android:label="@string/title_activity_home_page"></activity>
+        <activity android:name=".loginPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
