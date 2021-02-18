@@ -4,20 +4,20 @@
             "outputFile": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rXC\\values-en-rXC.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jmora\\.gradle\\caches\\transforms-2\\files-2.1\\ae31cc97a3f9383e0242537d69427d3a\\core-1.1.0\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "source": "C:\\Users\\jmora\\.gradle\\caches\\transforms-2\\files-2.1\\513efa8b232871d058fdda7e90972b20\\core-1.3.0\\res\\values-en-rXC\\values-en-rXC.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
-                        "endColumns": "202",
-                        "endOffsets": "253"
+                        "endColumns": "203",
+                        "endOffsets": "254"
                     },
                     "to": {
                         "startLines": "30",
                         "startColumns": "4",
                         "startOffsets": "5682",
-                        "endColumns": "202",
-                        "endOffsets": "5880"
+                        "endColumns": "203",
+                        "endOffsets": "5881"
                     }
                 },
                 {
