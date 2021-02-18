@@ -1,0 +1,4 @@
+com/example/eaglewallet/MainActivity.java
+ com.example.eaglewallet.MainActivity
+com/example/eaglewallet/BuildConfig.java
+ com.example.eaglewallet.BuildConfig
