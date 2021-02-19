@@ -103,10 +103,10 @@
 
     <Button
         android:id="@+id/createAccountAddPaymentBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="572dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="576dp"
         android:backgroundTint="#2196F3"
         android:text="Submit"
         app:cornerRadius="15dp"
@@ -115,10 +115,10 @@
 
     <Button
         android:id="@+id/createAccountAddPaymentBackBtn"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="572dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="576dp"
         android:backgroundTint="#2196F3"
         android:text="Back"
         app:cornerRadius="15dp"
