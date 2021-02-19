@@ -1438,7 +1438,7 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
-id CreatAccountSubmit
+id CreatAccountNext
 id CreateAccountTxt
 id FUNCTION
 id META
@@ -1530,7 +1530,6 @@ id contentPanel
 id coordinator
 id createAccountAddPaymentBtn
 id createAccountBackBtn
-id createAccountProfileImage
 id custom
 id customPanel
 id cut

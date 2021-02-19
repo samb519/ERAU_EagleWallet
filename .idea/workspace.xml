@@ -8,9 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d3172c18-3685-457b-9859-e85ec7d1b481" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/eaglewallet/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/eaglewallet/BuildConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/eaglewallet/loginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/eaglewallet/loginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/eaglewallet/CreateAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/eaglewallet/CreateAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_account.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_account_add_payment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_account_add_payment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/login_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/login_page.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,26 +134,26 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="530" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1613070542679" />
-    <state width="1476" height="221" key="GridCell.Tab.0.bottom" timestamp="1613686794310">
+    <state width="1476" height="166" key="GridCell.Tab.0.bottom" timestamp="1613717991708">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1455" height="255" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1613070726741" />
-    <state width="1476" height="221" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1613686794310" />
-    <state width="1476" height="221" key="GridCell.Tab.0.center" timestamp="1613686794310">
+    <state width="1476" height="166" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1613717991708" />
+    <state width="1476" height="166" key="GridCell.Tab.0.center" timestamp="1613717991707">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1455" height="255" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1613070726741" />
-    <state width="1476" height="221" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1613686794310" />
-    <state width="1476" height="221" key="GridCell.Tab.0.left" timestamp="1613686794309">
+    <state width="1476" height="166" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1613717991707" />
+    <state width="1476" height="166" key="GridCell.Tab.0.left" timestamp="1613717991707">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1455" height="255" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1613070726741" />
-    <state width="1476" height="221" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1613686794309" />
-    <state width="1476" height="221" key="GridCell.Tab.0.right" timestamp="1613686794310">
+    <state width="1476" height="166" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1613717991707" />
+    <state width="1476" height="166" key="GridCell.Tab.0.right" timestamp="1613717991708">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1455" height="255" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1613070726741" />
-    <state width="1476" height="221" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1613686794310" />
+    <state width="1476" height="166" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1613717991708" />
     <state x="277" y="77" key="SettingsEditor" timestamp="1613685354444">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
