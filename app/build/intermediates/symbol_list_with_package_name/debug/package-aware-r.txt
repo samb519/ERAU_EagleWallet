@@ -1385,6 +1385,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable credit
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1392,6 +1393,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable eagle
+drawable gpay
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
 drawable ic_dashboard_black_24dp
@@ -1438,9 +1440,12 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id ChoosePayment
 id CreatAccountNext
 id CreateAccountTxt
+id CreditBtn
 id FUNCTION
+id GPayBtn
 id META
 id SHIFT
 id SYM
@@ -1593,6 +1598,7 @@ id ifRoom
 id image
 id imageView
 id imageView1
+id imageView2
 id info
 id invisible
 id italic
@@ -1732,9 +1738,11 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textView
 id textView2
 id textView3
 id textView4
+id textView5
 id text_calender
 id text_home
 id text_input_end_icon
@@ -1828,6 +1836,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_choose_payment
 layout activity_create_account
 layout activity_create_account_add_payment
 layout activity_home_page

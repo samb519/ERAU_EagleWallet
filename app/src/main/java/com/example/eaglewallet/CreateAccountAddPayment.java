@@ -31,7 +31,7 @@ public class CreateAccountAddPayment extends AppCompatActivity {
         createAccountAddPaymentBackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CreateAccountAddPayment.this, CreateAccount.class);
+                Intent intent = new Intent(CreateAccountAddPayment.this, ChoosePayment.class);
                 startActivity(intent);
             }
         });

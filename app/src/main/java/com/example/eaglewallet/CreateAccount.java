@@ -30,7 +30,7 @@ public class CreateAccount extends AppCompatActivity {
         CreatAccountNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CreateAccount.this, CreateAccountAddPayment.class );
+                Intent intent = new Intent(CreateAccount.this, ChoosePayment.class );
                 startActivity(intent);
             }
         });
