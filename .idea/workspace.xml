@@ -7,19 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3172c18-3685-457b-9859-e85ec7d1b481" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_account.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_account_add_payment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_create_account_add_payment.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,26 +130,26 @@
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state x="530" y="235" key="FileChooserDialogImpl/0.0.1500.960@0.0.1500.960" timestamp="1613070542679" />
-    <state width="1476" height="166" key="GridCell.Tab.0.bottom" timestamp="1613723557004">
+    <state width="1476" height="166" key="GridCell.Tab.0.bottom" timestamp="1613724490236">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1455" height="255" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1613070726741" />
-    <state width="1476" height="166" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1613723557004" />
-    <state width="1476" height="166" key="GridCell.Tab.0.center" timestamp="1613723557003">
+    <state width="1476" height="166" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1613724490236" />
+    <state width="1476" height="166" key="GridCell.Tab.0.center" timestamp="1613724490236">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1455" height="255" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1613070726741" />
-    <state width="1476" height="166" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1613723557003" />
-    <state width="1476" height="166" key="GridCell.Tab.0.left" timestamp="1613723557003">
+    <state width="1476" height="166" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1613724490236" />
+    <state width="1476" height="166" key="GridCell.Tab.0.left" timestamp="1613724490236">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1455" height="255" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1613070726741" />
-    <state width="1476" height="166" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1613723557003" />
-    <state width="1476" height="166" key="GridCell.Tab.0.right" timestamp="1613723557004">
+    <state width="1476" height="166" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1613724490236" />
+    <state width="1476" height="166" key="GridCell.Tab.0.right" timestamp="1613724490236">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1455" height="255" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1613070726741" />
-    <state width="1476" height="166" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1613723557004" />
+    <state width="1476" height="166" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1613724490236" />
     <state x="277" y="77" key="SettingsEditor" timestamp="1613685354444">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
