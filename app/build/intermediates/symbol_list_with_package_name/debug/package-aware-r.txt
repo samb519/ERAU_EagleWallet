@@ -1528,6 +1528,7 @@ id container
 id content
 id contentPanel
 id coordinator
+id createAccountAddPaymentBackBtn
 id createAccountAddPaymentBtn
 id createAccountBackBtn
 id custom

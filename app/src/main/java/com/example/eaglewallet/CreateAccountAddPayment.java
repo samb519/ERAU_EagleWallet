@@ -10,6 +10,8 @@ import android.widget.Button;
 public class CreateAccountAddPayment extends AppCompatActivity {
 
     Button createAccountAddPaymentBtn;
+    Button  createAccountAddPaymentBackBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +23,15 @@ public class CreateAccountAddPayment extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CreateAccountAddPayment.this, loginPage.class);
+                startActivity(intent);
+            }
+        });
+
+        createAccountAddPaymentBackBtn = (Button) findViewById(R.id.createAccountAddPaymentBackBtn);
+        createAccountAddPaymentBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CreateAccountAddPayment.this, CreateAccount.class);
                 startActivity(intent);
             }
         });
