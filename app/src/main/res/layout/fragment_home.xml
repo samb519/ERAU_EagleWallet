@@ -7,8 +7,17 @@
     tools:context=".ui.home.HomeFragment">
 
 
+    <TextView
+        android:id="@+id/text_eagleRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:text="@string/title_remaining"
+        app:layout_constraintBottom_toBottomOf="@+id/text_eagleDollars"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <androidx.cardview.widget.CardView
-        android:id="@+id/view2"
+        android:id="@+id/profilePicHome"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_centerHorizontal="true"
@@ -34,10 +43,11 @@
         android:id="@+id/text_mealPlan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="74dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="175dp"
         android:layout_marginBottom="40dp"
         android:text="@string/title_mealPlans"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/text_diningDollars"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -46,9 +56,10 @@
         android:id="@+id/text_diningDollars"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="74dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="40dp"
         android:text="@string/title_diningDollars"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_mealPlan" />
 
@@ -56,9 +67,72 @@
         android:id="@+id/text_eagleDollars"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="74dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="40dp"
         android:text="@string/title_eagleDollarst"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_diningDollars" />
+
+    <ProgressBar
+        android:id="@+id/progress_mealPlan"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="217dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="25dp"
+        android:max="14"
+        android:progress="7"
+        android:scaleY="8"
+        app:layout_constraintBottom_toTopOf="@+id/text_diningAmount"
+        app:layout_constraintStart_toEndOf="@+id/text_mealPlan" />
+
+    <TextView
+        android:id="@+id/text_progressMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="175dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="@+id/progress_mealPlan"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_totalMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="175dp"
+        android:layout_marginEnd="10dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/progress_mealPlan"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_DiningRemaining"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:text="@string/title_remaining"
+        app:layout_constraintBottom_toBottomOf="@+id/text_diningDollars"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/text_diningAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/text_diningDollars"
+        app:layout_constraintEnd_toStartOf="@+id/text_DiningRemaining" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/text_eagleDollars"
+        app:layout_constraintEnd_toStartOf="@+id/text_eagleRemaining" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
