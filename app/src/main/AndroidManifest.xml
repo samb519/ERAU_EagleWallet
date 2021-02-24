@@ -9,8 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EagleWallet">
-        <activity android:name=".addCard"></activity>
-        <activity android:name=".addFunds" />
         <activity android:name=".CreateAccountAddPayment" />
         <activity android:name=".CreateAccount" />
         <activity
