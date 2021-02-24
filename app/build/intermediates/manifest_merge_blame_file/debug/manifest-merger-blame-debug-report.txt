@@ -11,7 +11,7 @@
 9-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:5:5-25:19
+11-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:5:5-26:19
 12        android:allowBackup="true"
 12-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -29,35 +29,38 @@
 20        android:testOnly="true"
 21        android:theme="@style/Theme.EagleWallet" >
 21-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:11:9-49
-22        <activity android:name="com.example.eaglewallet.ChoosePayment" />
-22-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:12:9-60
-22-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:12:19-48
-23        <activity android:name="com.example.eaglewallet.CreateAccountAddPayment" />
-23-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:13:9-61
-23-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:13:19-58
-24        <activity android:name="com.example.eaglewallet.CreateAccount" />
-24-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:14:9-51
-24-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:14:19-48
-25        <activity
-25-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:15:9-17:64
-26            android:name="com.example.eaglewallet.homePage"
-26-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:16:13-37
-27            android:label="@string/title_activity_home_page" />
-27-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:17:13-61
-28        <activity android:name="com.example.eaglewallet.loginPage" >
-28-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:18:9-24:20
-28-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:18:19-44
-29            <intent-filter>
-29-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:19:13-23:29
-30                <action android:name="android.intent.action.MAIN" />
-30-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:20:17-69
-30-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:20:25-66
-31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:22:17-77
-32-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:22:27-74
-33            </intent-filter>
-34        </activity>
-35    </application>
-36
-37</manifest>
+22        <activity android:name="com.example.eaglewallet.SettingsActivity" />
+22-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:12:9-63
+22-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:12:19-51
+23        <activity android:name="com.example.eaglewallet.ChoosePayment" />
+23-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:13:9-51
+23-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:13:19-48
+24        <activity android:name="com.example.eaglewallet.CreateAccountAddPayment" />
+24-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:14:9-61
+24-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:14:19-58
+25        <activity android:name="com.example.eaglewallet.CreateAccount" />
+25-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:15:9-51
+25-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:15:19-48
+26        <activity
+26-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:16:9-18:64
+27            android:name="com.example.eaglewallet.homePage"
+27-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:17:13-37
+28            android:label="@string/title_activity_home_page" />
+28-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:18:13-61
+29        <activity android:name="com.example.eaglewallet.loginPage" >
+29-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:19:9-25:20
+29-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:19:19-44
+30            <intent-filter>
+30-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:20:13-24:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:21:17-69
+31-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:21:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:23:17-77
+33-->P:\GitHub\EagleWallet\ERAU_EagleWallet\app\src\main\AndroidManifest.xml:23:27-74
+34            </intent-filter>
+35        </activity>
+36    </application>
+37
+38</manifest>
