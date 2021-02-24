@@ -18,18 +18,14 @@ public class PaymentFragment extends Fragment {
 
     private PaymentViewModel paymentViewModel;
 
+    Button addFunds;
+    Button addCard;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         paymentViewModel =
                 new ViewModelProvider(this).get(PaymentViewModel.class);
         View root = inflater.inflate(R.layout.fragment_payment, container, false);
-        final TextView textView = root.findViewById(R.id.text_notifications);
-        paymentViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
         return root;
     }
 }

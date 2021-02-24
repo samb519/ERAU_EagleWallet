@@ -21,4 +21,3 @@ com/example/eaglewallet/ui/home/HomeViewModel.java
  com.example.eaglewallet.ui.home.HomeViewModel
 com/example/eaglewallet/ui/payment/PaymentFragment.java
  com.example.eaglewallet.ui.payment.PaymentFragment
- com.example.eaglewallet.ui.payment.PaymentFragment$1
