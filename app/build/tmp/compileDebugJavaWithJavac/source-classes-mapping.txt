@@ -17,7 +17,6 @@ com/example/eaglewallet/SettingsActivity.java
  com.example.eaglewallet.SettingsActivity$2
 com/example/eaglewallet/ui/calender/CalenderFragment.java
  com.example.eaglewallet.ui.calender.CalenderFragment
- com.example.eaglewallet.ui.calender.CalenderFragment$1
 com/example/eaglewallet/CreateAccountAddPayment.java
  com.example.eaglewallet.CreateAccountAddPayment
  com.example.eaglewallet.CreateAccountAddPayment$1
@@ -26,7 +25,6 @@ com/example/eaglewallet/homePage.java
  com.example.eaglewallet.homePage
 com/example/eaglewallet/ui/home/HomeFragment.java
  com.example.eaglewallet.ui.home.HomeFragment
- com.example.eaglewallet.ui.home.HomeFragment$1
 com/example/eaglewallet/BuildConfig.java
  com.example.eaglewallet.BuildConfig
 com/example/eaglewallet/ui/home/HomeViewModel.java
