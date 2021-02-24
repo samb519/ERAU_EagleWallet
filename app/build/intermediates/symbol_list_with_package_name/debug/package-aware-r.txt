@@ -1649,6 +1649,7 @@ id nav_controller_view_tag
 id nav_host_fragment
 id nav_host_fragment_container
 id nav_view
+id navigation_addFunds
 id navigation_calender
 id navigation_header_container
 id navigation_home
