@@ -1587,6 +1587,8 @@ id beginning
 id blocking
 id bottom
 id buttonPanel
+id button_addCard
+id button_addFunds
 id cancel_button
 id center
 id center_horizontal
@@ -1722,6 +1724,7 @@ id nav_controller_view_tag
 id nav_host_fragment
 id nav_host_fragment_container
 id nav_view
+id navigation_addFunds
 id navigation_calender
 id navigation_header_container
 id navigation_home
@@ -1751,6 +1754,7 @@ id profilePicture
 id progress_circular
 id progress_horizontal
 id progress_mealPlan
+id progress_purchase
 id radio
 id recycler_view
 id right
@@ -1824,21 +1828,22 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView
-id textView2
 id textView4
 id textView5
 id textView7
 id text_DiningRemaining
 id text_diningAmount
 id text_diningDollars
+id text_eagleAmount
 id text_eagleDollars
 id text_eagleRemaining
 id text_input_end_icon
 id text_input_start_icon
 id text_mealPlan
-id text_notifications
+id text_namePayment
 id text_progressMeal
 id text_totalMeal
+id text_transactionHistory
 id textinput_counter
 id textinput_error
 id textinput_helper_text
@@ -2123,6 +2128,7 @@ string reply_title
 string search_menu_title
 string signature_title
 string status_bar_notification_info_overflow
+string studentName
 string summary_collapsed_preference_list
 string sync_header
 string sync_title
