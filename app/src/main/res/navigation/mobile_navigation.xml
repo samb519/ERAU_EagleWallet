@@ -22,4 +22,11 @@
         android:name="com.example.eaglewallet.ui.payment.PaymentFragment"
         android:label="@string/title_payment"
         tools:layout="@layout/fragment_payment" />
+
+    <fragment
+        android:id="@+id/navigation_addFunds"
+        android:name="com.example.eaglewallet.ui.payment.PaymentFragment"
+        android:label="@string/title_payment"
+        tools:layout="@layout/fragment_payment" />
+
 </navigation>

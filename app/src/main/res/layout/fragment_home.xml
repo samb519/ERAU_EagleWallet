@@ -87,6 +87,7 @@
         app:layout_constraintBottom_toTopOf="@+id/text_diningAmount"
         app:layout_constraintStart_toEndOf="@+id/text_mealPlan" />
 
+
     <TextView
         android:id="@+id/text_progressMeal"
         android:layout_width="wrap_content"
@@ -126,13 +127,23 @@
         app:layout_constraintEnd_toStartOf="@+id/text_DiningRemaining" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_eagleAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/text_eagleDollars"
         app:layout_constraintEnd_toStartOf="@+id/text_eagleRemaining" />
+
+    <ProgressBar
+        android:id="@+id/progress_purchase"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="127dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="142dp"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
