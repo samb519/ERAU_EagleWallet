@@ -1,4 +1,4 @@
-﻿namespace OneSkyOptimizer.Optimization.Repositories.Core
+﻿namespace EagleWalletAPI.Repositories
 {
     /// <summary>
     /// A helper interface defined for how to get a <see cref="DbConnection"/> to the Flexjet and Sentient DBs.

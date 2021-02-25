@@ -1,4 +1,5 @@
-﻿using EagleWalletAPI.Models;
+﻿using EagleWalletAPI.DTO.User;
+using EagleWalletAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,7 @@ namespace EagleWalletAPI.Repositories
 {
     public interface IAuthRepository
     {
-        Task<User> Register(User user, string password);
+        Task<Tuple<int, string>> Register(UserCreateDto user);
         Task<User> Login(string username, string password);
-        Task<bool> UserExists(string username);
-        Task<bool> EmailExists(string email);
     }
 }

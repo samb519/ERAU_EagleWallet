@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace OneSkyOptimizer.Optimization.Repositories.Core
+namespace EagleWalletAPI.Repositories
 {
     /// <summary>
     /// Helpful wrapper class for creating and ADO.NET connection.

@@ -1,31 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using EagleWalletAPI.DTO.User;
 using EagleWalletAPI.Models;
+using System;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace EagleWalletAPI.Repositories
 {
     public class AuthRepository : IAuthRepository
     {
-        private readonly DatabaseContext context;
+        private readonly IDbConnectionProvider context;
 
-        public AuthRepository(DatabaseContext context)
+        public AuthRepository(IDbConnectionProvider context)
         {
             this.context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         public async Task<User> Login(string username, string password)
         {
-            var user = await context.Users.FirstOrDefaultAsync(x => x.Username == username);
+            using (var conn = context.GetEagleWalletConnection())
+            using (var cmd = conn.CreateStoredProc("uspGetUserLogin"))
+            {
+                cmd.Parameters.AddWithValue("@Username", username);
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    string Username, Email;
+                    byte[] PasswordHash, PasswordSalt;
+                    while (reader.Read())
+                    {
+                        Username = reader["Username"].ToString();
+                        Email = reader["Email"].ToString();
+                        PasswordHash = Encoding.UTF8.GetBytes(reader["PasswordHash"].ToString());
+                        PasswordSalt = Encoding.UTF8.GetBytes(reader["PasswordSalt"].ToString());
 
-            if (user == null)
-                return null;
+                        if (VerifyPasswordHash(password, PasswordHash, PasswordSalt))
+                        {
+                            return new User()
+                            {
+                                Id = int.Parse(reader["Id"].ToString()),
+                                Email = Email,
+                                Username = Username
+                            };
+                        } 
+                        else
+                        {
+                            return null;
+                        }
+                    }
 
-            if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
-                return null;
-
-            return user;
+                }
+            }
+            return null;
         }
 
         private bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)
@@ -44,14 +69,23 @@ namespace EagleWalletAPI.Repositories
             }
         }
 
-        public async Task<User> Register(User user, string password)
+        public async Task<Tuple<int, string>> Register(UserCreateDto user)
         {
-            CreatePasswordHash(password, out byte[] hash, out byte[] salt);
-            user.PasswordHash = hash;
-            user.PasswordSalt = salt;
 
-            await context.Users.AddAsync(user);
-            return user;
+            CreatePasswordHash(user.Password, out byte[] hash, out byte[] salt);
+
+            using (var conn = context.GetEagleWalletConnection())
+            using (var cmd = conn.CreateStoredProc("uspCreateUser"))
+            {
+                cmd.Parameters.AddWithValue("@Username", user.Username);
+                cmd.Parameters.AddWithValue("@Email", user.Email);
+                cmd.Parameters.AddWithValue("@PasswordHash", hash);
+                cmd.Parameters.AddWithValue("@PasswordSalt", salt);
+
+                using (var reader = await cmd.ExecuteReaderAsync())                    
+                    return Tuple.Create(int.Parse(reader["UserId"].ToString()), reader["Message"].ToString());
+
+            }
         }
 
         private void CreatePasswordHash(string password, out byte[] hash, out byte[] salt)
@@ -61,21 +95,6 @@ namespace EagleWalletAPI.Repositories
                 salt = hmac.Key;
                 hash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
             }
-        }
-
-        public async Task<bool> UserExists(string username)
-        {
-            if (await context.Users.AnyAsync(x => x.Username == username))
-                return true;
-
-            return false;
-        }
-
-        public async Task<bool> EmailExists(string email)
-        {
-            if (await context.Users.AnyAsync(x => x.Email == email))
-                return true;
-            return false;
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
 
-namespace OneSkyOptimizer.Optimization.Repositories.Core
+namespace EagleWalletAPI.Repositories
 {
     /// <summary>
     /// The implementation of a connection provider toi read connection information from the environment variables.
@@ -25,7 +25,7 @@ namespace OneSkyOptimizer.Optimization.Repositories.Core
         /// </returns>
         public DbConnection GetEagleWalletConnection()
         {
-            return new DbConnection(configuration.GetValue<string>("FlexjetConnectionString"));
+            return new DbConnection(configuration.GetValue<string>("EagleWalletConnectionString"));
         }
 
     }
