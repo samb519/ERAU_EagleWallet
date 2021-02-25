@@ -1,6 +1,7 @@
 ﻿using EagleWalletAPI.DTO.User;
 using EagleWalletAPI.Models;
 using System;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,8 +31,8 @@ namespace EagleWalletAPI.Repositories
                     {
                         Username = reader["Username"].ToString();
                         Email = reader["Email"].ToString();
-                        PasswordHash = Encoding.UTF8.GetBytes(reader["PasswordHash"].ToString());
-                        PasswordSalt = Encoding.UTF8.GetBytes(reader["PasswordSalt"].ToString());
+                        PasswordHash = (byte[])reader["PasswordHash"];
+                        PasswordSalt = (byte[])reader["PasswordSalt"];
 
                         if (VerifyPasswordHash(password, PasswordHash, PasswordSalt))
                         {
@@ -82,8 +83,14 @@ namespace EagleWalletAPI.Repositories
                 cmd.Parameters.AddWithValue("@PasswordHash", hash);
                 cmd.Parameters.AddWithValue("@PasswordSalt", salt);
 
-                using (var reader = await cmd.ExecuteReaderAsync())                    
-                    return Tuple.Create(int.Parse(reader["UserId"].ToString()), reader["Message"].ToString());
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    while (reader.Read())
+                    {
+                        return Tuple.Create(int.Parse(reader[0].ToString()), reader[1].ToString());
+                    }
+                    return null;
+                }
 
             }
         }
