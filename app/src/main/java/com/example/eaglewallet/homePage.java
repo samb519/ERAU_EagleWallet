@@ -1,10 +1,9 @@
 package com.example.eaglewallet;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -16,7 +15,6 @@ import androidx.navigation.ui.NavigationUI;
 
 public class homePage extends AppCompatActivity {
 
-    ImageButton SettingsBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +29,16 @@ public class homePage extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
+        findViewById(R.id.navigation_calender).setOnClickListener(v -> clickedBtn( "https://eraudining.sodexomyway.com/dining-near-me/hours"));{
+
+
+        }
     }
 
+    public void clickedBtn(String url){
+        Intent intent=new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(url));
+        startActivity(intent);
+
+    }
 }
