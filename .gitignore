@@ -124,3 +124,9 @@ local.properties
 .Trashes
 ehthumbs.db
 Thumbs.db
+.gradle/6.5/executionHistory/executionHistory.bin
+*.bin
+*.lock
+*.properties
+.idea/workspace.xml
+.idea/workspace.xml
