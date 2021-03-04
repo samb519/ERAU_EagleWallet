@@ -11,6 +11,7 @@
     <string name="title_calender">Calender</string>
     <string name="title_payment">Payment</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name = "nextButtonCreateAccount">Next </string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
