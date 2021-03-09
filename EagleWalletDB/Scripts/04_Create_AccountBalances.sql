@@ -1,0 +1,29 @@
+
+
+USE EagleWallet;
+GO;
+
+CREATE TABLE [dbo].[AccountBalances](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[UserId] [int] NOT NULL,
+	SodexoBucks decimal(12,8) NOT NULL DEFAULT 0.0,
+	DiningDollars decimal(12,8) NOT NULL DEFAULT 0.0,
+	EagleDollars decimal(12,8) NOT NULL DEFAULT 0.0,
+)
+GO
+ALTER TABLE [dbo].[AccountBalances] ADD  CONSTRAINT [PK_AccountBalances] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+CREATE NONCLUSTERED INDEX [IX_AccountBalances_UserId] ON [dbo].[AccountBalances]
+(
+	[UserId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[AccountBalances]  WITH CHECK ADD  CONSTRAINT [FK_AccountBalances_Users_UserId] FOREIGN KEY([UserId])
+REFERENCES [dbo].[Users] ([Id])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[AccountBalances] CHECK CONSTRAINT [FK_AccountBalances_Users_UserId]
+GO
