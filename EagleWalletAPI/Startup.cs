@@ -25,6 +25,7 @@ namespace EagleWalletAPI
 
             services.AddScoped<IDbConnectionProvider, DbConnectionProvider>();
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
 
             services.AddSwaggerGen(c =>
             {
@@ -54,7 +55,7 @@ namespace EagleWalletAPI
 
             app.UseSwagger(c => {
 			c.PreSerializeFilters.Add((swagger, httpReq) => {
-				swagger.Servers = new List<OpenApiServer> { new OpenApiServer { Url = "https://eaglewallet.wise-net.xyz"}, new OpenApiServer { Url = "https://localhost:5001" } };	
+				swagger.Servers = new List<OpenApiServer> { new OpenApiServer { Url = "https://eaglewallet.wise-net.xyz"}, new OpenApiServer { Url = "http://localhost:5000" } };	
 				});
 			    });
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
