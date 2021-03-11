@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">EagleWallet</string>
     <string name="prompt_Email">Email</string>
     <string name="prompt_Password">Password</string>
@@ -30,5 +30,40 @@
     <string name="title_eagleDollarst"> Eagle Dollars </string>
     <string name="title_remaining">Remaining</string>
     <string name="studentName">Student Name</string>
+    <string name="choose_payment_method">Choose Payment Method</string>
+    <string name="google_pay">Google Pay</string>
+    <string name="debit_credit">Debit/Credit</string>
+    <string name="credit_card_image">Credit Card Image</string>
+    <string name="goolge_pay_image">Goolge Pay Image</string>
+    <string name="last_name" tools:ignore="DuplicateDefinition">Last Name</string>
+    <string name="next">Next</string>
+    <string name="back" tools:ignore="DuplicateDefinition">Back</string>
+    <string name="email">Email</string>
+    <string name="studentid">StudentID</string>
+    <string name="first_name" tools:ignore="DuplicateDefinition">First Name</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="full_name">Full Name</string>
+    <string name="email" tools:ignore="DuplicateDefinition">Email</string>
+    <string name="street_address">Street Address</string>
+    <string name="credit_card">Credit Card #</string>
+    <string name="add_payment_method">Add Payment Method</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="state">State</string>
+    <string name="back" tools:ignore="DuplicateDefinition">Back</string>
+    <string name="submit">Submit</string>
+    <string name="city">City</string>
+    <string name="submit" tools:ignore="DuplicateDefinition">Submit</string>
+    <string name="back" tools:ignore="DuplicateDefinition">Back</string>
+    <string name="email" tools:ignore="DuplicateDefinition">Email</string>
+    <string name="email_from_databse">Email From Databse</string>
+    <string name="last_name" tools:ignore="DuplicateDefinition">Last Name</string>
+    <string name="lastname_from_databse">LastName: From Databse</string>
+    <string name="first_name" tools:ignore="DuplicateDefinition">First Name</string>
+    <string name="firstname_from_databse">FirstName: From Databse</string>
+    <string name="select_card_to_remove">Select Card To Remove:</string>
+    <string name="Studentid">#######</string>
+    <string name="studentID">StudentID:</string>
+    <string name="riddle_logo">RIddle Logo</string>
+    <string name="create_account">Create Account</string>
 
 </resources>

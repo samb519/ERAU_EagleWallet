@@ -13,10 +13,11 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="228dp"
         android:ems="10"
-        android:hint="Full Name"
+        android:hint="@string/full_name"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextCrediCardEmail"
@@ -25,10 +26,11 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="500dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextTextStreetAddress"
@@ -37,10 +39,11 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="296dp"
         android:ems="10"
-        android:hint="Street Address"
+        android:hint="@string/street_address"
         android:inputType="textPostalAddress"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextCreditCardSignedNumber"
@@ -49,10 +52,11 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="152dp"
         android:ems="10"
-        android:hint="Credit Card #"
+        android:hint="@string/credit_card"
         android:inputType="numberSigned"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/textView4"
@@ -60,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="60dp"
-        android:text="Add Payment Method"
+        android:text="@string/add_payment_method"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="36sp"
         android:textStyle="bold"
@@ -74,10 +78,11 @@
         android:layout_marginStart="212dp"
         android:layout_marginTop="432dp"
         android:ems="10"
-        android:hint="Zip Code"
+        android:hint="@string/zip_code"
         android:inputType="numberSigned"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextTextStateAddress"
@@ -86,10 +91,11 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="432dp"
         android:ems="10"
-        android:hint="State"
+        android:hint="@string/state"
         android:inputType="textPostalAddress"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextCityAddress"
@@ -98,10 +104,11 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="360dp"
         android:ems="10"
-        android:hint="City"
+        android:hint="@string/city"
         android:inputType="textPostalAddress"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/createAccountAddPaymentBtn"
@@ -110,7 +117,7 @@
         android:layout_marginStart="236dp"
         android:layout_marginTop="576dp"
         android:backgroundTint="#2196F3"
-        android:text="Submit"
+        android:text="@string/submit"
         app:cornerRadius="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -122,7 +129,7 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="576dp"
         android:backgroundTint="#2196F3"
-        android:text="Back"
+        android:text="@string/back"
         app:cornerRadius="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

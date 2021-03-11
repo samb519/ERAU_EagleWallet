@@ -14,7 +14,7 @@
         android:layout_marginStart="232dp"
         android:layout_marginTop="612dp"
         android:backgroundTint="#2196F3"
-        android:text="Submit"
+        android:text="@string/submit"
         app:cornerRadius="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -28,7 +28,7 @@
         android:layout_marginTop="612dp"
         android:background="#00FFFFFF"
         android:backgroundTint="#2196F3"
-        android:text="Back"
+        android:text="@string/back"
         app:cornerRadius="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -53,6 +53,7 @@
             android:id="@+id/addProfileImageBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:contentDescription="@string/profile_image"
             app:srcCompat="@mipmap/ic_launcher" />
 
     </androidx.cardview.widget.CardView>
@@ -63,9 +64,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginTop="160dp"
-        android:text="StudentID:"
+        android:text="@string/studentID"
         android:textColor="#000000"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="StudentID:" />
@@ -77,11 +78,12 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="356dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:text="Email From Databse"
+        android:text="@string/email_from_databse"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextTextPersonLastName2"
@@ -90,11 +92,12 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="284dp"
         android:ems="10"
-        android:hint="Last Name"
+        android:hint="@string/last_name"
         android:inputType="textPersonName"
-        android:text="LastName: From Databse"
+        android:text="@string/lastname_from_databse"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/studentIDText"
@@ -102,8 +105,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="164dp"
         android:layout_marginTop="160dp"
-        android:text="#######"
-        android:textSize="18dp"
+        android:text="@string/Studentid"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -114,11 +117,12 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="212dp"
         android:ems="10"
-        android:hint="First Name"
+        android:hint="@string/first_name"
         android:inputType="textPersonName"
-        android:text="FirstName: From Databse"
+        android:text="@string/firstname_from_databse"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <Spinner
         android:id="@+id/PaymentList"
@@ -136,8 +140,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="73dp"
         android:layout_marginTop="431dp"
-        android:text="Select Card To Remove:"
-        android:textSize="18dp"
+        android:text="@string/select_card_to_remove"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
