@@ -1,7 +1,7 @@
-#Thu Feb 25 13:05:15 EST 2021
-base.0=P\:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+#Tue Mar 23 14:54:45 EDT 2021
+base.0=C\:\\Users\\edwar\\AndroidStudioProjects\\ERAU_EagleWallet\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=P\:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+base.1=C\:\\Users\\edwar\\AndroidStudioProjects\\ERAU_EagleWallet\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex

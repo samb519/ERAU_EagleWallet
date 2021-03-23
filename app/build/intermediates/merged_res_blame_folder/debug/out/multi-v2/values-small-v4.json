@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-small-v4\\values-small-v4.xml",
+            "outputFile": "C:\\Users\\edwar\\AndroidStudioProjects\\ERAU_EagleWallet\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-small-v4\\values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\forni\\.gradle\\caches\\transforms-2\\files-2.1\\8ad8269c0a879b235a19dc8e7219d938\\material-1.1.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\edwar\\.gradle\\caches\\transforms-2\\files-2.1\\8ad8269c0a879b235a19dc8e7219d938\\material-1.1.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
