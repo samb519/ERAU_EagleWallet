@@ -50,7 +50,6 @@
         android:layout_width="359dp"
         android:layout_height="263dp"
         android:layout_marginStart="26dp"
-        android:contentDescription="@string/riddle_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/eagle" />
@@ -64,7 +63,7 @@
         android:clickable="true"
         android:contextClickable="true"
         android:defaultFocusHighlightEnabled="true"
-        android:text="@string/create_account"
+        android:text="Create Account"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
