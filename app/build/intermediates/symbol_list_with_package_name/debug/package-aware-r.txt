@@ -2115,6 +2115,7 @@ string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
+string nextButtonCreateAccount
 string not_set
 string password_toggle_content_description
 string path_password_eye

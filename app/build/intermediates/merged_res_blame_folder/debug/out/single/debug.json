@@ -1,154 +1,154 @@
 [
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_create_account_add_payment.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\activity_create_account_add_payment.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home_black_24dp.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\ic_home_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_menu.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_create_account.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\activity_create_account.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_settings.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\activity_settings.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_credit.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\credit.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\xml_root_preferences.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\xml\\root_preferences.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gpay.jpg.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\gpay.jpg"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\xml_root_preferences.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\xml\\root_preferences.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_choose_payment.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\activity_choose_payment.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_credit.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\credit.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\navigation_mobile_navigation.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_home_black_24dp.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\ic_home_black_24dp.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_choose_payment.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\activity_choose_payment.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\navigation_mobile_navigation.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_calender.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\fragment_calender.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_create_account.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\activity_create_account.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_eagle.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\eagle.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notifications_black_24dp.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_calender.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\fragment_calender.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_payment.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\fragment_payment.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\fragment_home.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_payment.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\fragment_payment.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_menu.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_dashboard_black_24dp.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\ic_dashboard_black_24dp.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gpay.jpg.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\gpay.jpg"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_home_page.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\activity_home_page.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_home_page.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\activity_home_page.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icons8_us_dollar_24.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\icons8_us_dollar_24.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_eagle.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\eagle.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_login_page.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\login_page.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_settings.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\activity_settings.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icons8_us_dollar_24.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\icons8_us_dollar_24.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_create_account_add_payment.xml.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\activity_create_account_add_payment.xml"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\jmora\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_login_page.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\login_page.xml"
     }
 ]

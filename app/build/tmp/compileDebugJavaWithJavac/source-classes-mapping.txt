@@ -12,8 +12,9 @@ com/example/eaglewallet/ui/home/HomeFragment.java
  com.example.eaglewallet.ui.home.HomeFragment
 com/example/eaglewallet/ui/payment/PaymentViewModel.java
  com.example.eaglewallet.ui.payment.PaymentViewModel
-com/example/eaglewallet/ui/home/HomeViewModel.java
- com.example.eaglewallet.ui.home.HomeViewModel
+com/example/eaglewallet/ui/payment/PaymentFragment.java
+ com.example.eaglewallet.ui.payment.PaymentFragment
+ com.example.eaglewallet.ui.payment.PaymentFragment$1
 com/example/eaglewallet/ChoosePayment.java
  com.example.eaglewallet.ChoosePayment
  com.example.eaglewallet.ChoosePayment$1
@@ -31,6 +32,5 @@ com/example/eaglewallet/CreateAccountAddPayment.java
  com.example.eaglewallet.CreateAccountAddPayment$2
 com/example/eaglewallet/BuildConfig.java
  com.example.eaglewallet.BuildConfig
-com/example/eaglewallet/ui/payment/PaymentFragment.java
- com.example.eaglewallet.ui.payment.PaymentFragment
- com.example.eaglewallet.ui.payment.PaymentFragment$1
+com/example/eaglewallet/ui/home/HomeViewModel.java
+ com.example.eaglewallet.ui.home.HomeViewModel
