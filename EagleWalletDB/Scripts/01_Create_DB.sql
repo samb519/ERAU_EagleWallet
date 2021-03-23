@@ -1,0 +1,2 @@
+CREATE DATABASE EagleWallet;
+GO;

@@ -14,11 +14,13 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.eaglewallet.CreateAccount;
+import com.example.eaglewallet.CreateAccountAddPayment;
 import com.example.eaglewallet.R;
 import com.example.eaglewallet.homePage;
 import com.example.eaglewallet.loginPage;
 
-public class PaymentFragment extends Fragment {
+public class PaymentFragment extends Fragment{
 
     private PaymentViewModel paymentViewModel;
 
@@ -28,6 +30,15 @@ public class PaymentFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
+        addFunds = (Button)getView().findViewById(R.id.button_addFunds);
+        addFunds.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PaymentFragment.this.getContext(), CreateAccountAddPayment.class);
+                startActivity(intent);
+
+            }
+        }));
 
 
 
