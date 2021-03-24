@@ -3,6 +3,7 @@ package com.example.eaglewallet;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.HttpHeaderParser;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -29,11 +31,16 @@ public class CreateAccount extends AppCompatActivity {
 
     Button createAccountBackBtn;
     Button CreatAccountNext;
+    SharedPreferences regDetails;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
+
+        regDetails = getSharedPreferences("userdetails", MODE_PRIVATE);
+        editor = regDetails.edit();
 
         createAccountBackBtn = (Button)findViewById(R.id.createAccountBackBtn);
         createAccountBackBtn.setOnClickListener(new View.OnClickListener() {
@@ -48,20 +55,14 @@ public class CreateAccount extends AppCompatActivity {
         CreatAccountNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String code = postUserRegistration();
+                postUserRegistration();
 
-                if (code == "200") {
-                    Intent intent = new Intent(CreateAccount.this, ChoosePayment.class );
-                    startActivity(intent);
-                } else if (code == "401") {
-
-                }
             }
         });
 
     }
 
-    private String postUserRegistration() {
+    private void postUserRegistration() {
         final String[] code = {""};
 
         EditText usernameText = (EditText) findViewById(R.id.editStudentID);
@@ -87,12 +88,30 @@ public class CreateAccount extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        final String requestBody = jsonBody.toString();
 
-        StringRequest req = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+        JsonObjectRequest req = new JsonObjectRequest(url, jsonBody, new Response.Listener<JSONObject>() {
             @Override
-            public void onResponse(String response) {
-                Log.i("VOLLEY", response);
+            public void onResponse(JSONObject response) {
+                Log.i("VOLLEY", response.toString());
+
+                try {
+                    String id = response.getString("id");
+                    String username = response.getString("username");
+                    String email = response.getString("email");
+
+                    if (!id.isEmpty()) {
+                        editor.putString("issignedin", "true");
+                        editor.putString("userid", id);
+                        editor.putString("username", username);
+                        editor.putString("email", email);
+
+                        Intent intent = new Intent(CreateAccount.this, ChoosePayment.class );
+                        startActivity(intent);
+                    }
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }, new Response.ErrorListener() {
             @Override
@@ -105,29 +124,8 @@ public class CreateAccount extends AppCompatActivity {
                 return "application/json; charset=utf-8";
             }
 
-            @Override
-            public byte[] getBody() throws AuthFailureError {
-                try {
-                    return requestBody == null ? null : requestBody.getBytes("utf-8");
-                } catch (UnsupportedEncodingException uee) {
-                    VolleyLog.wtf("Unsupported Encoding while trying to get the bytes of %s using %s", requestBody, "utf-8");
-                    return null;
-                }
-            }
-
-            @Override
-            protected Response<String> parseNetworkResponse(NetworkResponse res) {
-                String responseCode = "";
-                if (res != null) {
-                    responseCode = String.valueOf(res.statusCode);
-                    code[0] = responseCode;
-                }
-                return Response.success(responseCode, HttpHeaderParser.parseCacheHeaders(res));
-            }
         };
 
         queue.add(req);
-        //Temp
-        return code[0];
     }
 }

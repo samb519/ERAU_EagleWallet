@@ -1,6 +1,8 @@
 package com.example.eaglewallet;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.content.Intent;
 import android.util.Log;
@@ -12,7 +14,6 @@ import android.widget.TextView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -20,7 +21,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.HttpHeaderParser;
-import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
 import java.io.UnsupportedEncodingException;
@@ -29,34 +30,41 @@ public class loginPage extends AppCompatActivity {
 
     Button loginButton;
     TextView CreateAccountTxt;
+    SharedPreferences userDetails;
+    SharedPreferences.Editor editor;
+    String is_signed_in = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
 
-        loginButton = (Button)findViewById(R.id.loginButton);
-        loginButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                String code = postUserLogin();
+        userDetails = getSharedPreferences("userdetails", MODE_PRIVATE);
+        editor = userDetails.edit();
 
-                if (code == "200") {
-                    Intent intent = new Intent(loginPage.this,homePage.class);
-                    startActivity(intent);
-                } else if (code == "401") {
-                    String failure = "Some failure message";
-                } else { //Realistically only 200 and 401 should occur, everything else is some weird scenario
-                    String failure = "We have no clue what happened";
-                }
+        is_signed_in = userDetails.getString("issignedin", "false");
+
+        if (is_signed_in.equals("true")) {
+            Intent intent = new Intent(loginPage.this, homePage.class);
+            startActivity(intent);
+        }
+
+        loginButton = (Button) findViewById(R.id.loginButton);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Log.i("TEST", "Try request");
+                postUserLogin();
+
             }
         });
 
-        CreateAccountTxt = (TextView)findViewById(R.id.CreateAccountTxt);
+        CreateAccountTxt = (TextView) findViewById(R.id.CreateAccountTxt);
         CreateAccountTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(loginPage.this, CreateAccount.class );
+                Intent intent = new Intent(loginPage.this, CreateAccount.class);
                 startActivity(intent);
             }
         });
@@ -64,8 +72,7 @@ public class loginPage extends AppCompatActivity {
 
     }
 
-    private String postUserLogin() {
-        final String[] code = {""};
+    private void postUserLogin() {
 
         EditText usernameText = (EditText) findViewById(R.id.editTextTextEmailAddress);
         String username = usernameText.getText().toString();
@@ -74,7 +81,7 @@ public class loginPage extends AppCompatActivity {
         String password = passwordText.getText().toString();
 
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        String url ="https://eaglewallet.wise-net.xyz/api/Auth/login";
+        String url = "https://eaglewallet.wise-net.xyz/api/Auth/login";
         JSONObject jsonBody = new JSONObject();
         try {
             jsonBody.put("username", username);
@@ -84,10 +91,29 @@ public class loginPage extends AppCompatActivity {
         }
         final String requestBody = jsonBody.toString();
 
-        StringRequest req = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+        JsonObjectRequest req = new JsonObjectRequest(url, jsonBody, new Response.Listener<JSONObject>() {
             @Override
-            public void onResponse(String response) {
-                Log.i("VOLLEY", response);
+            public void onResponse(JSONObject response) {
+                Log.i("VOLLEY", response.toString());
+
+                try {
+                    String id = response.getString("id");
+                    String username = response.getString("username");
+                    String email = response.getString("email");
+
+                    if (!id.isEmpty()) {
+                        editor.putString("issignedin", "true");
+                        editor.putString("userid", id);
+                        editor.putString("username", username);
+                        editor.putString("email", email);
+
+                        Intent intent = new Intent(loginPage.this, homePage.class);
+                        startActivity(intent);
+                    }
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         }, new Response.ErrorListener() {
             @Override
@@ -100,31 +126,9 @@ public class loginPage extends AppCompatActivity {
                 return "application/json; charset=utf-8";
             }
 
-            @Override
-            public byte[] getBody() throws AuthFailureError {
-                try {
-                    return requestBody == null ? null : requestBody.getBytes("utf-8");
-                } catch (UnsupportedEncodingException uee) {
-                    VolleyLog.wtf("Unsupported Encoding while trying to get the bytes of %s using %s", requestBody, "utf-8");
-                    return null;
-                }
-            }
-
-            @Override
-            protected Response<String> parseNetworkResponse(NetworkResponse res) {
-                String responseCode = "";
-                if (res != null) {
-                    responseCode = String.valueOf(res.statusCode);
-                    code[0] = responseCode;
-                }
-                return Response.success(responseCode, HttpHeaderParser.parseCacheHeaders(res));
-            }
         };
 
         queue.add(req);
-        //Temp
-//        http://arnab.ch/blog/2013/08/asynchronous-http-requests-in-android-using-volley/
-        return code[0];
     }
 
 }
