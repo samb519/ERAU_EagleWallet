@@ -13,8 +13,8 @@ import android.widget.TextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import com.android.volley.NetworkResponse;
+import com.android.volley.ParseError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -44,10 +44,10 @@ public class loginPage extends AppCompatActivity {
 
         is_signed_in = userDetails.getString("issignedin", "false");
 
-        if (is_signed_in.equals("true")) {
-            Intent intent = new Intent(loginPage.this, homePage.class);
-            startActivity(intent);
-        }
+//        if (is_signed_in.equals("true")) {
+//            Intent intent = new Intent(loginPage.this, homePage.class);
+//            startActivity(intent);
+//        }
 
         loginButton = (Button) findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -126,7 +126,24 @@ public class loginPage extends AppCompatActivity {
                 return "application/json; charset=utf-8";
             }
 
-        };
+//            @Override
+//           public Response<JSONObject> parseNetworkResponse(NetworkResponse response)
+//           {
+//                try {
+//                    String jsonString = new String(response.data, HttpHeaderParser.parseCharset(response.headers));
+//                    JSONObject obj = new JSONObject(jsonString);
+//                    return Response.success(obj, HttpHeaderParser.parseCacheHeaders(response));
+//                }
+//               catch (UnsupportedEncodingException e)
+//               {
+//                  return Response.error(new ParseError(e));
+//               }
+//               catch (JSONException je)
+//               {
+//                   return Response.error(new ParseError(je));
+//               }
+//           }
+       };
 
         queue.add(req);
     }
