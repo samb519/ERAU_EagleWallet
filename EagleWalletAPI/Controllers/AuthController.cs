@@ -46,14 +46,8 @@ namespace EagleWalletAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            if (!string.IsNullOrEmpty(dto.Username))
-                dto.Username = dto.Username.ToLower();
-
-
             foreach (char c in INVALID_CHARACTERS)
             {
-                if (dto.Username.Contains(c))
-                    ModelState.AddModelError("Username", "Invalid character \"" + c + "\"");
                 if (dto.Email.Contains(c))
                     ModelState.AddModelError("Email", "Invalid character \"" + c + "\"");
             }
@@ -63,8 +57,8 @@ namespace EagleWalletAPI.Controllers
 
             var result = await repository.Register(dto);
 
-            if (result.Item1 == -1 && result.Item2.Contains("Username"))
-                ModelState.AddModelError("Username", "Username already taken");
+            if (result.Item1 == -1 && result.Item2.Contains("StudentID"))
+                ModelState.AddModelError("StudentID", "StudentID already taken");
 
             if (result.Item1 == -1 && result.Item2.Contains("email"))
                 ModelState.AddModelError("Email", "Email is already associated with an account.");
@@ -74,7 +68,6 @@ namespace EagleWalletAPI.Controllers
 
             var userToCreate = new User()
             {
-                Username = dto.Username,
                 Email = dto.Email,
                 Id = result.Item1
             };
@@ -100,7 +93,7 @@ namespace EagleWalletAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var user = await repository.Login(dto.Username, dto.Password);
+            var user = await repository.Login(dto.Email, dto.Password);
 
             if (user == null)
                 return Unauthorized();
