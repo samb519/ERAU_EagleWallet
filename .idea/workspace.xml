@@ -48,7 +48,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeProjectDexDebug/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/out/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifest/debug/out/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_manifests/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/packaged_manifests/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/eaglewallet/CreateAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/eaglewallet/CreateAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/eaglewallet/loginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/eaglewallet/loginPage.java" afterDir="false" />
     </list>
@@ -205,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616525979696</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Working Post requests">
+      <created>1616551844415</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616551844415</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,7 +264,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Requests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Requests" />
+    <MESSAGE value="Working Post requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working Post requests" />
   </component>
   <component name="WindowStateProjectService">
     <state x="120" y="102" width="1681" height="838" key="AVDManager" timestamp="1616525162453">
@@ -257,35 +273,35 @@
     </state>
     <state x="94" y="94" width="1313" height="773" key="AVDManager/0.0.1500.960@0.0.1500.960" timestamp="1614031788547" />
     <state x="120" y="102" width="1681" height="838" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1616525162453" />
-    <state width="1877" height="271" key="GridCell.Tab.0.bottom" timestamp="1616551206683">
+    <state width="1183" height="271" key="GridCell.Tab.0.bottom" timestamp="1616628516731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1476" height="221" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1614232505771" />
-    <state width="1877" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616551206683" />
-    <state width="1877" height="271" key="GridCell.Tab.0.center" timestamp="1616551206683">
+    <state width="1183" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616628516731" />
+    <state width="1183" height="271" key="GridCell.Tab.0.center" timestamp="1616628516731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1476" height="221" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1614232505771" />
-    <state width="1877" height="271" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616551206683" />
-    <state width="1877" height="271" key="GridCell.Tab.0.left" timestamp="1616551206683">
+    <state width="1183" height="271" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616628516731" />
+    <state width="1183" height="271" key="GridCell.Tab.0.left" timestamp="1616628516731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1476" height="221" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1614232505771" />
-    <state width="1877" height="271" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616551206683" />
-    <state width="1877" height="271" key="GridCell.Tab.0.right" timestamp="1616551206683">
+    <state width="1183" height="271" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616628516731" />
+    <state width="1183" height="271" key="GridCell.Tab.0.right" timestamp="1616628516731">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1476" height="221" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1614232505771" />
-    <state width="1877" height="271" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616551206683" />
+    <state width="1183" height="271" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616628516731" />
     <state x="323" y="137" key="SettingsEditor" timestamp="1616525146094">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="252" y="126" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1614032084504" />
     <state x="323" y="137" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1616525146094" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1616525987456">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1616551888215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1616525987456" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1616551888215" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1616525031676">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

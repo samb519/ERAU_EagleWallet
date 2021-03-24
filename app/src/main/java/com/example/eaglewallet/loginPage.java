@@ -53,7 +53,6 @@ public class loginPage extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                Log.i("TEST", "Try request");
                 postUserLogin();
 
             }
@@ -68,14 +67,12 @@ public class loginPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 
     private void postUserLogin() {
 
-        EditText usernameText = (EditText) findViewById(R.id.editTextTextEmailAddress);
-        String username = usernameText.getText().toString();
+        EditText emailText = (EditText) findViewById(R.id.editTextTextEmailAddress);
+        String email = emailText.getText().toString();
 
         EditText passwordText = (EditText) findViewById(R.id.editTextTextPassword);
         String password = passwordText.getText().toString();
@@ -84,13 +81,11 @@ public class loginPage extends AppCompatActivity {
         String url = "https://eaglewallet.wise-net.xyz/api/Auth/login";
         JSONObject jsonBody = new JSONObject();
         try {
-            jsonBody.put("username", username);
+            jsonBody.put("email", email);
             jsonBody.put("password", password);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        final String requestBody = jsonBody.toString();
-
         JsonObjectRequest req = new JsonObjectRequest(url, jsonBody, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -98,13 +93,11 @@ public class loginPage extends AppCompatActivity {
 
                 try {
                     String id = response.getString("id");
-                    String username = response.getString("username");
                     String email = response.getString("email");
 
                     if (!id.isEmpty()) {
                         editor.putString("issignedin", "true");
                         editor.putString("userid", id);
-                        editor.putString("username", username);
                         editor.putString("email", email);
 
                         Intent intent = new Intent(loginPage.this, homePage.class);
