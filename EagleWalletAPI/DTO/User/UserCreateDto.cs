@@ -9,6 +9,7 @@ namespace EagleWalletAPI.DTO.User
     public class UserCreateDto
     {
         [Required]
+        [Range(1000000, 9999999, ErrorMessage = "You must input an ID 7 digits long")]
         public int StudentID { get; set; }
         [Required]
         public string FirstName { get; set; }

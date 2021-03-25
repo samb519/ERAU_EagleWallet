@@ -52,6 +52,19 @@ namespace EagleWalletAPI.Controllers
                     ModelState.AddModelError("Email", "Invalid character \"" + c + "\"");
             }
 
+            if (!dto.Password.Any(char.IsUpper))
+                ModelState.AddModelError("Password", "Upper case character required");
+
+            if (!dto.Password.Any(char.IsLower))
+                ModelState.AddModelError("Password", "Lower case character required");
+
+            if (!dto.Password.Any(char.IsDigit))
+                ModelState.AddModelError("Password", "Number required");
+
+            if (!dto.Password.Any(c => !char.IsLetterOrDigit(c)))
+                ModelState.AddModelError("Password", "Special character required");
+            
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
