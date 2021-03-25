@@ -33,12 +33,14 @@ public class loginPage extends AppCompatActivity {
     SharedPreferences userDetails;
     SharedPreferences.Editor editor;
     String is_signed_in = "";
-
+    TextView warningText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
-
+        warningText = (TextView) findViewById((R.id.loginWarningText));
+        warningText.setText("Username/Password is incorrect");
+        displayWarning(false);
         userDetails = getSharedPreferences("userdetails", MODE_PRIVATE);
         editor = userDetails.edit();
 
@@ -70,6 +72,18 @@ public class loginPage extends AppCompatActivity {
         });
 
 
+    }
+
+    private  void displayWarning(boolean condition)
+    {
+        if(condition)
+        {
+            warningText.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            warningText.setVisibility(View.INVISIBLE);
+        }
     }
 
     private void postUserLogin() {
@@ -108,11 +122,13 @@ public class loginPage extends AppCompatActivity {
                         editor.putString("email", email);
 
                         Intent intent = new Intent(loginPage.this, homePage.class);
+                        displayWarning(false);
                         startActivity(intent);
                     }
 
                 } catch (Exception e) {
                     e.printStackTrace();
+                    displayWarning(true);
                 }
             }
         }, new Response.ErrorListener() {

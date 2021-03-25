@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
@@ -33,6 +34,7 @@ public class CreateAccount extends AppCompatActivity {
     Button CreatAccountNext;
     SharedPreferences regDetails;
     SharedPreferences.Editor editor;
+    TextView warningText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,10 @@ public class CreateAccount extends AppCompatActivity {
 
         regDetails = getSharedPreferences("userdetails", MODE_PRIVATE);
         editor = regDetails.edit();
+
+        warningText = (TextView) findViewById((R.id.creatAccWarningText));
+        warningText.setText("Create Account Failed, please fill in all boxes");
+        displayWarning(false);
 
         createAccountBackBtn = (Button)findViewById(R.id.createAccountBackBtn);
         createAccountBackBtn.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +66,17 @@ public class CreateAccount extends AppCompatActivity {
             }
         });
 
+    }
+    private  void displayWarning(boolean condition)
+    {
+        if(condition)
+        {
+            warningText.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            warningText.setVisibility(View.INVISIBLE);
+        }
     }
 
     private void postUserRegistration() {
@@ -106,11 +123,13 @@ public class CreateAccount extends AppCompatActivity {
                         editor.putString("email", email);
 
                         Intent intent = new Intent(CreateAccount.this, ChoosePayment.class );
+                        displayWarning(false);
                         startActivity(intent);
                     }
 
                 } catch (Exception e) {
                     e.printStackTrace();
+                    displayWarning(true);
                 }
             }
         }, new Response.ErrorListener() {

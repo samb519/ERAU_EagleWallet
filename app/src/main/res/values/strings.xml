@@ -31,5 +31,6 @@
     <string name="title_eagleDollarst"> Eagle Dollars </string>
     <string name="title_remaining">Remaining</string>
     <string name="studentName">Student Name</string>
+    <string name="loginWarningMessage">Warning Message</string>
 
 </resources>

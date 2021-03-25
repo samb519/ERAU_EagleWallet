@@ -1608,6 +1608,7 @@ id container
 id content
 id contentPanel
 id coordinator
+id creatAccWarningText
 id createAccountAddPaymentBackBtn
 id createAccountAddPaymentBtn
 id createAccountBackBtn
@@ -1688,6 +1689,7 @@ id line3
 id listMode
 id list_item
 id loginButton
+id loginWarningText
 id masked
 id message
 id middle
@@ -2077,6 +2079,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string loginWarningMessage
 string login_button
 string messages_header
 string mtrl_badge_numberless_content_description
