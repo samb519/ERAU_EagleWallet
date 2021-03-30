@@ -32,5 +32,14 @@
     <string name="title_remaining">Remaining</string>
     <string name="studentName">Student Name</string>
     <string name="loginWarningMessage">Warning Message</string>
+    <string name="backBtnCreateAccount">Back</string>
+    <string name="studentIDCreateAccount">StudentID</string>
+    <string name="first_nameCreateAccount">First Name</string>
+    <string name="warning_messageCreateAccount">Warning Message</string>
+    <string name="email_CreateAccount">Email</string>
+    <string name="last_name_CreateAccount">Last Name</string>
+    <string name="profileimagebtncreateaccount">ProfileImageBtnCreateAccount</string>
+    <string name="create_accountTxt">Create Account</string>
+    <string name="eagleicon">eagleIcon</string>
 
 </resources>

@@ -50,6 +50,7 @@
         android:layout_width="359dp"
         android:layout_height="263dp"
         android:layout_marginStart="26dp"
+        android:contentDescription="@string/eagleicon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/eagle" />
@@ -63,19 +64,19 @@
         android:clickable="true"
         android:contextClickable="true"
         android:defaultFocusHighlightEnabled="true"
-        android:text="Create Account"
+        android:text="@string/create_accountTxt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/loginWarningText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginBottom="256dp"
+        android:layout_width="234dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="468dp"
         android:text="@string/loginWarningMessage"
         android:textColor="#FF0000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

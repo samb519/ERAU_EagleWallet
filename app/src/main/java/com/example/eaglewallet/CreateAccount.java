@@ -45,8 +45,7 @@ public class CreateAccount extends AppCompatActivity {
         editor = regDetails.edit();
 
         warningText = (TextView) findViewById((R.id.creatAccWarningText));
-        warningText.setText("Create Account Failed, please fill in all boxes");
-        displayWarning(false);
+        displayWarning(false,"Create Account Failed");
 
         createAccountBackBtn = (Button)findViewById(R.id.createAccountBackBtn);
         createAccountBackBtn.setOnClickListener(new View.OnClickListener() {
@@ -67,10 +66,11 @@ public class CreateAccount extends AppCompatActivity {
         });
 
     }
-    private  void displayWarning(boolean condition)
+    private  void displayWarning(boolean condition, String error)
     {
         if(condition)
         {
+            warningText.setText(error);
             warningText.setVisibility(View.VISIBLE);
         }
         else
@@ -88,8 +88,8 @@ public class CreateAccount extends AppCompatActivity {
         EditText lastNameText = (EditText) findViewById(R.id.editTextTextPersonLastName);
         String lastName = lastNameText.getText().toString();
 
-        EditText studentidText = (EditText) findViewById(R.id.editStudentID);
-        int studentid = Integer.parseInt(studentidText.getText().toString());
+        EditText studentIDText = (EditText) findViewById(R.id.editStudentID);
+        int studentID = Integer.parseInt(studentIDText.getText().toString());
 
         EditText passwordText = (EditText) findViewById(R.id.editTextTextPassword2);
         String password = passwordText.getText().toString();
@@ -101,7 +101,7 @@ public class CreateAccount extends AppCompatActivity {
         String url ="https://eaglewallet.wise-net.xyz/api/Auth/register";
         JSONObject jsonBody = new JSONObject();
         try {
-            jsonBody.put("studentID", studentid);
+            jsonBody.put("studentID", studentID);
             jsonBody.put("firstName", firstName);
             jsonBody.put("lastName", lastName);
             jsonBody.put("password", password);
@@ -125,19 +125,20 @@ public class CreateAccount extends AppCompatActivity {
                         editor.putString("email", email);
 
                         Intent intent = new Intent(CreateAccount.this, ChoosePayment.class );
-                        displayWarning(false);
+                        displayWarning(false,"Create Account Failed");
                         startActivity(intent);
                     }
 
                 } catch (Exception e) {
                     e.printStackTrace();
-                    displayWarning(true);
+
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("VOLLEY", error.toString());
+                displayWarning(true,error.toString());
             }
         }) {
             @Override

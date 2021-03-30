@@ -25,6 +25,7 @@
             android:id="@+id/addProfileImageBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:contentDescription="@string/profileimagebtncreateaccount"
             app:srcCompat="@mipmap/ic_launcher" />
 
     </androidx.cardview.widget.CardView>
@@ -36,10 +37,11 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="320dp"
         android:ems="10"
-        android:hint="Last Name"
+        android:hint="@string/last_name_CreateAccount"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/CreatAccountNext"
@@ -51,6 +53,7 @@
         android:backgroundTint="#2196F3"
         android:text="@string/nextButtonCreateAccount"
         app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,7 +66,7 @@
         android:layout_marginTop="576dp"
         android:background="#00FFFFFF"
         android:backgroundTint="#2196F3"
-        android:text="Back"
+        android:text="@string/backBtnCreateAccount"
         app:cornerRadius="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -74,12 +77,13 @@
         android:layout_width="264dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="484dp"
+        android:layout_marginTop="480dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email_CreateAccount"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/editStudentID"
@@ -88,10 +92,11 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="148dp"
         android:ems="10"
-        android:hint="StudentID"
+        android:hint="@string/studentIDCreateAccount"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/editTextTextPersonFirstName"
@@ -100,10 +105,11 @@
         android:layout_marginStart="72dp"
         android:layout_marginTop="232dp"
         android:ems="10"
-        android:hint="First Name"
+        android:hint="@string/first_nameCreateAccount"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/editTextTextPassword2"
@@ -115,15 +121,16 @@
         android:hint="@string/prompt_Password"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/creatAccWarningText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
+        android:layout_width="213dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="96dp"
         android:layout_marginTop="624dp"
-        android:text="Warning Message"
+        android:text="@string/warning_messageCreateAccount"
         android:textColor="#FF0000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
