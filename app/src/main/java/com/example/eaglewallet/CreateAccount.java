@@ -82,8 +82,14 @@ public class CreateAccount extends AppCompatActivity {
     private void postUserRegistration() {
         final String[] code = {""};
 
-        EditText usernameText = (EditText) findViewById(R.id.editStudentID);
-        String username = usernameText.getText().toString();
+        EditText firstNameText = (EditText) findViewById(R.id.editTextTextPersonFirstName);
+        String firstName = firstNameText.getText().toString();
+
+        EditText lastNameText = (EditText) findViewById(R.id.editTextTextPersonLastName);
+        String lastName = lastNameText.getText().toString();
+
+        EditText studentidText = (EditText) findViewById(R.id.editStudentID);
+        int studentid = Integer.parseInt(studentidText.getText().toString());
 
         EditText passwordText = (EditText) findViewById(R.id.editTextTextPassword2);
         String password = passwordText.getText().toString();
@@ -91,15 +97,13 @@ public class CreateAccount extends AppCompatActivity {
         EditText emailText = (EditText) findViewById(R.id.editTextTextEmailAddress2);
         String email = emailText.getText().toString();
 
-        Log.i("USERNAME", username);
-        Log.i("PASSWORD", password);
-        Log.i("EMAIL", email);
-
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
         String url ="https://eaglewallet.wise-net.xyz/api/Auth/register";
         JSONObject jsonBody = new JSONObject();
         try {
-            jsonBody.put("username", username);
+            jsonBody.put("studentID", studentid);
+            jsonBody.put("firstName", firstName);
+            jsonBody.put("lastName", lastName);
             jsonBody.put("password", password);
             jsonBody.put("email", email);
         } catch (JSONException e) {
@@ -113,13 +117,11 @@ public class CreateAccount extends AppCompatActivity {
 
                 try {
                     String id = response.getString("id");
-                    String username = response.getString("username");
                     String email = response.getString("email");
 
                     if (!id.isEmpty()) {
                         editor.putString("issignedin", "true");
                         editor.putString("userid", id);
-                        editor.putString("username", username);
                         editor.putString("email", email);
 
                         Intent intent = new Intent(CreateAccount.this, ChoosePayment.class );
