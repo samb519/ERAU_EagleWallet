@@ -7,6 +7,18 @@
     tools:context=".HomeScreen">
 
     <ImageButton
+        android:id="@+id/settingsHScreenBtn"
+        android:layout_width="76dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="328dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/settings_homescreenbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/settingsicon" />
+
+    <ImageButton
         android:id="@+id/calenderHScreenBtn"
         android:layout_width="95dp"
         android:layout_height="65dp"

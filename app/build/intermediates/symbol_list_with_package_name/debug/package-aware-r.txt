@@ -1501,6 +1501,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable preference_list_divider_material
+drawable settingsicon
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1590,6 +1591,7 @@ id buttonPanel
 id button_addCard
 id button_addFunds
 id calenderHScreenBtn
+id calenderPScreenBtn
 id cancel_button
 id center
 id center_horizontal
@@ -1671,6 +1673,7 @@ id groups
 id hideable
 id home
 id homeAsUp
+id homePScreenBtn
 id homeScreenBtn
 id icon
 id icon_frame
@@ -1750,6 +1753,7 @@ id parentPanel
 id parent_matrix
 id password_toggle
 id paymentHScreenBtn
+id paymentPScreenBtn
 id peekHeight
 id percent
 id pin
@@ -1789,6 +1793,7 @@ id seekbar
 id seekbar_value
 id select_dialog_listview
 id selected
+id settingsHScreenBtn
 id shortcut
 id showCustom
 id showHome
@@ -1942,6 +1947,7 @@ layout activity_create_account
 layout activity_create_account_add_payment
 layout activity_home_page
 layout activity_home_screen
+layout activity_payment_home_screen
 layout activity_settings
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2071,6 +2077,7 @@ string attachment_summary_on
 string attachment_title
 string backBtnCreateAccount
 string bottom_sheet_behavior
+string calender_for_homescreen
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -2087,6 +2094,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string first_nameCreateAccount
 string hide_bottom_view_on_scroll_behavior
+string homescreen_button
 string icon_content_description
 string last_name_CreateAccount
 string loginWarningMessage
@@ -2135,12 +2143,14 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string payment_for_homescreen
 string preference_copied
 string profileimagebtncreateaccount
 string prompt_Email
 string prompt_Password
 string reply_title
 string search_menu_title
+string settings_homescreenbtn
 string signature_title
 string status_bar_notification_info_overflow
 string studentIDCreateAccount

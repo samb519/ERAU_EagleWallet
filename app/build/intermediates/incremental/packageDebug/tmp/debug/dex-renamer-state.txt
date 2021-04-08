@@ -1,4 +1,4 @@
-#Thu Apr 08 18:46:08 EDT 2021
+#Thu Apr 08 19:50:08 EDT 2021
 base.0=P\:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

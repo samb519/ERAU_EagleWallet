@@ -42,3 +42,5 @@ com/example/eaglewallet/ui/home/HomeViewModel.java
  com.example.eaglewallet.ui.home.HomeViewModel
 com/example/eaglewallet/HomeScreen.java
  com.example.eaglewallet.HomeScreen
+com/example/eaglewallet/PaymentHomeScreen.java
+ com.example.eaglewallet.PaymentHomeScreen

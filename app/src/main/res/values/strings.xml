@@ -44,5 +44,6 @@
     <string name="calender_for_homescreen">calender_for_homescreen</string>
     <string name="payment_for_homescreen">payment_for_homescreen</string>
     <string name="homescreen_button">homescreen_button</string>
+    <string name="settings_homescreenbtn">settings_homeScreenBtn</string>
 
 </resources>

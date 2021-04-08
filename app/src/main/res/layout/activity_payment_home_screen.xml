@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentHomeScreen">
+
+    <ImageButton
+        android:id="@+id/paymentPScreenBtn"
+        android:layout_width="95dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="600dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/payment_for_homescreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icons8_us_dollar_24" />
+
+    <ImageButton
+        android:id="@+id/homePScreenBtn"
+        android:layout_width="95dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="600dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/homescreen_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_home_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/calenderPScreenBtn"
+        android:layout_width="95dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="600dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/calender_for_homescreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
