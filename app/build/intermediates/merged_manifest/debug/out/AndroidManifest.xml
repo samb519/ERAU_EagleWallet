@@ -22,6 +22,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.EagleWallet"
         android:usesCleartextTraffic="true" >
+        <activity android:name="com.example.eaglewallet.HomeScreen" />
         <activity android:name="com.example.eaglewallet.SettingsActivity" />
         <activity android:name="com.example.eaglewallet.ChoosePayment" />
         <activity android:name="com.example.eaglewallet.CreateAccountAddPayment" />

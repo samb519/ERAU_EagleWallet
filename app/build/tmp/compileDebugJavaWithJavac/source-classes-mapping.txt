@@ -18,14 +18,6 @@ com/example/eaglewallet/ui/payment/PaymentFragment.java
 com/example/eaglewallet/ChoosePayment.java
  com.example.eaglewallet.ChoosePayment
  com.example.eaglewallet.ChoosePayment$1
-com/example/eaglewallet/ui/home/HomeViewModel.java
- com.example.eaglewallet.ui.home.HomeViewModel
-com/example/eaglewallet/BuildConfig.java
- com.example.eaglewallet.BuildConfig
-com/example/eaglewallet/CreateAccountAddPayment.java
- com.example.eaglewallet.CreateAccountAddPayment
- com.example.eaglewallet.CreateAccountAddPayment$1
- com.example.eaglewallet.CreateAccountAddPayment$2
 com/example/eaglewallet/loginPage.java
  com.example.eaglewallet.loginPage
  com.example.eaglewallet.loginPage$1
@@ -40,3 +32,13 @@ com/example/eaglewallet/CreateAccount.java
  com.example.eaglewallet.CreateAccount$3
  com.example.eaglewallet.CreateAccount$4
  com.example.eaglewallet.CreateAccount$5
+com/example/eaglewallet/CreateAccountAddPayment.java
+ com.example.eaglewallet.CreateAccountAddPayment
+ com.example.eaglewallet.CreateAccountAddPayment$1
+ com.example.eaglewallet.CreateAccountAddPayment$2
+com/example/eaglewallet/BuildConfig.java
+ com.example.eaglewallet.BuildConfig
+com/example/eaglewallet/ui/home/HomeViewModel.java
+ com.example.eaglewallet.ui.home.HomeViewModel
+com/example/eaglewallet/HomeScreen.java
+ com.example.eaglewallet.HomeScreen

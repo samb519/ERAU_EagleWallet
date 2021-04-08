@@ -114,7 +114,7 @@ public class loginPage extends AppCompatActivity {
                         editor.putString("userid", id);
                         editor.putString("email", email);
 
-                        Intent intent = new Intent(loginPage.this, homePage.class);
+                        Intent intent = new Intent(loginPage.this, HomeScreen.class);
                         displayWarning(false);
                         startActivity(intent);
                     }

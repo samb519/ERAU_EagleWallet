@@ -11,7 +11,7 @@
     <string name="title_calender">Calender</string>
     <string name="title_payment">Payment</string>
     <string name="title_activity_settings">SettingsActivity</string>
-    <string name = "nextButtonCreateAccount">Next </string>
+    <string name="nextButtonCreateAccount">Next </string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
@@ -41,5 +41,8 @@
     <string name="profileimagebtncreateaccount">ProfileImageBtnCreateAccount</string>
     <string name="create_accountTxt">Create Account</string>
     <string name="eagleicon">eagleIcon</string>
+    <string name="calender_for_homescreen">calender_for_homescreen</string>
+    <string name="payment_for_homescreen">payment_for_homescreen</string>
+    <string name="homescreen_button">homescreen_button</string>
 
 </resources>
