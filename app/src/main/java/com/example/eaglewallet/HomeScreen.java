@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class HomeScreen extends AppCompatActivity {
 
-    ImageButton calenderPScreenBtn;
+    ImageButton calenderHScreenBtn;
     ImageButton paymentHScreenBtn;
     ImageButton settingHScreenBtn;
     @Override
@@ -19,15 +19,15 @@ public class HomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
-        calenderPScreenBtn = (ImageButton) findViewById(R.id.calenderHScreenBtn);
-        calenderPScreenBtn .setOnClickListener(v ->
+        calenderHScreenBtn = (ImageButton) findViewById(R.id.calenderHScreenBtn);
+        calenderHScreenBtn.setOnClickListener(v ->
                 clickedCalenderBtn( "https://eraudining.sodexomyway.com/dining-near-me/hours"));{}
 
-        paymentHScreenBtn = (ImageButton)findViewById((R.id.paymentHScreenBtn));
+        paymentHScreenBtn = (ImageButton)findViewById(R.id.paymentHScreenBtn);
         paymentHScreenBtn .setOnClickListener(v ->
                 clickedPaymentBtn());{}
 
-        settingHScreenBtn = (ImageButton)findViewById((R.id.settingsHScreenBtn));
+        settingHScreenBtn = (ImageButton)findViewById(R.id.settingsHScreenBtn);
         settingHScreenBtn.setOnClickListener(v ->
                 clickedSettingBtn());{}
     }

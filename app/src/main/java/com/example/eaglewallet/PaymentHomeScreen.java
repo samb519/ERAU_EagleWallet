@@ -17,13 +17,14 @@ public class PaymentHomeScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment_home_screen);
 
-        homePScreenBtn = (ImageButton)findViewById((R.id.homePScreenBtn));
+        homePScreenBtn = (ImageButton)findViewById(R.id.homePScreenBtn);
         homePScreenBtn.setOnClickListener(v ->
                 clickedHomeBtn());{}
+                
+        calenderPScreenBtn = (ImageButton) findViewById(R.id.calenderPScreenBtn);
+        calenderPScreenBtn.setOnClickListener(v ->
+                clickedCalenderBtn("https://eraudining.sodexomyway.com/dining-near-me/hours"));{}
 
-        calenderPScreenBtn = (ImageButton) findViewById(R.id.calenderHScreenBtn);
-        calenderPScreenBtn .setOnClickListener(v ->
-                clickedCalenderBtn( "https://eraudining.sodexomyway.com/dining-near-me/hours"));{}
     }
 
     public  void clickedHomeBtn()

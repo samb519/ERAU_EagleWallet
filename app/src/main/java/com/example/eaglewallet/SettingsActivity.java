@@ -32,7 +32,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Send the data to the databse
-                Intent intent = new Intent(SettingsActivity.this, homePage.class);
+                Intent intent = new Intent(SettingsActivity.this, HomeScreen.class);
                 startActivity(intent);
             }
         });
@@ -41,7 +41,7 @@ public class SettingsActivity extends AppCompatActivity {
         SettingsBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SettingsActivity.this, homePage.class);
+                Intent intent = new Intent(SettingsActivity.this, HomeScreen.class);
                 startActivity(intent);
             }
         });

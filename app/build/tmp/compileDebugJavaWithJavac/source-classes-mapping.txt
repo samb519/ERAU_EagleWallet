@@ -1,9 +1,7 @@
 com/example/eaglewallet/ui/calender/CalenderViewModel.java
  com.example.eaglewallet.ui.calender.CalenderViewModel
-com/example/eaglewallet/SettingsActivity.java
- com.example.eaglewallet.SettingsActivity
- com.example.eaglewallet.SettingsActivity$1
- com.example.eaglewallet.SettingsActivity$2
+com/example/eaglewallet/BuildConfig.java
+ com.example.eaglewallet.BuildConfig
 com/example/eaglewallet/ui/calender/CalenderFragment.java
  com.example.eaglewallet.ui.calender.CalenderFragment
 com/example/eaglewallet/homePage.java
@@ -18,13 +16,8 @@ com/example/eaglewallet/ui/payment/PaymentFragment.java
 com/example/eaglewallet/ChoosePayment.java
  com.example.eaglewallet.ChoosePayment
  com.example.eaglewallet.ChoosePayment$1
-com/example/eaglewallet/loginPage.java
- com.example.eaglewallet.loginPage
- com.example.eaglewallet.loginPage$1
- com.example.eaglewallet.loginPage$2
- com.example.eaglewallet.loginPage$3
- com.example.eaglewallet.loginPage$4
- com.example.eaglewallet.loginPage$5
+com/example/eaglewallet/ui/home/HomeViewModel.java
+ com.example.eaglewallet.ui.home.HomeViewModel
 com/example/eaglewallet/CreateAccount.java
  com.example.eaglewallet.CreateAccount
  com.example.eaglewallet.CreateAccount$1
@@ -36,10 +29,17 @@ com/example/eaglewallet/CreateAccountAddPayment.java
  com.example.eaglewallet.CreateAccountAddPayment
  com.example.eaglewallet.CreateAccountAddPayment$1
  com.example.eaglewallet.CreateAccountAddPayment$2
-com/example/eaglewallet/BuildConfig.java
- com.example.eaglewallet.BuildConfig
-com/example/eaglewallet/ui/home/HomeViewModel.java
- com.example.eaglewallet.ui.home.HomeViewModel
+com/example/eaglewallet/loginPage.java
+ com.example.eaglewallet.loginPage
+ com.example.eaglewallet.loginPage$1
+ com.example.eaglewallet.loginPage$2
+ com.example.eaglewallet.loginPage$3
+ com.example.eaglewallet.loginPage$4
+ com.example.eaglewallet.loginPage$5
+com/example/eaglewallet/SettingsActivity.java
+ com.example.eaglewallet.SettingsActivity
+ com.example.eaglewallet.SettingsActivity$1
+ com.example.eaglewallet.SettingsActivity$2
 com/example/eaglewallet/HomeScreen.java
  com.example.eaglewallet.HomeScreen
 com/example/eaglewallet/PaymentHomeScreen.java
