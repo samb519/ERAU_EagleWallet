@@ -53,4 +53,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icons8_us_dollar_24" />
+
+    <LinearLayout
+        android:layout_width="226dp"
+        android:layout_height="210dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="260dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/determinateBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="196dp"
+            android:layout_height="38dp"
+            android:layout_margin="15dp"
+            android:progress="25" />
+
+        <ProgressBar
+            android:id="@+id/determinateBar4"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="196dp"
+            android:layout_height="38dp"
+            android:layout_margin="15dp"
+            android:progress="25" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

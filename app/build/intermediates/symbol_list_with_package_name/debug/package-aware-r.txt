@@ -1478,6 +1478,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
 drawable icons8_us_dollar_24
+drawable loginbackground
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1501,6 +1502,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable preference_list_divider_material
+drawable round
 drawable settingsicon
 drawable test_custom_background
 drawable tooltip_frame_dark
@@ -1680,7 +1682,6 @@ id icon_frame
 id icon_group
 id ifRoom
 id image
-id imageView
 id imageView2
 id info
 id invisible
@@ -1693,6 +1694,7 @@ id line1
 id line3
 id listMode
 id list_item
+id loginBackground
 id loginButton
 id loginWarningText
 id masked
@@ -1746,6 +1748,7 @@ id notification_main_column_container
 id off
 id on
 id outline
+id pBarLoginScreen
 id packed
 id parallax
 id parent

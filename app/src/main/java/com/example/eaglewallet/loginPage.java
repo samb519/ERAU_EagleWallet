@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import org.json.JSONException;
@@ -34,6 +35,8 @@ public class loginPage extends AppCompatActivity {
     SharedPreferences.Editor editor;
     String is_signed_in = "";
     TextView warningText;
+    ProgressBar pgsBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,17 +49,14 @@ public class loginPage extends AppCompatActivity {
 
         is_signed_in = userDetails.getString("issignedin", "false");
 
-//        if (is_signed_in.equals("true")) {
-//            Intent intent = new Intent(loginPage.this, homePage.class);
-//            startActivity(intent);
-//        }
+        pgsBar = (ProgressBar)findViewById(R.id.pBarLoginScreen);
+        pgsBar.setVisibility(View.GONE);
 
         loginButton = (Button) findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
                 postUserLogin();
-
+                pgsBar.setVisibility(View.GONE);
             }
         });
 
@@ -84,7 +84,7 @@ public class loginPage extends AppCompatActivity {
     }
 
     private void postUserLogin() {
-
+        pgsBar.setVisibility(View.VISIBLE);
         EditText emailText = (EditText) findViewById(R.id.editTextTextEmailAddress);
         String email = emailText.getText().toString();
 
@@ -135,23 +135,6 @@ public class loginPage extends AppCompatActivity {
                 return "application/json; charset=utf-8";
             }
 
-//            @Override
-//           public Response<JSONObject> parseNetworkResponse(NetworkResponse response)
-//           {
-//                try {
-//                    String jsonString = new String(response.data, HttpHeaderParser.parseCharset(response.headers));
-//                    JSONObject obj = new JSONObject(jsonString);
-//                    return Response.success(obj, HttpHeaderParser.parseCacheHeaders(response));
-//                }
-//               catch (UnsupportedEncodingException e)
-//               {
-//                  return Response.error(new ParseError(e));
-//               }
-//               catch (JSONException je)
-//               {
-//                   return Response.error(new ParseError(je));
-//               }
-//           }
        };
 
         queue.add(req);

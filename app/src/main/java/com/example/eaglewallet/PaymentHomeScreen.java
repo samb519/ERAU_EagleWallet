@@ -20,7 +20,7 @@ public class PaymentHomeScreen extends AppCompatActivity {
         homePScreenBtn = (ImageButton)findViewById(R.id.homePScreenBtn);
         homePScreenBtn.setOnClickListener(v ->
                 clickedHomeBtn());{}
-                
+
         calenderPScreenBtn = (ImageButton) findViewById(R.id.calenderPScreenBtn);
         calenderPScreenBtn.setOnClickListener(v ->
                 clickedCalenderBtn("https://eraudining.sodexomyway.com/dining-near-me/hours"));{}
@@ -33,7 +33,8 @@ public class PaymentHomeScreen extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void clickedCalenderBtn(String url){
+    public void clickedCalenderBtn(String url)
+    {
         Intent intent=new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));
         startActivity(intent);
