@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".HomeScreen">
 
     <ImageButton
@@ -23,7 +24,7 @@
         android:layout_width="95dp"
         android:layout_height="65dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="620dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/calender_for_homescreen"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,8 +35,8 @@
         android:id="@+id/homeScreenBtn"
         android:layout_width="95dp"
         android:layout_height="65dp"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="620dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/homescreen_button"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,8 +47,8 @@
         android:id="@+id/paymentHScreenBtn"
         android:layout_width="95dp"
         android:layout_height="65dp"
-        android:layout_marginStart="312dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="620dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/payment_for_homescreen"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,45 +56,147 @@
         app:srcCompat="@drawable/icons8_us_dollar_24" />
 
     <LinearLayout
+        android:id="@+id/ProgressBarLayout"
         android:layout_width="225dp"
         android:layout_height="274dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="200dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ProgressBar
-            android:id="@+id/determinateBar7"
+            android:id="@+id/Meal_PlansBar"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:layout_margin="15dp"
-            android:progress="25" />
+            android:background="#FFFFFF"
+            android:endColor="#FFFFFF"
+            android:foregroundTint="@color/white"
+            android:progress="25"
+            android:progressBackgroundTint="?attr/colorButtonNormal"
+            android:progressDrawable="@drawable/myprogressbar1"
+            android:progressTint="#4CAF50" />
 
         <ProgressBar
-            android:id="@+id/determinateBar"
+            android:id="@+id/SodexoBar"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="196dp"
             android:layout_height="38dp"
             android:layout_margin="15dp"
-            android:progress="25" />
+            android:progress="25"
+            android:progressBackgroundTint="?attr/colorButtonNormal"
+            android:progressDrawable="@drawable/myprogressbar1"
+            android:progressTint="#4CAF50" />
 
         <ProgressBar
-            android:id="@+id/determinateBar4"
+            android:id="@+id/Dinning_DollarsBar"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="196dp"
             android:layout_height="38dp"
             android:layout_margin="15dp"
-            android:progress="25" />
+            android:progress="25"
+            android:progressBackgroundTint="?attr/colorButtonNormal"
+            android:progressDrawable="@drawable/myprogressbar1"
+            android:progressTint="#4CAF50" />
 
         <ProgressBar
-            android:id="@+id/determinateBar5"
+            android:id="@+id/Eagle_DollarsBar"
             style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:layout_margin="15dp"
-            android:progress="25" />
+            android:progress="25"
+            android:progressBackgroundTint="?attr/colorButtonNormal"
+            android:progressDrawable="@drawable/myprogressbar1"
+            android:progressTint="#4CAF50" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ProgressNameLayout"
+        android:layout_width="132dp"
+        android:layout_height="274dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/Meal_Plan_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="@string/meal_plans_text"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/Sodexo_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="@string/sodexo_text"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/Dinning_Dollars_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="@string/dinning_dollars_text"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/Eagle_Dollars_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="@string/eagle_dollars_text"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/HScreenBorderTop"
+        android:layout_width="415dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="140dp"
+        android:background="#000000"
+        android:contentDescription="@string/homescreenbordertop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/divider_horizontal_textfield" />
+
+    <ImageView
+        android:id="@+id/HScreenBorderBtm"
+        android:layout_width="415dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="612dp"
+        android:background="#000000"
+        android:contentDescription="@string/homescreenborderbtm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/divider_horizontal_textfield" />
+
+    <ImageButton
+        android:id="@+id/hideDollarsBtn"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="148dp"
+        android:contentDescription="@string/hidesdollars"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
