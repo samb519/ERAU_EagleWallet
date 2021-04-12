@@ -55,5 +55,14 @@
     <string name="processingScannerText">Processing</string>
     <string name="add_funds">Add Funds</string>
     <string name="add_card">Add Card</string>
+    <string name="credit_card">Credit Card #</string>
+    <string name="full_name">Full Name</string>
+    <string name="street_address">Street Address</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="your_payment_history">Your Payment History:</string>
+    <string name="example_of_payment_history_on_4_12_2021">Example Of Payment History on 4/12/2021</string>
+    <string name="your_current_balances">Your Current Balances:</string>
 
 </resources>
