@@ -47,7 +47,7 @@
         android:id="@+id/paymentHScreenBtn"
         android:layout_width="95dp"
         android:layout_height="65dp"
-        android:layout_marginStart="300dp"
+        android:layout_marginStart="308dp"
         android:layout_marginTop="620dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/payment_for_homescreen"
@@ -77,7 +77,7 @@
             android:progress="25"
             android:progressBackgroundTint="?attr/colorButtonNormal"
             android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="#4CAF50" />
+            android:progressTint="@android:color/holo_blue_bright" />
 
         <ProgressBar
             android:id="@+id/SodexoBar"
@@ -88,7 +88,7 @@
             android:progress="25"
             android:progressBackgroundTint="?attr/colorButtonNormal"
             android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="#4CAF50" />
+            android:progressTint="@android:color/holo_blue_bright" />
 
         <ProgressBar
             android:id="@+id/Dinning_DollarsBar"
@@ -99,7 +99,7 @@
             android:progress="25"
             android:progressBackgroundTint="?attr/colorButtonNormal"
             android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="#4CAF50" />
+            android:progressTint="@android:color/holo_blue_bright" />
 
         <ProgressBar
             android:id="@+id/Eagle_DollarsBar"
@@ -110,7 +110,7 @@
             android:progress="25"
             android:progressBackgroundTint="?attr/colorButtonNormal"
             android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="#4CAF50" />
+            android:progressTint="@android:color/holo_blue_bright" />
 
     </LinearLayout>
 
@@ -198,5 +198,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <ProgressBar
+        android:id="@+id/pBarHScreen"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Inverse"
+        android:layout_width="147dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="472dp"
+        android:background="#00FFFFFF"
+        android:foregroundTint="#FFFFFF"
+        android:indeterminateTint="@android:color/holo_blue_bright"
+        android:progressTint="#03A9F4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ProgressBar>
+
+    <TextView
+        android:id="@+id/scannerProcessText"
+        android:layout_width="89dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="524dp"
+        android:text="@string/processingScannerText"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

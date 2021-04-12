@@ -1685,6 +1685,7 @@ id ghost_view_holder
 id gone
 id group_divider
 id groups
+id hideDollarsBtn
 id hideable
 id home
 id homeAsUp
@@ -1761,7 +1762,7 @@ id notification_main_column_container
 id off
 id on
 id outline
-id pBarLoginScreen
+id pBarHScreen
 id packed
 id parallax
 id parent
@@ -1789,6 +1790,7 @@ id rounded
 id save_non_transition_alpha
 id save_overlay_view
 id scale
+id scannerProcessText
 id screen
 id scroll
 id scrollIndicatorDown
@@ -2112,6 +2114,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string first_nameCreateAccount
 string hide_bottom_view_on_scroll_behavior
+string hidesdollars
 string homescreen_button
 string homescreenborderbtm
 string homescreenbordertop
@@ -2166,6 +2169,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string payment_for_homescreen
 string preference_copied
+string processingScannerText
 string profileimagebtncreateaccount
 string prompt_Email
 string prompt_Password

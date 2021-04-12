@@ -14,18 +14,12 @@ import android.widget.TextView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import com.android.volley.NetworkResponse;
-import com.android.volley.ParseError;
-import com.android.volley.Request;
+
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-
-import java.io.UnsupportedEncodingException;
 
 public class loginPage extends AppCompatActivity {
 
@@ -49,7 +43,7 @@ public class loginPage extends AppCompatActivity {
 
         is_signed_in = userDetails.getString("issignedin", "false");
 
-        pgsBar = (ProgressBar)findViewById(R.id.pBarLoginScreen);
+        pgsBar = (ProgressBar)findViewById(R.id.pBarHScreen);
         pgsBar.setVisibility(View.GONE);
 
         loginButton = (Button) findViewById(R.id.loginButton);

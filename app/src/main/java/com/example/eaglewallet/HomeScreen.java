@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class HomeScreen extends AppCompatActivity {
@@ -14,10 +15,19 @@ public class HomeScreen extends AppCompatActivity {
     ImageButton calenderHScreenBtn;
     ImageButton paymentHScreenBtn;
     ImageButton settingHScreenBtn;
+    ProgressBar pBarHScreen;
+    TextView processText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
+        pBarHScreen = (ProgressBar)findViewById(R.id.pBarHScreen);
+        disEnableScannerProgress();
+
+        processText = (TextView) findViewById(R.id.scannerProcessText);
+        disProcessText();
 
         calenderHScreenBtn = (ImageButton) findViewById(R.id.calenderHScreenBtn);
         calenderHScreenBtn.setOnClickListener(v ->
@@ -32,22 +42,57 @@ public class HomeScreen extends AppCompatActivity {
                 clickedSettingBtn());{}
     }
 
-    public void clickedCalenderBtn(String url){
+    private void clickedCalenderBtn(String url){
         Intent intent=new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(url));
         startActivity(intent);
 
     }
 
-    public  void clickedPaymentBtn()
+    private   void clickedPaymentBtn()
     {
         Intent intent=new Intent(HomeScreen.this, PaymentHomeScreen.class);
         startActivity(intent);
     }
 
-    public  void clickedSettingBtn()
+    private   void clickedSettingBtn()
     {
         Intent intent=new Intent(HomeScreen.this, SettingsActivity.class);
         startActivity(intent);
+    }
+
+    private  void enableScannerProgress()
+    {
+        pBarHScreen.setVisibility(View.VISIBLE);
+    }
+
+    private void disEnableScannerProgress()
+    {
+        pBarHScreen.setVisibility(View.GONE);
+    }
+
+    private  void processFailed()
+    {
+        processText.setText("Process Failed");
+    }
+
+    private  void processCurrently()
+    {
+        processText.setText("Processing");
+    }
+
+    private  void processComplete()
+    {
+        processText.setText("Process Completed");
+    }
+
+    private  void disProcessText()
+    {
+        processText.setVisibility(View.GONE);
+    }
+
+    private  void enableProcessText()
+    {
+        processText.setVisibility(View.VISIBLE);
     }
 }

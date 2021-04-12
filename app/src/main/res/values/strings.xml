@@ -52,5 +52,6 @@
     <string name="homescreenbordertop">homescreenBorderTop</string>
     <string name="homescreenborderbtm">homeScreenBorderBtm</string>
     <string name="hidesdollars">hidesDollars</string>
+    <string name="processingScannerText">Processing</string>
 
 </resources>
