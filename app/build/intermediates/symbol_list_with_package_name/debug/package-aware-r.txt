@@ -1513,6 +1513,15 @@ drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
+id AddPScreen_Amount
+id AddPScreen_Back
+id AddPScreen_CardSpinner
+id AddPScreen_CheckB0
+id AddPScreen_CheckB1
+id AddPScreen_CheckB2
+id AddPScreen_Layout
+id AddPScreen_Submit
+id AddPScreen_Title
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
@@ -1524,6 +1533,7 @@ id Dinning_DollarsBar
 id Dinning_Dollars_text
 id Eagle_DollarsBar
 id Eagle_Dollars_text
+id ExistCardPScreen_CardLayout
 id FUNCTION
 id GPayBtn
 id HScreen_Title
@@ -1532,8 +1542,10 @@ id Meal_Plan_Text
 id Meal_PlansBar
 id PScreenBorderBtm
 id PScreenBorderBtm2
+id PScreenBorderBtm3
 id PScreenBorderTop
 id PScreenBorderTop2
+id PScreenBorderTop3
 id PScreen_City
 id PScreen_CreditCardNum
 id PScreen_ExHistory
@@ -1702,6 +1714,7 @@ id fitToContents
 id fixed
 id forever
 id fragment_container_view_tag
+id fundOption_Layout
 id ghost_view
 id ghost_view_holder
 id gone
@@ -1734,6 +1747,8 @@ id loginBackground
 id loginButton
 id loginWarningText
 id masked
+id mealOptions
+id mealOptionsLayout
 id message
 id middle
 id mini
@@ -1796,6 +1811,7 @@ id paymentPScreenBtn
 id peekHeight
 id percent
 id pin
+id planOptions
 id profilePicCal
 id profilePicHome
 id profilePicture
@@ -2113,11 +2129,14 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string add_card
 string add_funds
+string adding_funds_to_your_account
+string amount
 string app_name
 string appbar_scrolling_view_behavior
 string attachment_summary_off
 string attachment_summary_on
 string attachment_title
+string back
 string backBtnCreateAccount
 string bottom_sheet_behavior
 string calender_for_homescreen
@@ -2136,12 +2155,14 @@ string eagleicon
 string email_CreateAccount
 string error_icon_content_description
 string example_of_payment_history_on_4_12_2021
+string existing_card
 string expand_button_title
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string first_nameCreateAccount
 string full_name
+string google_pay
 string hide_bottom_view_on_scroll_behavior
 string hidesdollars
 string homescreen_button
@@ -2212,6 +2233,7 @@ string status_bar_notification_info_overflow
 string street_address
 string studentIDCreateAccount
 string studentName
+string submit
 string summary_collapsed_preference_list
 string sync_header
 string sync_title
