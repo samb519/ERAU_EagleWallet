@@ -7,21 +7,29 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class HomeScreen extends AppCompatActivity {
 
-    ImageButton calenderHScreenBtn;
-    ImageButton paymentHScreenBtn;
-    ImageButton settingHScreenBtn;
+    ImageButton calenderHScreenBtn, paymentHScreenBtn,settingHScreenBtn, hideDollarsBtn;
     ProgressBar pBarHScreen;
     TextView processText;
+    boolean hideCondition;
+    LinearLayout ProgressBarLayout, ProgressNameLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
+        ProgressNameLayout = (LinearLayout)findViewById(R.id.ProgressNameLayout);
+        ProgressBarLayout = (LinearLayout)findViewById(R.id.ProgressBarLayout);
+
+        hideDollarsBtn = (ImageButton) findViewById(R.id.hideDollarsBtn);
+        hideCondition = true;
+        hideDollarsBtn.setOnClickListener(v -> clickedHideDollars());
 
         pBarHScreen = (ProgressBar)findViewById(R.id.pBarHScreen);
         disEnableScannerProgress();
@@ -40,6 +48,24 @@ public class HomeScreen extends AppCompatActivity {
         settingHScreenBtn = (ImageButton)findViewById(R.id.settingsHScreenBtn);
         settingHScreenBtn.setOnClickListener(v ->
                 clickedSettingBtn());{}
+    }
+
+    private  void clickedHideDollars()
+    {
+        hideCondition = hideCondition? false:true;
+        if(!hideCondition)
+        {
+            ProgressBarLayout.setVisibility(View.GONE);
+            ProgressNameLayout.setVisibility(View.GONE);
+            hideDollarsBtn.setImageResource(R.drawable.oclusionoff);
+        }
+        else
+        {
+            ProgressBarLayout.setVisibility(View.VISIBLE);
+            ProgressNameLayout.setVisibility(View.VISIBLE);
+            hideDollarsBtn.setImageResource(R.drawable.oclusionon);
+        }
+
     }
 
     private void clickedCalenderBtn(String url){

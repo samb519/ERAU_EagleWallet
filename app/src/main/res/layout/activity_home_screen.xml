@@ -23,7 +23,7 @@
         android:id="@+id/calenderHScreenBtn"
         android:layout_width="95dp"
         android:layout_height="65dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="620dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/calender_for_homescreen"
@@ -47,7 +47,7 @@
         android:id="@+id/paymentHScreenBtn"
         android:layout_width="95dp"
         android:layout_height="65dp"
-        android:layout_marginStart="308dp"
+        android:layout_marginStart="300dp"
         android:layout_marginTop="620dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/payment_for_homescreen"
@@ -193,11 +193,11 @@
         android:layout_width="48dp"
         android:layout_height="40dp"
         android:layout_marginStart="320dp"
-        android:layout_marginTop="148dp"
+        android:layout_marginTop="160dp"
         android:contentDescription="@string/hidesdollars"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@drawable/oclusionon" />
 
     <ProgressBar
         android:id="@+id/pBarHScreen"
