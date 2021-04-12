@@ -8,37 +8,62 @@
 
     <ImageButton
         android:id="@+id/paymentPScreenBtn"
-        android:layout_width="95dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="312dp"
-        android:layout_marginTop="600dp"
+        android:layout_width="108dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="612dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/payment_for_homescreen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icons8_us_dollar_24" />
+        app:srcCompat="@drawable/dollaricon" />
 
     <ImageButton
         android:id="@+id/homePScreenBtn"
-        android:layout_width="95dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="600dp"
+        android:layout_width="104dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="612dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/homescreen_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_home_black_24dp" />
 
+    <ImageView
+        android:id="@+id/HScreenBorderBtm3"
+        android:layout_width="415dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="612dp"
+        android:background="#000000"
+        android:contentDescription="@string/homescreenborderbtm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/divider_horizontal_textfield" />
+
     <ImageButton
         android:id="@+id/calenderPScreenBtn"
-        android:layout_width="95dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="600dp"
+        android:layout_width="108dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="612dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/calender_for_homescreen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+        app:srcCompat="@drawable/calender" />
+
+    <ImageView
+        android:id="@+id/HScreenBorderTop3"
+        android:layout_width="415dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="140dp"
+        android:background="#000000"
+        android:contentDescription="@string/homescreenbordertop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/divider_horizontal_textfield" />
 </androidx.constraintlayout.widget.ConstraintLayout>

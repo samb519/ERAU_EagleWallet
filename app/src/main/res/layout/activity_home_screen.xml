@@ -20,23 +20,11 @@
         app:srcCompat="@drawable/settingsicon" />
 
     <ImageButton
-        android:id="@+id/calenderHScreenBtn"
-        android:layout_width="95dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="620dp"
-        android:backgroundTint="#FFFFFF"
-        android:contentDescription="@string/calender_for_homescreen"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
-
-    <ImageButton
         android:id="@+id/homeScreenBtn"
-        android:layout_width="95dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="620dp"
+        android:layout_width="104dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="612dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/homescreen_button"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,16 +32,28 @@
         app:srcCompat="@drawable/ic_home_black_24dp" />
 
     <ImageButton
+        android:id="@+id/calenderHScreenBtn"
+        android:layout_width="108dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="612dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/calender_for_homescreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/calender" />
+
+    <ImageButton
         android:id="@+id/paymentHScreenBtn"
-        android:layout_width="95dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="300dp"
-        android:layout_marginTop="620dp"
+        android:layout_width="108dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="612dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/payment_for_homescreen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icons8_us_dollar_24" />
+        app:srcCompat="@drawable/dollaricon" />
 
     <LinearLayout
         android:id="@+id/ProgressBarLayout"
@@ -183,7 +183,6 @@
         android:background="#000000"
         android:contentDescription="@string/homescreenborderbtm"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/divider_horizontal_textfield" />

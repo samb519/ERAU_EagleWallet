@@ -1451,6 +1451,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable calender
 drawable credit
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -1458,6 +1459,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dollaricon
 drawable eagle
 drawable gpay
 drawable ic_arrow_down_24dp
@@ -1525,7 +1527,9 @@ id Eagle_Dollars_text
 id FUNCTION
 id GPayBtn
 id HScreenBorderBtm
+id HScreenBorderBtm3
 id HScreenBorderTop
+id HScreenBorderTop3
 id META
 id Meal_Plan_Text
 id Meal_PlansBar
