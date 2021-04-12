@@ -1536,6 +1536,7 @@ id Eagle_Dollars_text
 id ExistCardPScreen_CardLayout
 id FUNCTION
 id GPayBtn
+id HScreen_ProfilePic
 id HScreen_Title
 id META
 id Meal_Plan_Text
@@ -1556,6 +1557,7 @@ id PScreen_ExHistory5
 id PScreen_ExHistory6
 id PScreen_ExHistory7
 id PScreen_FullName
+id PScreen_ProfilePic
 id PScreen_State
 id PScreen_Street
 id PScreen_Title
@@ -2168,6 +2170,7 @@ string hidesdollars
 string homescreen_button
 string homescreenborderbtm
 string homescreenbordertop
+string hscreenprofilepic
 string icon_content_description
 string last_name_CreateAccount
 string loginWarningMessage
@@ -2223,6 +2226,7 @@ string processingScannerText
 string profileimagebtncreateaccount
 string prompt_Email
 string prompt_Password
+string pscreenprofilepic
 string reply_title
 string search_menu_title
 string settings_homescreenbtn

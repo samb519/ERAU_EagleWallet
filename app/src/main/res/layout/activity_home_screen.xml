@@ -11,10 +11,23 @@
         android:id="@+id/PScreenBorderTop2"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="64dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
+
+    <ImageButton
+        android:id="@+id/HScreen_ProfilePic"
+        android:layout_width="98dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="165dp"
+        android:contentDescription="@string/hscreenprofilepic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@android:mipmap/sym_def_app_icon" />
 
     <View
         android:id="@+id/PScreenBorderBtm2"
@@ -29,8 +42,8 @@
         android:id="@+id/HScreen_Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="128dp"
         android:text="@string/your_current_balances"
         android:textColor="@color/black"
         android:textSize="24sp"
@@ -79,7 +92,7 @@
         android:layout_width="48dp"
         android:layout_height="40dp"
         android:layout_marginStart="308dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="120dp"
         android:contentDescription="@string/hidesdollars"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -10,10 +10,23 @@
         android:id="@+id/PScreenBorderTop"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="64dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
+
+    <ImageButton
+        android:id="@+id/PScreen_ProfilePic"
+        android:layout_width="98dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="165dp"
+        android:contentDescription="@string/pscreenprofilepic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@android:mipmap/sym_def_app_icon" />
 
     <View
         android:id="@+id/PScreenBorderBtm"

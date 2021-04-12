@@ -70,5 +70,7 @@
     <string name="existing_card">Existing Card</string>
     <string name="adding_funds_to_your_account">Add Funds To Your Account</string>
     <string name="amount">Amount</string>
+    <string name="pscreenprofilepic">PScreenProfilePic</string>
+    <string name="hscreenprofilepic">HScreenProfilePic</string>
 
 </resources>
