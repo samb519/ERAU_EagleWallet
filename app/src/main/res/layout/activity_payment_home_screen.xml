@@ -6,6 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".PaymentHomeScreen">
 
+    <Button
+        android:id="@+id/addCardBtnPScreen"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="164dp"
+        android:backgroundTint="#2196F3"
+        android:text="@string/add_card"
+        app:cornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addFundBtnPScreen"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="164dp"
+        android:backgroundTint="#2196F3"
+        android:text="@string/add_funds"
+        app:cornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageButton
         android:id="@+id/paymentPScreenBtn"
         android:layout_width="108dp"
