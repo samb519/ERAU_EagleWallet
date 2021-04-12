@@ -64,5 +64,10 @@
     <string name="your_payment_history">Your Payment History:</string>
     <string name="example_of_payment_history_on_4_12_2021">Example Of Payment History on 4/12/2021</string>
     <string name="your_current_balances">Your Current Balances:</string>
+    <string name="submit">submit</string>
+    <string name="back">Back</string>
+    <string name="google_pay">Google Pay</string>
+    <string name="existing_card">Existing Card</string>
+    <string name="adding_funds_to_your_account">Add Funds To Your Account</string>
 
 </resources>
