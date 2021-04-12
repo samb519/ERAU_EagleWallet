@@ -53,5 +53,7 @@
     <string name="homescreenborderbtm">homeScreenBorderBtm</string>
     <string name="hidesdollars">hidesDollars</string>
     <string name="processingScannerText">Processing</string>
+    <string name="add_funds">Add Funds</string>
+    <string name="add_card">Add Card</string>
 
 </resources>
