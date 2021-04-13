@@ -1525,17 +1525,14 @@ id AddPScreen_Title
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
-id ChoosePayment
 id CreatAccountNext
 id CreateAccountTxt
-id CreditBtn
 id Dinning_DollarsBar
 id Dinning_Dollars_text
 id Eagle_DollarsBar
 id Eagle_Dollars_text
 id ExistCardPScreen_CardLayout
 id FUNCTION
-id GPayBtn
 id HScreen_ProfilePic
 id HScreen_Title
 id META
@@ -1663,8 +1660,6 @@ id content
 id contentPanel
 id coordinator
 id creatAccWarningText
-id createAccountAddPaymentBackBtn
-id createAccountAddPaymentBtn
 id createAccountBackBtn
 id custom
 id customPanel
@@ -1683,10 +1678,6 @@ id direct
 id disableHome
 id dropdown_menu
 id editStudentID
-id editTextCityAddress
-id editTextCrediCardEmail
-id editTextCreditCardName
-id editTextCreditCardSignedNumber
 id editTextTextEmailAddress
 id editTextTextEmailAddress2
 id editTextTextEmailAddress3
@@ -1696,9 +1687,6 @@ id editTextTextPersonFirstName
 id editTextTextPersonFirstName2
 id editTextTextPersonLastName
 id editTextTextPersonLastName2
-id editTextTextStateAddress
-id editTextTextStreetAddress
-id editTextZipCode
 id edit_query
 id end
 id enterAlways
@@ -1733,7 +1721,6 @@ id icon_frame
 id icon_group
 id ifRoom
 id image
-id imageView2
 id info
 id invisible
 id italic
@@ -1783,9 +1770,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
 id nav_controller_view_tag
-id nav_host_fragment
 id nav_host_fragment_container
-id nav_view
 id navigation_addFunds
 id navigation_calender
 id navigation_header_container
@@ -1895,9 +1880,6 @@ id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
-id textView
-id textView4
-id textView5
 id textView7
 id text_DiningRemaining
 id text_diningAmount
@@ -2001,10 +1983,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_payment_from_payment_screen
-layout activity_choose_payment
 layout activity_create_account
-layout activity_create_account_add_payment
-layout activity_home_page
 layout activity_home_screen
 layout activity_payment_home_screen
 layout activity_settings

@@ -124,7 +124,7 @@ public class CreateAccount extends AppCompatActivity {
                         editor.putString("userid", id);
                         editor.putString("email", email);
 
-                        Intent intent = new Intent(CreateAccount.this, ChoosePayment.class );
+                        Intent intent = new Intent(CreateAccount.this, loginPage.class );
                         displayWarning(false,"Create Account Failed");
                         startActivity(intent);
                     }

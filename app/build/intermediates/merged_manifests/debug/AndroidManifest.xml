@@ -26,12 +26,7 @@
         <activity android:name="com.example.eaglewallet.PaymentHomeScreen" />
         <activity android:name="com.example.eaglewallet.HomeScreen" />
         <activity android:name="com.example.eaglewallet.SettingsActivity" />
-        <activity android:name="com.example.eaglewallet.ChoosePayment" />
-        <activity android:name="com.example.eaglewallet.CreateAccountAddPayment" />
         <activity android:name="com.example.eaglewallet.CreateAccount" />
-        <activity
-            android:name="com.example.eaglewallet.homePage"
-            android:label="@string/title_activity_home_page" />
         <activity android:name="com.example.eaglewallet.loginPage" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
