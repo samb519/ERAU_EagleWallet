@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="288dp"
         android:layout_marginTop="108dp"
-        android:backgroundTint="#2196F3"
+        android:backgroundTint="?android:attr/colorEdgeEffect"
         android:text="@string/add_funds"
         app:cornerRadius="15dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +59,7 @@
         android:contentDescription="@string/payment_for_homescreen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dollaricon" />
+        app:srcCompat="@drawable/ic_eraucmoney_foreground" />
 
     <ImageButton
         android:id="@+id/homePScreenBtn"
@@ -83,7 +83,7 @@
         android:contentDescription="@string/calender_for_homescreen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/calender" />
+        app:srcCompat="@drawable/ic_eraucalender_foreground" />
 
     <TextView
         android:id="@+id/PScreen_Title"

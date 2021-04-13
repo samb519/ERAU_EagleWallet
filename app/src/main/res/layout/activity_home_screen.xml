@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:backgroundTint="#FFFFFF"
     tools:context=".HomeScreen">
 
     <View
@@ -40,10 +41,10 @@
 
     <TextView
         android:id="@+id/HScreen_Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="128dp"
+        android:layout_width="267dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="132dp"
         android:text="@string/your_current_balances"
         android:textColor="@color/black"
         android:textSize="24sp"
@@ -67,8 +68,8 @@
         android:id="@+id/homeScreenBtn"
         android:layout_width="104dp"
         android:layout_height="84dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="612dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="616dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/homescreen_button"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,36 +80,38 @@
         android:id="@+id/calenderHScreenBtn"
         android:layout_width="108dp"
         android:layout_height="84dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="612dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="616dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/calender_for_homescreen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/calender" />
+        app:srcCompat="@drawable/ic_eraucalender_foreground" />
 
     <ImageButton
         android:id="@+id/hideDollarsBtn"
         android:layout_width="48dp"
         android:layout_height="40dp"
-        android:layout_marginStart="308dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="132dp"
+        android:background="#FFFFFF"
         android:contentDescription="@string/hidesdollars"
+        android:tint="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/oclusionon" />
+        app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
 
     <ImageButton
         android:id="@+id/paymentHScreenBtn"
         android:layout_width="108dp"
         android:layout_height="84dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginTop="612dp"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="616dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/payment_for_homescreen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dollaricon" />
+        app:srcCompat="@drawable/ic_eraucmoney_foreground" />
 
     <LinearLayout
         android:id="@+id/ProgressBarLayout"
@@ -132,7 +135,7 @@
             android:progress="25"
             android:progressBackgroundTint="?attr/colorButtonNormal"
             android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="@android:color/holo_blue_dark" />
+            android:progressTint="?android:attr/colorEdgeEffect" />
 
         <ProgressBar
             android:id="@+id/SodexoBar"
@@ -143,7 +146,7 @@
             android:progress="25"
             android:progressBackgroundTint="?attr/colorButtonNormal"
             android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="@android:color/holo_blue_dark" />
+            android:progressTint="?android:attr/colorEdgeEffect" />
 
         <ProgressBar
             android:id="@+id/Dinning_DollarsBar"
@@ -154,7 +157,7 @@
             android:progress="25"
             android:progressBackgroundTint="?attr/colorButtonNormal"
             android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="@android:color/holo_blue_dark" />
+            android:progressTint="?android:attr/colorEdgeEffect" />
 
         <ProgressBar
             android:id="@+id/Eagle_DollarsBar"
@@ -165,7 +168,7 @@
             android:progress="25"
             android:progressBackgroundTint="?attr/colorButtonNormal"
             android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="@android:color/holo_blue_dark" />
+            android:progressTint="?android:attr/colorEdgeEffect" />
 
     </LinearLayout>
 
@@ -230,8 +233,8 @@
         android:layout_marginTop="456dp"
         android:background="#00FFFFFF"
         android:foregroundTint="#FFFFFF"
-        android:indeterminateTint="@android:color/holo_blue_dark"
-        android:progressTint="@android:color/holo_blue_dark"
+        android:indeterminateTint="?android:attr/colorEdgeEffect"
+        android:progressTint="?android:attr/colorEdgeEffect"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></ProgressBar>
 

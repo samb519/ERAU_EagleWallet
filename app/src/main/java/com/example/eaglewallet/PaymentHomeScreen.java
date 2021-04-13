@@ -21,14 +21,10 @@ public class PaymentHomeScreen extends AppCompatActivity {
 
         addFundBtnPScreen = (Button) findViewById(R.id.addFundBtnPScreen);
         addFundBtnPScreen.setOnClickListener(v ->
-                clickedAddFundBtn());
-        {
-        }
+                clickedAddFundBtn());{}
         homePScreenBtn = (ImageButton) findViewById(R.id.homePScreenBtn);
         homePScreenBtn.setOnClickListener(v ->
-                clickedHomeBtn());
-        {
-        }
+                clickedHomeBtn());{}
     }
 
     private void clickedAddFundBtn() {
