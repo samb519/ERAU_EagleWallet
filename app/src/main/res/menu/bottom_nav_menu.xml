@@ -13,7 +13,7 @@
 
     <item
         android:id="@+id/navigation_payment"
-        android:icon="@drawable/icons8_us_dollar_24"
+        android:icon="@drawable/dollaricon"
         android:title="@string/title_payment" />
 
 </menu>

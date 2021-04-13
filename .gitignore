@@ -130,3 +130,6 @@ Thumbs.db
 *.properties
 .idea/workspace.xml
 .idea/workspace.xml
+
+obj
+.vscode
