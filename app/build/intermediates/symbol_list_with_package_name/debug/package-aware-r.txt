@@ -1515,10 +1515,12 @@ drawable tooltip_frame_light
 id ALT
 id AddPScreen_Amount
 id AddPScreen_Back
+id AddPScreen_CVC
 id AddPScreen_CardSpinner
 id AddPScreen_CheckB0
 id AddPScreen_CheckB1
 id AddPScreen_CheckB2
+id AddPScreen_ExpirationDate
 id AddPScreen_Layout
 id AddPScreen_Submit
 id AddPScreen_Title
@@ -2130,6 +2132,7 @@ string clear_text_end_icon_content_description
 string copy
 string create_accountTxt
 string credit_card
+string cvc
 string dinning_dollars_text
 string eagle_dollars_text
 string eagleicon
@@ -2137,6 +2140,7 @@ string email_CreateAccount
 string error_icon_content_description
 string example_of_payment_history_on_4_12_2021
 string existing_card
+string exp_date
 string expand_button_title
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior

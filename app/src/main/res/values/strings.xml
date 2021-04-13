@@ -72,5 +72,7 @@
     <string name="amount">Amount</string>
     <string name="pscreenprofilepic">PScreenProfilePic</string>
     <string name="hscreenprofilepic">HScreenProfilePic</string>
+    <string name="cvc">CVC</string>
+    <string name="exp_date">Exp. Date</string>
 
 </resources>

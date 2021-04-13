@@ -79,6 +79,32 @@
                 android:layout_height="19dp" />
 
             <EditText
+                android:id="@+id/AddPScreen_CVC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/cvc"
+                android:inputType="number"
+                android:autofillHints="" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="19dp" />
+
+            <EditText
+                android:id="@+id/AddPScreen_ExpirationDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/exp_date"
+                android:inputType="date"
+                android:autofillHints="" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="19dp" />
+
+            <EditText
                 android:id="@+id/PScreen_FullName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -241,6 +267,7 @@
                 android:id="@+id/mealOptions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
         </LinearLayout>
 
         <EditText
@@ -250,7 +277,7 @@
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/amount"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:visibility="gone" />
 
     </LinearLayout>

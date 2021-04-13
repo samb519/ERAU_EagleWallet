@@ -9,10 +9,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -25,57 +25,77 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
     Spinner cardSpinner, planOptionsSpinner, mealOptionsSpinner;
     int clickedPlanOption;
     LinearLayout fundOptionsLayout,mealOptionsLayout,ExistCardPScreen_CardLayout; //within the spinners
-    TextView amountText;
     Button AddPScreen_Back, AddPScreen_Submit;
+    EditText credCardNum,CVC,ExpDate,FullName,StreetAddr, City,State,Zip, amountText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_payment_from_payment_screen);
         addCardCondition = existCardCondition = gpayCardConditon = false;
+        findEditText();
+        findSpinnerAndLayouts();
+        findBtns();
 
+        //Testing - Will need to be removed
+        ArrayList<String> cards = new ArrayList<>();
+        cards.add("User Card 1");
+        cards.add("User Card 2");
+        loadCardList(cards);
+
+
+        //Default:
+        loadPlanOptions();
+        loadMeals();
+        addCard.setChecked(true);
+        clickedAddCard();
+    }
+
+    private  void findSpinnerAndLayouts()
+    {
+        fundOptionsLayout = (LinearLayout) findViewById(R.id.fundOption_Layout);
+        ExistCardPScreen_CardLayout = (LinearLayout) findViewById(R.id.ExistCardPScreen_CardLayout);
+        mealOptionsLayout = (LinearLayout) findViewById(R.id.mealOptionsLayout);
+        planOptionsSpinner = (Spinner) findViewById(R.id.planOptions);
+        mealOptionsSpinner = (Spinner) findViewById(R.id.mealOptions);
+        cardSpinner = (Spinner) findViewById(R.id.AddPScreen_CardSpinner);
+        addPScreen_Layout = (ScrollView) findViewById(R.id.AddPScreen_Layout);
+    }
+
+    private void findEditText()
+    {
+        credCardNum = (EditText) findViewById(R.id.PScreen_CreditCardNum);
+        CVC = (EditText) findViewById(R.id.AddPScreen_CVC);
+        ExpDate= (EditText) findViewById(R.id.AddPScreen_ExpirationDate);
+        FullName= (EditText) findViewById(R.id.PScreen_FullName);
+        StreetAddr = (EditText) findViewById(R.id.PScreen_Street);
+        City= (EditText) findViewById(R.id.PScreen_City);
+        State= (EditText) findViewById(R.id.PScreen_State);
+        Zip= (EditText) findViewById(R.id.PScreen_ZipCode);;
+        amountText = (EditText) findViewById(R.id.AddPScreen_Amount);
+    }
+
+    private void findBtns()
+    {
         AddPScreen_Back = (Button) findViewById(R.id.AddPScreen_Back);
         AddPScreen_Back.setOnClickListener(v ->
                 clickedBack());{}
         AddPScreen_Submit = (Button) findViewById(R.id.AddPScreen_Submit);
         AddPScreen_Submit.setOnClickListener(v ->
                 clickedSubmit());{}
-
-        cardSpinner = (Spinner) findViewById(R.id.AddPScreen_CardSpinner);
-        //Testing - Will need to be removed
-        ArrayList<String> cards = new ArrayList<>();
-        cards.add("User Card 1");
-        cards.add("User Card 2");
-        loadCardToAdds(cards);
-
-        addPScreen_Layout = (ScrollView) findViewById(R.id.AddPScreen_Layout);
-
         addCard = (CheckBox) findViewById(R.id.AddPScreen_CheckB0);
         addCard.setOnClickListener(v ->
                 clickedAddCard());{}
-
         existCard = (CheckBox) findViewById(R.id.AddPScreen_CheckB1);
         existCard.setOnClickListener(v ->
                 clickedAddExistCard());{}
-
-
         gPayCard = (CheckBox) findViewById(R.id.AddPScreen_CheckB2);
         gPayCard.setOnClickListener(v ->
                 clickedAddGPay());{}
 
-        fundOptionsLayout = (LinearLayout) findViewById(R.id.fundOption_Layout);
-        ExistCardPScreen_CardLayout = (LinearLayout) findViewById(R.id.ExistCardPScreen_CardLayout);
-        mealOptionsLayout = (LinearLayout) findViewById(R.id.mealOptionsLayout);
-        planOptionsSpinner = (Spinner) findViewById(R.id.planOptions);
-        mealOptionsSpinner = (Spinner) findViewById(R.id.mealOptions);
-
-        loadPlanOptions();
-        loadMeals();
-        amountText = (TextView) findViewById(R.id.AddPScreen_Amount);
-
         planOptionsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-             @Override
-             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 clickedPlanOption = position;
                 if(position == 0) //Meal Plans
                 {
@@ -88,17 +108,13 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
                     amountText.setVisibility(View.VISIBLE);
 
                 }
-             }
+            }
 
-             @Override
-             public void onNothingSelected(AdapterView<?> parent) {
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
 
-             }
-         });
-
-        //Default:
-        addCard.setChecked(true);
-        clickedAddCard();
+            }
+        });
     }
 
     private void clickedBack() {
@@ -107,7 +123,6 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
     }
 
     private void clickedSubmit() {
-
         if(addCard.isChecked())
         {
             //Add the card to database
@@ -140,26 +155,21 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         }
         else if(clickedPlanOption == 1)//Sodexo
         {
-            getAmount(); //gets the amount of money to add
+
         }
         else if(clickedPlanOption == 2) //Dinning
         {
-            getAmount();
+
         }
         else if (clickedPlanOption == 3) //Eagle
         {
-            getAmount();
+
         }
     }
 
     private int getMealPlanSelected()
     {
         return mealOptionsSpinner.getSelectedItemPosition();
-    }
-
-    private  double getAmount()
-    {
-        return  Double.parseDouble((String) amountText.getText());
     }
 
     private void clickedAddCard()
@@ -219,7 +229,7 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
     }
 
     //Load list of cards from the database
-    private  void loadCardToAdds(ArrayList<String> cards)
+    private  void loadCardList(ArrayList<String> cards)
     {
         for(String currentCard : cards)
         {
