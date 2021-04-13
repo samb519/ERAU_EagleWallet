@@ -241,6 +241,7 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
     private  void loadMeals()
     {
         ArrayList<String> planOptions = new ArrayList<String>();
+        planOptions.add("7");
         planOptions.add("14");
         planOptions.add("21");
         addToSpinner(mealOptionsSpinner,  planOptions);
