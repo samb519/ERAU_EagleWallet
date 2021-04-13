@@ -132,7 +132,7 @@
             android:progress="25"
             android:progressBackgroundTint="?attr/colorButtonNormal"
             android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="@android:color/holo_blue_bright" />
+            android:progressTint="@android:color/holo_blue_dark" />
 
         <ProgressBar
             android:id="@+id/SodexoBar"
@@ -143,7 +143,7 @@
             android:progress="25"
             android:progressBackgroundTint="?attr/colorButtonNormal"
             android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="@android:color/holo_blue_bright" />
+            android:progressTint="@android:color/holo_blue_dark" />
 
         <ProgressBar
             android:id="@+id/Dinning_DollarsBar"
@@ -154,7 +154,7 @@
             android:progress="25"
             android:progressBackgroundTint="?attr/colorButtonNormal"
             android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="@android:color/holo_blue_bright" />
+            android:progressTint="@android:color/holo_blue_dark" />
 
         <ProgressBar
             android:id="@+id/Eagle_DollarsBar"
@@ -165,7 +165,7 @@
             android:progress="25"
             android:progressBackgroundTint="?attr/colorButtonNormal"
             android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="@android:color/holo_blue_bright" />
+            android:progressTint="@android:color/holo_blue_dark" />
 
     </LinearLayout>
 
@@ -230,8 +230,8 @@
         android:layout_marginTop="456dp"
         android:background="#00FFFFFF"
         android:foregroundTint="#FFFFFF"
-        android:indeterminateTint="@android:color/holo_blue_bright"
-        android:progressTint="#03A9F4"
+        android:indeterminateTint="@android:color/holo_blue_dark"
+        android:progressTint="@android:color/holo_blue_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></ProgressBar>
 
