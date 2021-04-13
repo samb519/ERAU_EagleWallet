@@ -63,11 +63,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="164dp"
         android:layout_marginTop="396dp"
-        android:backgroundTint="#03A9F4"
+        android:backgroundTint="?android:attr/colorEdgeEffect"
         android:text="@string/login_button"
         android:textAlignment="center"
         app:cornerRadius="15dp"
-        app:iconTint="#3F51B5"
+        app:iconTint="?android:attr/colorEdgeEffect"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

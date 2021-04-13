@@ -1452,7 +1452,6 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable calender
-drawable credit
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1461,12 +1460,16 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable dollaricon
 drawable eagle
-drawable gpay
 drawable ic_arrow_down_24dp
+drawable ic_baseline_remove_red_eye_24
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
 drawable ic_dashboard_black_24dp
 drawable ic_edit_black_24dp
+drawable ic_eraucalender_background
+drawable ic_eraucalender_foreground
+drawable ic_eraucmoney_background
+drawable ic_eraucmoney_foreground
 drawable ic_home_black_24dp
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
@@ -1505,7 +1508,6 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable oclusionoff
-drawable oclusionon
 drawable preference_list_divider_material
 drawable round
 drawable settingsicon
@@ -2078,6 +2080,10 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu bottom_nav_menu
+mipmap ic_eraucalender
+mipmap ic_eraucalender_round
+mipmap ic_eraucmoney
+mipmap ic_eraucmoney_round
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
