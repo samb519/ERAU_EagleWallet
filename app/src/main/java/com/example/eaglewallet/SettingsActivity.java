@@ -19,32 +19,32 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        spinner = (Spinner)findViewById(R.id.PaymentList);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item,paths);
-
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
-
-        SettingsSubmit = (Button) findViewById(R.id.SettingsSubmit);
-        SettingsSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Send the data to the databse
-                Intent intent = new Intent(SettingsActivity.this, homePage.class);
-                startActivity(intent);
-            }
-        });
-
-        SettingsBack = (Button) findViewById(R.id.SettingsBack);
-        SettingsBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SettingsActivity.this, homePage.class);
-                startActivity(intent);
-            }
-        });
+//        spinner = (Spinner)findViewById(R.id.PaymentList);
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+//                android.R.layout.simple_spinner_item,paths);
+//
+//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spinner.setAdapter(adapter);
+//        spinner.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
+//
+//        SettingsSubmit = (Button) findViewById(R.id.SettingsSubmit);
+//        SettingsSubmit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //Send the data to the databse
+//                Intent intent = new Intent(SettingsActivity.this, HomeScreen.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        SettingsBack = (Button) findViewById(R.id.SettingsBack);
+//        SettingsBack.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(SettingsActivity.this, HomeScreen.class);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 

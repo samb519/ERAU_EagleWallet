@@ -1,17 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using EagleWalletAPI.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-
 using Microsoft.OpenApi.Models;
+using System.Collections.Generic;
 
 namespace EagleWalletAPI
 {
@@ -29,6 +23,10 @@ namespace EagleWalletAPI
         {
             services.AddControllers();
 
+            services.AddScoped<IDbConnectionProvider, DbConnectionProvider>();
+            services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<ITransactionRepository, TransactionRepository>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
@@ -43,6 +41,8 @@ namespace EagleWalletAPI
                     },
                 });
             });
+
+            services.AddSwaggerGenNewtonsoftSupport();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,7 +55,7 @@ namespace EagleWalletAPI
 
             app.UseSwagger(c => {
 			c.PreSerializeFilters.Add((swagger, httpReq) => {
-				swagger.Servers = new List<OpenApiServer> { new OpenApiServer { Url = "https://eaglewallet.wise-net.xyz"}};	
+				swagger.Servers = new List<OpenApiServer> { new OpenApiServer { Url = "https://eaglewallet.wise-net.xyz"}, new OpenApiServer { Url = "http://localhost:5000" } };	
 				});
 			    });
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),

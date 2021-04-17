@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentHomeScreen">
+
+    <View
+        android:id="@+id/PScreenBorderTop"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="64dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageButton
+        android:id="@+id/PScreen_ProfilePic"
+        android:layout_width="98dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="165dp"
+        android:contentDescription="@string/pscreenprofilepic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@android:mipmap/sym_def_app_icon" />
+
+    <View
+        android:id="@+id/PScreenBorderBtm"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="616dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-16dp" />
+
+    <Button
+        android:id="@+id/addFundBtnPScreen"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="108dp"
+        android:backgroundTint="?android:attr/colorEdgeEffect"
+        android:text="@string/add_funds"
+        app:cornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/paymentPScreenBtn"
+        android:layout_width="108dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="612dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/payment_for_homescreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_eraucmoney_foreground" />
+
+    <ImageButton
+        android:id="@+id/homePScreenBtn"
+        android:layout_width="104dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="612dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/homescreen_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_home_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/calenderPScreenBtn"
+        android:layout_width="108dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="612dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/calender_for_homescreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_eraucalender_foreground" />
+
+    <TextView
+        android:id="@+id/PScreen_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="130dp"
+        android:text="@string/your_payment_history"
+        android:textAlignment="viewStart"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Your Payment History:" />
+
+    <ScrollView
+        android:layout_width="364dp"
+        android:layout_height="424dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/paymentPScreenBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/PScreen_ExHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/example_of_payment_history_on_4_12_2021"
+                android:textAlignment="viewStart"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="14dp" />
+
+            <TextView
+                android:id="@+id/PScreen_ExHistory2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/example_of_payment_history_on_4_12_2021"
+                android:textAlignment="viewStart"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="14dp" />
+
+            <TextView
+                android:id="@+id/PScreen_ExHistory3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/example_of_payment_history_on_4_12_2021"
+                android:textAlignment="viewStart"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="14dp" />
+
+            <TextView
+                android:id="@+id/PScreen_ExHistory4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/example_of_payment_history_on_4_12_2021"
+                android:textAlignment="viewStart"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="14dp" />
+
+            <TextView
+                android:id="@+id/PScreen_ExHistory5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/example_of_payment_history_on_4_12_2021"
+                android:textAlignment="viewStart"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="14dp" />
+
+            <TextView
+                android:id="@+id/PScreen_ExHistory6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/example_of_payment_history_on_4_12_2021"
+                android:textAlignment="viewStart"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="14dp" />
+
+            <TextView
+                android:id="@+id/PScreen_ExHistory7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/example_of_payment_history_on_4_12_2021"
+                android:textAlignment="viewStart"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="14dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

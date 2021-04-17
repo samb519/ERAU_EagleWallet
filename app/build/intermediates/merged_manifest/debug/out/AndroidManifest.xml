@@ -8,6 +8,8 @@
         android:minSdkVersion="26"
         android:targetSdkVersion="30" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -18,14 +20,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.EagleWallet" >
+        android:theme="@style/Theme.EagleWallet"
+        android:usesCleartextTraffic="true" >
+        <activity android:name="com.example.eaglewallet.AddPaymentFromPaymentScreen" />
+        <activity android:name="com.example.eaglewallet.PaymentHomeScreen" />
+        <activity android:name="com.example.eaglewallet.HomeScreen" />
         <activity android:name="com.example.eaglewallet.SettingsActivity" />
-        <activity android:name="com.example.eaglewallet.ChoosePayment" />
-        <activity android:name="com.example.eaglewallet.CreateAccountAddPayment" />
         <activity android:name="com.example.eaglewallet.CreateAccount" />
-        <activity
-            android:name="com.example.eaglewallet.homePage"
-            android:label="@string/title_activity_home_page" />
         <activity android:name="com.example.eaglewallet.loginPage" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
