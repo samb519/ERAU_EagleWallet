@@ -4,21 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:foregroundTint="#FFFFFF"
     tools:context=".loginPage">
-
-    <ImageView
-        android:id="@+id/loginBackground"
-        android:layout_width="413dp"
-        android:layout_height="730dp"
-        android:layout_marginBottom="1dp"
-        android:backgroundTint="#FFFFFF"
-        android:contentDescription="@string/eagleicon"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/loginbackground" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -26,15 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
         android:layout_marginTop="258dp"
-        android:background="@drawable/round"
-        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="@string/prompt_Email"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
-        android:shadowRadius="0"
-        android:textAlignment="center"
-        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,15 +25,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
         android:layout_marginTop="320dp"
-        android:background="@drawable/round"
-
-        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="@string/prompt_Password"
         android:importantForAutofill="no"
         android:inputType="textPassword"
-        android:textAlignment="center"
-        android:textColor="@color/black"
         android:theme="@style/Theme.EagleWallet"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -61,49 +37,33 @@
         android:id="@+id/loginButton"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="396dp"
-        android:backgroundTint="?android:attr/colorEdgeEffect"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="412dp"
+        android:backgroundTint="#2196F3"
         android:text="@string/login_button"
-        android:textAlignment="center"
         app:cornerRadius="15dp"
-        app:iconTint="?android:attr/colorEdgeEffect"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ProgressBar
-        android:id="@+id/pBarHScreen"
-        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Inverse"
-        android:layout_width="147dp"
-        android:layout_height="147dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="228dp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="359dp"
+        android:layout_height="263dp"
+        android:layout_marginStart="26dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ProgressBar>
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/eagle" />
 
     <TextView
         android:id="@+id/CreateAccountTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
-        android:layout_marginTop="356dp"
-        android:backgroundTint="#FFFCFC"
+        android:layout_marginTop="376dp"
         android:clickable="true"
         android:contextClickable="true"
         android:defaultFocusHighlightEnabled="true"
-        android:text="@string/create_accountTxt"
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/loginWarningText"
-        android:layout_width="234dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="452dp"
-        android:text="@string/loginWarningMessage"
-        android:textColor="#FF0000"
+        android:text="Create Account"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
