@@ -110,7 +110,7 @@ namespace EagleWalletAPI.Controllers
             using (var smtpClient = new SmtpClient())
             {
                 smtpClient.Connect("mail.wise-net.xyz", 25, SecureSocketOptions.StartTls);
-                smtpClient.Authenticate("noreply@wise-net.xyz", System.Environment.GetEnvironmentVariable("EmailPassword", EnvironmentVariableTarget.User));
+                smtpClient.Authenticate("noreply@wise-net.xyz", System.Environment.GetEnvironmentVariable("EmailPassword", EnvironmentVariableTarget.Process));
                 smtpClient.Send(mailMessage);
                 smtpClient.Disconnect(true);
             }
