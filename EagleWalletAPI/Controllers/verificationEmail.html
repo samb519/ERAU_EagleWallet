@@ -29,7 +29,7 @@
 
     <input type="submit" name="verify" value="Verify Email" onclick="submit()" />
     <p> If the button does not work, click on the link below!</p>
-    <a href="http://localhost:5000/api/Auth/validation/<idGoesHere>">Verify Email</a>
+    <a href="http://eaglewallet.wise-net.xyz/api/Auth/validation/<idGoesHere>">Verify Email</a>
 </center>
 
 <script type="text/javascript">
@@ -38,7 +38,7 @@
         xhr.onreadystatechange = function () {
             console.log(xhr.response);
         }
-        xhr.open('GET', 'http://localhost:5000/api/Auth/validation/<idGoesHere>');
+        xhr.open('GET', 'http://eaglewallet.wise-net.xyz/api/Auth/validation/<idGoesHere>');
 
         xhr.send();
     }
