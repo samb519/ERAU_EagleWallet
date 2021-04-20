@@ -156,7 +156,7 @@ namespace EagleWalletAPI.Controllers
         [ProducesResponseType(400, Type = typeof(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary))]
         [ProducesResponseType(401)]
         [ProducesResponseType(200, Type = typeof(User))]
-        public IActionResult ValidateUser(int id)
+        public async Task<IActionResult> ValidateUser(int id)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
