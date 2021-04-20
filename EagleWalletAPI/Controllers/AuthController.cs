@@ -162,9 +162,9 @@ namespace EagleWalletAPI.Controllers
                 return BadRequest(ModelState);
 
             if(await repository.ValidateUser(id))
-                return Ok();
+                return Ok("User verified!");
             else
-                return Unauthorized();
+                return Unauthorized("User not verified!");
         }
     }
 }
