@@ -1,0 +1,48 @@
+<html>
+<head>
+  <style type="text/css">
+    pre{
+        background-color: #0000bb;
+        color: #ffff00
+      }
+  </style>
+
+</head>
+<body>
+  <center>
+
+    <pre>
+                  _                    _ _      _   
+                 | |                  | | |    | |  
+  ___  __ _  __ _| | _____      ____ _| | | ___| |_ 
+ / _ \/ _` |/ _` | |/ _ \ \ /\ / / _` | | |/ _ \ __|
+|  __/ (_| | (_| | |  __/\ V  V / (_| | | |  __/ |_ 
+ \___|\__,_|\__, |_|\___| \_/\_/ \__,_|_|_|\___|\__|
+             __/ |                                  
+            |___/                                   
+    </pre>
+    <h1>
+        Hello and welcome to EagleWallet!
+    </h1>
+
+    <h3>Click the button below to verify your email.</h3>
+
+    <input type="submit" name="verify" value="Verify Email" onclick="submit()" />
+</center>
+
+<script type="text/javascript">
+    function submit() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            console.log(xhr.response);
+        }
+        xhr.open('GET', 'http://localhost:5000/api/Auth/validation/<idGoesHere>');
+
+        xhr.send();
+    }
+
+</script>
+
+
+</body>
+</html>

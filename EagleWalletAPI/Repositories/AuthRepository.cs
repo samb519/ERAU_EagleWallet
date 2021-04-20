@@ -95,6 +95,23 @@ namespace EagleWalletAPI.Repositories
             }
         }
 
+        public async Task<bool> ValidateUser(int userId){
+
+            using (var conn = context.GetEagleWalletConnection())
+            using (var cmd = conn.CreateStoredProc("uspValidateUser"))
+            {
+                cmd.Parameters.AddWithValue("@UserID", userId);
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    while (reader.Read())
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+            }
+        }
+
         private void CreatePasswordHash(string password, out byte[] hash, out byte[] salt)
         {
             using (var hmac = new System.Security.Cryptography.HMACSHA512())

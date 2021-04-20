@@ -6,21 +6,21 @@ GO
 
 /*
 
-EXEC dbo.uspGetUserLogin @Username='hello'
+EXEC dbo.uspGetUserLogin @Email='wiset2@my.erau.edu';
 
 */
 CREATE PROCEDURE dbo.uspGetUserLogin
-    @Username nvarchar(max)
+    @Email nvarchar(max)
 AS
 BEGIN
 
     SELECT Id,
-            Username,
             Email,
             PasswordHash,
             PasswordSalt
     FROM dbo.Users U
-    WHERE U.Username = @Username
+    WHERE U.Email = @Email AND Validated = 1
 
 END
 GO
+
