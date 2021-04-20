@@ -41,7 +41,11 @@ namespace EagleWalletAPI
                     },
                 });
             });
-
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder => builder.AllowAnyOrigin());
+            });
             services.AddSwaggerGenNewtonsoftSupport();
         }
 
@@ -53,11 +57,13 @@ namespace EagleWalletAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger(c => {
-			c.PreSerializeFilters.Add((swagger, httpReq) => {
-				swagger.Servers = new List<OpenApiServer> { new OpenApiServer { Url = "https://eaglewallet.wise-net.xyz"}, new OpenApiServer { Url = "http://localhost:5000" } };	
-				});
-			    });
+            app.UseSwagger(c =>
+            {
+                c.PreSerializeFilters.Add((swagger, httpReq) =>
+                {
+                    swagger.Servers = new List<OpenApiServer> { new OpenApiServer { Url = "https://eaglewallet.wise-net.xyz" }, new OpenApiServer { Url = "http://localhost:5000" } };
+                });
+            });
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
@@ -68,10 +74,10 @@ namespace EagleWalletAPI
                 c.RoutePrefix = string.Empty;
             });
 
-		// app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
