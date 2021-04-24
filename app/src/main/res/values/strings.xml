@@ -74,5 +74,6 @@
     <string name="hscreenprofilepic">HScreenProfilePic</string>
     <string name="cvc">CVC</string>
     <string name="exp_date">Exp. Date</string>
+    <string name="meal_plan">Meal Plan</string>
 
 </resources>

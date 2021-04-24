@@ -1531,9 +1531,7 @@ id BOTTOM_START
 id CTRL
 id CreatAccountNext
 id CreateAccountTxt
-id Dinning_DollarsBar
 id Dinning_Dollars_text
-id Eagle_DollarsBar
 id Eagle_Dollars_text
 id ExistCardPScreen_CardLayout
 id FUNCTION
@@ -1541,7 +1539,6 @@ id HScreen_ProfilePic
 id HScreen_Title
 id META
 id Meal_Plan_Text
-id Meal_PlansBar
 id PScreenBorderBtm
 id PScreenBorderBtm2
 id PScreenBorderBtm3
@@ -1570,7 +1567,6 @@ id SHIFT
 id SYM
 id SettingsBack
 id SettingsSubmit
-id SodexoBar
 id Sodexo_Text
 id StudentIDLabel
 id TOP_END
@@ -1678,9 +1674,11 @@ id design_menu_item_text
 id design_navigation_view
 id dialog_button
 id dimensions
+id dinningDollarText
 id direct
 id disableHome
 id dropdown_menu
+id eagleDollarsText
 id editStudentID
 id editTextTextEmailAddress
 id editTextTextEmailAddress2
@@ -1742,6 +1740,7 @@ id loginWarningText
 id masked
 id mealOptions
 id mealOptionsLayout
+id mealPlanAmount
 id message
 id middle
 id mini
@@ -1852,6 +1851,7 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id sodexoAmount
 id spacer
 id spinner
 id split_action_bar
@@ -2164,6 +2164,7 @@ string icon_content_description
 string last_name_CreateAccount
 string loginWarningMessage
 string login_button
+string meal_plan
 string meal_plans_text
 string messages_header
 string mtrl_badge_numberless_content_description

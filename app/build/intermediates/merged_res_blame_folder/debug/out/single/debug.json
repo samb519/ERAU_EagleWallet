@@ -76,12 +76,12 @@
         "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
         "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_eraucalender.png.flat",
         "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_eraucalender.png"
+    },
+    {
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
         "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
@@ -116,12 +116,12 @@
         "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\icons8_us_dollar_24.png"
     },
     {
-        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_myprogressbar1.xml.flat",
-        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\myprogressbar1.xml"
-    },
-    {
         "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_eraucmoney_round.png.flat",
         "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_eraucmoney_round.png"
+    },
+    {
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_myprogressbar1.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\myprogressbar1.xml"
     },
     {
         "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
@@ -144,12 +144,12 @@
         "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\ic_home_black_24dp.xml"
     },
     {
-        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
-    },
-    {
         "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_eraucmoney_round.xml.flat",
         "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_eraucmoney_round.xml"
+    },
+    {
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_settings.xml.flat",
@@ -228,20 +228,20 @@
         "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\activity_add_payment_from_payment_screen.xml"
     },
     {
-        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_payment.xml.flat",
-        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\fragment_payment.xml"
-    },
-    {
-        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
-        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
-    },
-    {
         "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_eraucalender.xml.flat",
         "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_eraucalender.xml"
     },
     {
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_payment.xml.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\layout\\fragment_payment.xml"
+    },
+    {
         "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_eraucmoney.png.flat",
         "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_eraucmoney.png"
+    },
+    {
+        "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "P:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",

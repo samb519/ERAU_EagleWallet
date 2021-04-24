@@ -34,10 +34,10 @@
         android:id="@+id/PScreenBorderBtm2"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="616dp"
+        android:layout_marginTop="600dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-16dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/HScreen_Title"
@@ -69,7 +69,7 @@
         android:layout_width="104dp"
         android:layout_height="84dp"
         android:layout_marginStart="140dp"
-        android:layout_marginTop="616dp"
+        android:layout_marginTop="604dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/homescreen_button"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,11 +77,23 @@
         app:srcCompat="@drawable/ic_home_black_24dp" />
 
     <ImageButton
+        android:id="@+id/paymentHScreenBtn"
+        android:layout_width="108dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="604dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/payment_for_homescreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_eraucmoney_foreground" />
+
+    <ImageButton
         android:id="@+id/calenderHScreenBtn"
         android:layout_width="108dp"
         android:layout_height="84dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="616dp"
+        android:layout_marginTop="604dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/calender_for_homescreen"
         app:layout_constraintStart_toStartOf="parent"
@@ -101,74 +113,59 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_remove_red_eye_24" />
 
-    <ImageButton
-        android:id="@+id/paymentHScreenBtn"
-        android:layout_width="108dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="616dp"
-        android:backgroundTint="#FFFFFF"
-        android:contentDescription="@string/payment_for_homescreen"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_eraucmoney_foreground" />
-
     <LinearLayout
         android:id="@+id/ProgressBarLayout"
-        android:layout_width="225dp"
-        android:layout_height="274dp"
-        android:layout_marginStart="140dp"
+        android:layout_width="171dp"
+        android:layout_height="271dp"
+        android:layout_marginStart="210dp"
         android:layout_marginTop="184dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ProgressBar
-            android:id="@+id/Meal_PlansBar"
-            style="@android:style/Widget.ProgressBar.Horizontal"
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="38dp"
-            android:layout_margin="15dp"
-            android:background="#FFFFFF"
-            android:endColor="#FFFFFF"
-            android:foregroundTint="@color/white"
-            android:progress="25"
-            android:progressBackgroundTint="?attr/colorButtonNormal"
-            android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="?android:attr/colorEdgeEffect" />
+            android:layout_height="21dp" />
 
-        <ProgressBar
-            android:id="@+id/SodexoBar"
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="196dp"
-            android:layout_height="38dp"
-            android:layout_margin="15dp"
-            android:progress="25"
-            android:progressBackgroundTint="?attr/colorButtonNormal"
-            android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="?android:attr/colorEdgeEffect" />
-
-        <ProgressBar
-            android:id="@+id/Dinning_DollarsBar"
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="196dp"
-            android:layout_height="38dp"
-            android:layout_margin="15dp"
-            android:progress="25"
-            android:progressBackgroundTint="?attr/colorButtonNormal"
-            android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="?android:attr/colorEdgeEffect" />
-
-        <ProgressBar
-            android:id="@+id/Eagle_DollarsBar"
-            style="@android:style/Widget.ProgressBar.Horizontal"
+        <TextView
+            android:id="@+id/mealPlanAmount"
             android:layout_width="match_parent"
-            android:layout_height="38dp"
-            android:layout_margin="15dp"
-            android:progress="25"
-            android:progressBackgroundTint="?attr/colorButtonNormal"
-            android:progressDrawable="@drawable/myprogressbar1"
-            android:progressTint="?android:attr/colorEdgeEffect" />
+            android:layout_height="wrap_content"
+            android:text="@string/meal_plan"
+            android:textSize="18sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+
+        <TextView
+            android:id="@+id/sodexoAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sodexo_text"
+            android:textSize="18sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+
+        <TextView
+            android:id="@+id/dinningDollarText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dinning_dollars_text"
+            android:textSize="18sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="43dp" />
+
+        <TextView
+            android:id="@+id/eagleDollarsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/eagle_dollars_text"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -176,7 +173,7 @@
         android:id="@+id/ProgressNameLayout"
         android:layout_width="132dp"
         android:layout_height="274dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="184dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
@@ -188,7 +185,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="22dp"
             android:text="@string/meal_plans_text"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
@@ -198,7 +195,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
             android:text="@string/sodexo_text"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
@@ -208,7 +205,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
             android:text="@string/dinning_dollars_text"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="@color/black"
             android:textSize="18sp" />
 
@@ -218,7 +215,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="44dp"
             android:text="@string/eagle_dollars_text"
-            android:textAlignment="center"
+            android:textAlignment="viewStart"
             android:textColor="@color/black"
             android:textSize="18sp" />
 

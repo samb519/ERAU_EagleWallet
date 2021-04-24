@@ -11,11 +11,13 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class HomeScreen extends AppCompatActivity {
 
     ImageButton calenderHScreenBtn, paymentHScreenBtn,settingHScreenBtn, hideDollarsBtn;
     ProgressBar pBarHScreen;
-    TextView processText;
+    TextView processText, mealPlanText,sodexoText,eagleDollarText,dinningText;
     boolean hideCondition;
     LinearLayout ProgressBarLayout, ProgressNameLayout;
 
@@ -23,6 +25,11 @@ public class HomeScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
+        mealPlanText = (TextView) findViewById(R.id.mealPlanAmount);
+        sodexoText = (TextView) findViewById(R.id.sodexoAmount);
+        eagleDollarText = (TextView) findViewById(R.id.eagleDollarsText);
+        dinningText = (TextView) findViewById(R.id.dinningDollarText);
 
         ProgressNameLayout = (LinearLayout)findViewById(R.id.ProgressNameLayout);
         ProgressBarLayout = (LinearLayout)findViewById(R.id.ProgressBarLayout);
@@ -86,6 +93,27 @@ public class HomeScreen extends AppCompatActivity {
         Intent intent=new Intent(HomeScreen.this, SettingsActivity.class);
         startActivity(intent);
     }
+
+    private void setMealPlan(String amountTaken, String totalAmount)
+    {
+        mealPlanText.setText("$" + amountTaken + "/" + totalAmount);
+    }
+
+    private  void setEagleDollar(String amount)
+    {
+        eagleDollarText.setText("$"+amount);
+    }
+
+    private void setDinningDollar(String amount)
+    {
+        dinningText.setText("$"+amount);
+    }
+
+    private void setSodexo(String amount)
+    {
+        sodexoText.setText("$"+amount);
+    }
+
 
     private  void enableScannerProgress()
     {

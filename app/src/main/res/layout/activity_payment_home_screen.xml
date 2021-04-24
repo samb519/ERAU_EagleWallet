@@ -32,10 +32,10 @@
         android:id="@+id/PScreenBorderBtm"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="616dp"
+        android:layout_marginTop="600dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-16dp" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/addFundBtnPScreen"
@@ -53,8 +53,8 @@
         android:id="@+id/paymentPScreenBtn"
         android:layout_width="108dp"
         android:layout_height="84dp"
-        android:layout_marginStart="248dp"
-        android:layout_marginTop="612dp"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="604dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/payment_for_homescreen"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,28 +62,28 @@
         app:srcCompat="@drawable/ic_eraucmoney_foreground" />
 
     <ImageButton
-        android:id="@+id/homePScreenBtn"
-        android:layout_width="104dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="612dp"
-        android:backgroundTint="#FFFFFF"
-        android:contentDescription="@string/homescreen_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_home_black_24dp" />
-
-    <ImageButton
         android:id="@+id/calenderPScreenBtn"
         android:layout_width="108dp"
         android:layout_height="84dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="612dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="604dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/calender_for_homescreen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_eraucalender_foreground" />
+
+    <ImageButton
+        android:id="@+id/homePScreenBtn"
+        android:layout_width="104dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="604dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/homescreen_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_home_black_24dp" />
 
     <TextView
         android:id="@+id/PScreen_Title"
