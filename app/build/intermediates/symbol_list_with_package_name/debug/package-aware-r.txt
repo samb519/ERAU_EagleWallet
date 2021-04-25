@@ -1553,7 +1553,6 @@ id PScreen_State
 id PScreen_Street
 id PScreen_Title
 id PScreen_ZipCode
-id PaymentList
 id ProgressBarLayout
 id ProgressNameLayout
 id SHIFT
@@ -1805,6 +1804,7 @@ id progress_mealPlan
 id progress_purchase
 id radio
 id recycler_view
+id removeList
 id right
 id right_icon
 id right_side
@@ -2148,6 +2148,7 @@ string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string first_nameCreateAccount
+string first_name_settings
 string full_name
 string google_pay
 string hide_bottom_view_on_scroll_behavior
