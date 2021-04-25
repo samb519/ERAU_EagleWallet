@@ -11,5 +11,6 @@ namespace EagleWalletAPI.Repositories
     {
         Task<UserBalances> GetUserBalances(int userId);
         Task<UserBalances> ModifyBalances(UserBalances balances);
+        Task<List<TransactionHistory>> GetTransactionHistory(int userId);
     }
 }
