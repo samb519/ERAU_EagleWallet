@@ -75,5 +75,12 @@
     <string name="cvc">CVC</string>
     <string name="exp_date">Exp. Date</string>
     <string name="meal_plan">Meal Plan</string>
+    <string name="submit_settings">Submit</string>
+    <string name="back_settings">Back</string>
+    <string name="email_settings">Email</string>
+    <string name="studentid_settings">StudentID:</string>
+    <string name="last_name_settings">Last Name</string>
+    <string name="select_card_to_remove">Select Card To Remove:</string>
+    <string name="first_name_settings">First Name</string>
 
 </resources>

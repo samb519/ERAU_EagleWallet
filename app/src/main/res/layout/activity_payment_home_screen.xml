@@ -116,95 +116,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/historyLinearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/PScreen_ExHistory"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/example_of_payment_history_on_4_12_2021"
-                android:textAlignment="viewStart"
-                android:textSize="24sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="14dp" />
-
-            <TextView
-                android:id="@+id/PScreen_ExHistory2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/example_of_payment_history_on_4_12_2021"
-                android:textAlignment="viewStart"
-                android:textSize="24sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="14dp" />
-
-            <TextView
-                android:id="@+id/PScreen_ExHistory3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/example_of_payment_history_on_4_12_2021"
-                android:textAlignment="viewStart"
-                android:textSize="24sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="14dp" />
-
-            <TextView
-                android:id="@+id/PScreen_ExHistory4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/example_of_payment_history_on_4_12_2021"
-                android:textAlignment="viewStart"
-                android:textSize="24sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="14dp" />
-
-            <TextView
-                android:id="@+id/PScreen_ExHistory5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/example_of_payment_history_on_4_12_2021"
-                android:textAlignment="viewStart"
-                android:textSize="24sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="14dp" />
-
-            <TextView
-                android:id="@+id/PScreen_ExHistory6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/example_of_payment_history_on_4_12_2021"
-                android:textAlignment="viewStart"
-                android:textSize="24sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="14dp" />
-
-            <TextView
-                android:id="@+id/PScreen_ExHistory7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/example_of_payment_history_on_4_12_2021"
-                android:textAlignment="viewStart"
-                android:textSize="24sp" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="14dp" />
-
-        </LinearLayout>
+            android:orientation="vertical"/>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

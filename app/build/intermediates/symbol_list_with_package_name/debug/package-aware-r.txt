@@ -1547,13 +1547,6 @@ id PScreenBorderTop2
 id PScreenBorderTop3
 id PScreen_City
 id PScreen_CreditCardNum
-id PScreen_ExHistory
-id PScreen_ExHistory2
-id PScreen_ExHistory3
-id PScreen_ExHistory4
-id PScreen_ExHistory5
-id PScreen_ExHistory6
-id PScreen_ExHistory7
 id PScreen_FullName
 id PScreen_ProfilePic
 id PScreen_State
@@ -1679,16 +1672,16 @@ id direct
 id disableHome
 id dropdown_menu
 id eagleDollarsText
+id editEmailSettings
+id editFirstNameSettings
+id editLastNameSettings
 id editStudentID
 id editTextTextEmailAddress
 id editTextTextEmailAddress2
-id editTextTextEmailAddress3
 id editTextTextPassword
 id editTextTextPassword2
 id editTextTextPersonFirstName
-id editTextTextPersonFirstName2
 id editTextTextPersonLastName
-id editTextTextPersonLastName2
 id edit_query
 id end
 id enterAlways
@@ -1714,6 +1707,7 @@ id group_divider
 id groups
 id hideDollarsBtn
 id hideable
+id historyLinearLayout
 id home
 id homeAsUp
 id homePScreenBtn
@@ -1863,7 +1857,7 @@ id src_over
 id standard
 id start
 id stretch
-id studentIDText
+id studentId_text
 id submenuarrow
 id submit_area
 id switchWidget
@@ -2127,6 +2121,7 @@ string attachment_summary_on
 string attachment_title
 string back
 string backBtnCreateAccount
+string back_settings
 string bottom_sheet_behavior
 string calender_for_homescreen
 string character_counter_content_description
@@ -2143,6 +2138,7 @@ string dinning_dollars_text
 string eagle_dollars_text
 string eagleicon
 string email_CreateAccount
+string email_settings
 string error_icon_content_description
 string example_of_payment_history_on_4_12_2021
 string existing_card
@@ -2162,6 +2158,7 @@ string homescreenbordertop
 string hscreenprofilepic
 string icon_content_description
 string last_name_CreateAccount
+string last_name_settings
 string loginWarningMessage
 string login_button
 string meal_plan
@@ -2219,6 +2216,7 @@ string prompt_Password
 string pscreenprofilepic
 string reply_title
 string search_menu_title
+string select_card_to_remove
 string settings_homescreenbtn
 string signature_title
 string sodexo_text
@@ -2227,7 +2225,9 @@ string status_bar_notification_info_overflow
 string street_address
 string studentIDCreateAccount
 string studentName
+string studentid_settings
 string submit
+string submit_settings
 string summary_collapsed_preference_list
 string sync_header
 string sync_title
