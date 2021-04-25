@@ -37,11 +37,11 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         findSpinnerAndLayouts();
         findBtns();
 
-        //Testing - Will need to be removed
-        ArrayList<String> cards = new ArrayList<>();
-        cards.add("User Card 1");
-        cards.add("User Card 2");
-        loadCardList(cards);
+//        //Testing - Will need to be removed
+//        ArrayList<String> cards = new ArrayList<>();
+//        cards.add("User Card 1");
+//        cards.add("User Card 2");
+//        loadCardList(cards);
 
 
         //Default:

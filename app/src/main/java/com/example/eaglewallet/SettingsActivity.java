@@ -27,11 +27,11 @@ public class SettingsActivity extends AppCompatActivity {
 
         cardSpinner = (Spinner) findViewById(R.id.removeList);
 
-        //Testing - Will need to be removed
-        ArrayList<String> cards = new ArrayList<>();
-        cards.add("User Card 1");
-        cards.add("User Card 2");
-        loadCardList(cards);
+//        //Testing - Will need to be removed
+//        ArrayList<String> cards = new ArrayList<>();
+//        cards.add("User Card 1");
+//        cards.add("User Card 2");
+//        loadCardList(cards);
 
         studentId = (TextView) findViewById(R.id.studentId_text);
         name = (EditText) findViewById(R.id.editFirstNameSettings);
