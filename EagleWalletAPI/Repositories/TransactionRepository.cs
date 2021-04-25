@@ -65,5 +65,31 @@ namespace EagleWalletAPI.Repositories
             }
             return result;
         }
+
+        
+        public async Task<List<TransactionHistory>> GetTransactionHistory(int userId){
+            List<TransactionHistory> result = new List<TransactionHistory>();
+            using (var conn = context.GetEagleWalletConnection())
+            using (var cmd = conn.CreateStoredProc("uspGetTransactionHistory"))
+            {
+                cmd.Parameters.AddWithValue("@UserId", userId);
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    while (reader.Read())
+                    {
+                        result.Add(new TransactionHistory(){
+                            TransactionId = int.Parse(reader["TransactionId"].ToString()),
+                            UserId = int.Parse(reader["UserId"].ToString()),
+                            SodexoBucks = double.Parse(reader["SodexoBucks"].ToString()),
+                            DiningDollars = double.Parse(reader["DiningDollars"].ToString()),
+                            EagleDollars = double.Parse(reader["EagleDollars"].ToString()),
+                            MealPlans = int.Parse(reader["MealPlans"].ToString()),
+                            TransactionDate = DateTime.Parse(reader["TransactionDate"].ToString()),
+                        });
+                    }
+                }
+            }
+            return result;
+        }
     }
 }

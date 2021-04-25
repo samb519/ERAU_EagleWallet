@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace EagleWalletAPI.Repositories
 {
-    public interface IAuthRepository
+    public interface ICardRepository
     {
-        Task<Tuple<int, string>> Register(UserCreateDto user);
-        Task<User> Login(string username, string password);
-        Task<bool> ValidateUser(int userId);
+        Task<CreditCard> AddUserCard(CreditCard card);
+        Task<bool> DeleteCard(int cardId);
+        Task<List<CreditCard>> GetUserCards(int userId);
+    
     }
 }
