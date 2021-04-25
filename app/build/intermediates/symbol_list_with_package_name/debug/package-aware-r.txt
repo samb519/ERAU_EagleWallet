@@ -1651,7 +1651,6 @@ id container
 id content
 id contentPanel
 id coordinator
-id creatAccWarningText
 id createAccountBackBtn
 id custom
 id customPanel
@@ -1729,7 +1728,6 @@ id listMode
 id list_item
 id loginBackground
 id loginButton
-id loginWarningText
 id masked
 id mealOptions
 id mealOptionsLayout
@@ -1782,6 +1780,7 @@ id notification_main_column_container
 id off
 id on
 id outline
+id pBarCreateAccount
 id pBarHScreen
 id packed
 id parallax
@@ -2134,6 +2133,8 @@ string copy
 string create_accountTxt
 string credit_card
 string cvc
+string dialog_message
+string dialog_title
 string dinning_dollars_text
 string eagle_dollars_text
 string eagleicon

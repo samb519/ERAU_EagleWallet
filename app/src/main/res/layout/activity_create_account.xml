@@ -124,15 +124,14 @@
         app:layout_constraintTop_toTopOf="parent"
         android:importantForAutofill="no" />
 
-    <TextView
-        android:id="@+id/creatAccWarningText"
-        android:layout_width="213dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="624dp"
-        android:text="@string/warning_messageCreateAccount"
-        android:textColor="#FF0000"
+    <ProgressBar
+        android:id="@+id/pBarCreateAccount"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Inverse"
+        android:layout_width="147dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="228dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"></ProgressBar>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

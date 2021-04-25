@@ -2,6 +2,8 @@ package com.example.eaglewallet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -9,7 +11,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
@@ -34,18 +38,18 @@ public class CreateAccount extends AppCompatActivity {
     Button CreatAccountNext;
     SharedPreferences regDetails;
     SharedPreferences.Editor editor;
-    TextView warningText;
-
+    AlertDialog.Builder builder;
+    ProgressBar pgsBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
 
+        pgsBar = (ProgressBar)findViewById(R.id.pBarCreateAccount);
+        pgsBar.setVisibility(View.GONE);
+
         regDetails = getSharedPreferences("userdetails", MODE_PRIVATE);
         editor = regDetails.edit();
-
-        warningText = (TextView) findViewById((R.id.creatAccWarningText));
-        displayWarning(false,"Create Account Failed");
 
         createAccountBackBtn = (Button)findViewById(R.id.createAccountBackBtn);
         createAccountBackBtn.setOnClickListener(new View.OnClickListener() {
@@ -66,20 +70,9 @@ public class CreateAccount extends AppCompatActivity {
         });
 
     }
-    private  void displayWarning(boolean condition, String error)
-    {
-        if(condition)
-        {
-            warningText.setText(error);
-            warningText.setVisibility(View.VISIBLE);
-        }
-        else
-        {
-            warningText.setVisibility(View.INVISIBLE);
-        }
-    }
 
     private void postUserRegistration() {
+        pgsBar.setVisibility(View.VISIBLE);
         final String[] code = {""};
 
         EditText firstNameText = (EditText) findViewById(R.id.editTextTextPersonFirstName);
@@ -125,7 +118,6 @@ public class CreateAccount extends AppCompatActivity {
                         editor.putString("email", email);
 
                         Intent intent = new Intent(CreateAccount.this, loginPage.class );
-                        displayWarning(false,"Create Account Failed");
                         startActivity(intent);
                     }
 
@@ -138,7 +130,7 @@ public class CreateAccount extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("VOLLEY", error.toString());
-                displayWarning(true,error.toString());
+                alert(error.toString());
             }
         }) {
             @Override
@@ -149,5 +141,25 @@ public class CreateAccount extends AppCompatActivity {
         };
 
         queue.add(req);
+    }
+
+    private  void alert(String error)
+    {
+        builder.setMessage(R.string.dialog_message).setTitle(R.string.dialog_title);
+
+        //Setting message manually and performing action on button click
+        builder.setMessage("Error: " + error)
+                .setCancelable(false)
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                        pgsBar.setVisibility(View.GONE);
+                    }
+                });
+        //Creating dialog box
+        AlertDialog alert = builder.create();
+        //Setting the title manually
+        alert.setTitle("Error Creating Account");
+        alert.show();
     }
 }
