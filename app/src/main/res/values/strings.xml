@@ -11,7 +11,7 @@
     <string name="title_calender">Calender</string>
     <string name="title_payment">Payment</string>
     <string name="title_activity_settings">SettingsActivity</string>
-    <string name = "nextButtonCreateAccount">Next </string>
+    <string name="nextButtonCreateAccount">Next </string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
@@ -31,5 +31,48 @@
     <string name="title_eagleDollarst"> Eagle Dollars </string>
     <string name="title_remaining">Remaining</string>
     <string name="studentName">Student Name</string>
+    <string name="loginWarningMessage">Warning Message</string>
+    <string name="backBtnCreateAccount">Back</string>
+    <string name="studentIDCreateAccount">StudentID</string>
+    <string name="first_nameCreateAccount">First Name</string>
+    <string name="warning_messageCreateAccount">Warning Message</string>
+    <string name="email_CreateAccount">Email</string>
+    <string name="last_name_CreateAccount">Last Name</string>
+    <string name="profileimagebtncreateaccount">ProfileImageBtnCreateAccount</string>
+    <string name="create_accountTxt">Create Account</string>
+    <string name="eagleicon">eagleIcon</string>
+    <string name="calender_for_homescreen">calender_for_homescreen</string>
+    <string name="payment_for_homescreen">payment_for_homescreen</string>
+    <string name="homescreen_button">homescreen_button</string>
+    <string name="settings_homescreenbtn">settings_homeScreenBtn</string>
+    <string name="meal_plans_text">Meal Plans</string>
+    <string name="sodexo_text">Sodexo</string>
+    <string name="dinning_dollars_text">Dinning Dollars</string>
+    <string name="eagle_dollars_text">Eagle Dollars</string>
+    <string name="homescreenbordertop">homescreenBorderTop</string>
+    <string name="homescreenborderbtm">homeScreenBorderBtm</string>
+    <string name="hidesdollars">hidesDollars</string>
+    <string name="processingScannerText">Processing</string>
+    <string name="add_funds">Add Funds</string>
+    <string name="add_card">Add Card</string>
+    <string name="credit_card">Credit Card #</string>
+    <string name="full_name">Full Name</string>
+    <string name="street_address">Street Address</string>
+    <string name="zip_code">Zip Code</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="your_payment_history">Your Payment History:</string>
+    <string name="example_of_payment_history_on_4_12_2021">Example Of Payment History on 4/12/2021</string>
+    <string name="your_current_balances">Your Current Balances:</string>
+    <string name="submit">submit</string>
+    <string name="back">Back</string>
+    <string name="google_pay">Google Pay</string>
+    <string name="existing_card">Existing Card</string>
+    <string name="adding_funds_to_your_account">Add Funds To Your Account</string>
+    <string name="amount">Amount</string>
+    <string name="pscreenprofilepic">PScreenProfilePic</string>
+    <string name="hscreenprofilepic">HScreenProfilePic</string>
+    <string name="cvc">CVC</string>
+    <string name="exp_date">Exp. Date</string>
 
 </resources>

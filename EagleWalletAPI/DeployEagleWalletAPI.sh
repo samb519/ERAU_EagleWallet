@@ -3,7 +3,7 @@
 systemctl stop EagleWalletAPI.service
 
 git clean -df
-git checkout main
+git checkout Tyler_Transactions
 git pull
 dotnet build
 
