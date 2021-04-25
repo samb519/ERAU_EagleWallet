@@ -18,7 +18,8 @@ import java.util.ArrayList;
 
 public class AddPaymentFromPaymentScreen extends AppCompatActivity {
 
-    CheckBox addCard,existCard, gPayCard;
+    CheckBox addCard,existCard;
+            //gPayCard;
     boolean addCardCondition, existCardCondition, gpayCardConditon;
     ScrollView addPScreen_Layout;
     ArrayList<String> cardList = new ArrayList<>();
@@ -49,6 +50,7 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         loadMeals();
         addCard.setChecked(true);
         clickedAddCard();
+        //ExistCardPScreen_CardLayout.setVisibility(View.GONE);
     }
 
     private  void findSpinnerAndLayouts()
@@ -89,9 +91,6 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         existCard = (CheckBox) findViewById(R.id.AddPScreen_CheckB1);
         existCard.setOnClickListener(v ->
                 clickedAddExistCard());{}
-        gPayCard = (CheckBox) findViewById(R.id.AddPScreen_CheckB2);
-        gPayCard.setOnClickListener(v ->
-                clickedAddGPay());{}
 
         planOptionsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -132,10 +131,6 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         {
             getSelectedCard(); //Gets the selected card
             fundsSelectedForSubmit();//Find the selected plan
-        }
-        else if(gPayCard.isChecked())
-        {
-            fundsSelectedForSubmit();
         }
 
         Intent intent=new Intent(AddPaymentFromPaymentScreen.this, HomeScreen.class);
@@ -178,7 +173,6 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         if(addCard.isChecked())
         {
             existCard.setChecked(false);
-            gPayCard.setChecked(false);
             addPScreen_Layout.setVisibility(View.VISIBLE);
             ExistCardPScreen_CardLayout.setVisibility(View.GONE);
             fundOptionsLayout.setVisibility(View.VISIBLE);
@@ -197,7 +191,6 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         if(existCard.isChecked())
         {
             addCard.setChecked(false);
-            gPayCard.setChecked(false);
             addPScreen_Layout.setVisibility(View.GONE);
             ExistCardPScreen_CardLayout.setVisibility(View.VISIBLE);
             fundOptionsLayout.setVisibility(View.VISIBLE);
@@ -210,23 +203,23 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         }
     }
 
-    private void clickedAddGPay()
-    {
-        //gPayCard.setChecked(gpayCardConditon = gpayCardConditon ? true:false);
-        if(gPayCard.isChecked())
-        {
-            existCard.setChecked(false);
-            addCard.setChecked(false);
-            addPScreen_Layout.setVisibility(View.GONE);
-            ExistCardPScreen_CardLayout.setVisibility(View.GONE);
-            fundOptionsLayout.setVisibility(View.VISIBLE);
-            fundOptionsLayout.setTranslationY(-700);
-        }
-        else
-        {
-            fundOptionsLayout.setVisibility(View.GONE);
-        }
-    }
+//    private void clickedAddGPay()
+//    {
+//        //gPayCard.setChecked(gpayCardConditon = gpayCardConditon ? true:false);
+//        if(gPayCard.isChecked())
+//        {
+//            existCard.setChecked(false);
+//            addCard.setChecked(false);
+//            addPScreen_Layout.setVisibility(View.GONE);
+//            ExistCardPScreen_CardLayout.setVisibility(View.GONE);
+//            fundOptionsLayout.setVisibility(View.VISIBLE);
+//            fundOptionsLayout.setTranslationY(-700);
+//        }
+//        else
+//        {
+//            fundOptionsLayout.setVisibility(View.GONE);
+//        }
+//    }
 
     //Load list of cards from the database
     private  void loadCardList(ArrayList<String> cards)

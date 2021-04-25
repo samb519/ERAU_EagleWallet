@@ -62,13 +62,12 @@
         android:id="@+id/AddPScreen_Layout"
         android:layout_width="291dp"
         android:layout_height="248dp"
-        android:layout_marginStart="60dp"
         android:layout_marginTop="170dp"
-        android:layout_marginEnd="60dp"
         android:translationX="0dp"
         android:translationY="0dp"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible">
@@ -183,44 +182,39 @@
     </ScrollView>
 
     <LinearLayout
-        android:layout_width="338dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="30dp"
+        android:layout_width="230dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="583dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <CheckBox
             android:id="@+id/AddPScreen_CheckB0"
-            android:layout_width="111dp"
+            android:layout_width="114dp"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="@string/add_card" />
+            android:text="@string/add_card"
+            android:textColor="#000000" />
 
         <CheckBox
             android:id="@+id/AddPScreen_CheckB1"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/existing_card" />
-
-        <CheckBox
-            android:id="@+id/AddPScreen_CheckB2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/google_pay" />
+            android:text="@string/existing_card"
+            android:textColor="#000000" />
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/AddPScreen_Title"
-        android:layout_width="406dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="4dp"
+        android:layout_width="315dp"
+        android:layout_height="35dp"
         android:layout_marginTop="16dp"
         android:text="@string/adding_funds_to_your_account"
         android:textAlignment="center"
@@ -228,7 +222,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -236,12 +230,11 @@
         android:id="@+id/fundOption_Layout"
         android:layout_width="291dp"
         android:layout_height="150dp"
-        android:layout_marginStart="60dp"
         android:layout_marginTop="443dp"
-        android:layout_marginEnd="60dp"
         android:orientation="vertical"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible">
@@ -250,13 +243,16 @@
             android:id="@+id/ExistCardPScreen_CardLayout"
             android:layout_width="match_parent"
             android:layout_height="42dp"
+            android:backgroundTint="#000000"
             android:orientation="vertical"
             android:visibility="gone">
 
             <Spinner
                 android:id="@+id/AddPScreen_CardSpinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/add_card"
+                android:backgroundTint="#000000" />
 
             <Space
                 android:layout_width="match_parent"
@@ -266,7 +262,8 @@
         <Spinner
             android:id="@+id/planOptions"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000000" />
 
         <LinearLayout
             android:id="@+id/mealOptionsLayout"
@@ -281,7 +278,8 @@
             <Spinner
                 android:id="@+id/mealOptions"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:backgroundTint="#000000" />
 
         </LinearLayout>
 
@@ -293,6 +291,7 @@
             android:ems="10"
             android:hint="@string/amount"
             android:inputType="number"
+            android:textColor="#000000"
             android:visibility="gone" />
 
     </LinearLayout>

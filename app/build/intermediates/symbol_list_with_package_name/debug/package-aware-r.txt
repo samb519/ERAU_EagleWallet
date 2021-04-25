@@ -1521,7 +1521,6 @@ id AddPScreen_CVC
 id AddPScreen_CardSpinner
 id AddPScreen_CheckB0
 id AddPScreen_CheckB1
-id AddPScreen_CheckB2
 id AddPScreen_ExpirationDate
 id AddPScreen_Layout
 id AddPScreen_Submit
