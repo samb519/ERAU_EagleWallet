@@ -181,7 +181,7 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         else
         {
             addPScreen_Layout.setVisibility(View.GONE);
-            //fundOptionsLayout.setVisibility(View.GONE);
+            fundOptionsLayout.setVisibility(View.GONE);
         }
     }
 
@@ -199,7 +199,7 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         else
         {
             ExistCardPScreen_CardLayout.setVisibility(View.GONE);
-           // fundOptionsLayout.setVisibility(View.GONE);
+           fundOptionsLayout.setVisibility(View.GONE);
         }
     }
 
