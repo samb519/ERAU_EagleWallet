@@ -1452,6 +1452,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable calender
+drawable cardemulator
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1460,6 +1461,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable dollaricon
 drawable eagle
+drawable eaglecard
 drawable ic_arrow_down_24dp
 drawable ic_baseline_remove_red_eye_24
 drawable ic_calendar_black_24dp
@@ -1645,6 +1647,7 @@ id button_addFunds
 id calenderHScreenBtn
 id calenderPScreenBtn
 id cancel_button
+id cardEmulatorHScreenBtn
 id center
 id center_horizontal
 id center_vertical
@@ -1681,6 +1684,7 @@ id dimensions
 id direct
 id disableHome
 id dropdown_menu
+id eagleCard
 id editStudentID
 id editTextTextEmailAddress
 id editTextTextEmailAddress2
@@ -1987,6 +1991,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_payment_from_payment_screen
+layout activity_card_emulator
 layout activity_create_account
 layout activity_home_screen
 layout activity_payment_home_screen

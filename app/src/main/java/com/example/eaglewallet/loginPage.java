@@ -49,7 +49,7 @@ public class loginPage extends AppCompatActivity {
         loginButton = (Button) findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                postUserLogin();
+                //postUserLogin();
                 pgsBar.setVisibility(View.GONE);
             }
         });

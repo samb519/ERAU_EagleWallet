@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class HomeScreen extends AppCompatActivity {
 
-    ImageButton calenderHScreenBtn, paymentHScreenBtn,settingHScreenBtn, hideDollarsBtn;
+    ImageButton calenderHScreenBtn, paymentHScreenBtn,settingHScreenBtn, hideDollarsBtn, cardEmulatorHScreenBtn;
     ProgressBar pBarHScreen;
     TextView processText;
     boolean hideCondition;
@@ -48,6 +48,11 @@ public class HomeScreen extends AppCompatActivity {
         settingHScreenBtn = (ImageButton)findViewById(R.id.settingsHScreenBtn);
         settingHScreenBtn.setOnClickListener(v ->
                 clickedSettingBtn());{}
+
+        cardEmulatorHScreenBtn = (ImageButton)findViewById(R.id.cardEmulatorHScreenBtn);
+        cardEmulatorHScreenBtn.setOnClickListener(v ->
+                clickedCardEmulatorBtn());{}
+
     }
 
     private  void clickedHideDollars()
@@ -84,6 +89,12 @@ public class HomeScreen extends AppCompatActivity {
     private   void clickedSettingBtn()
     {
         Intent intent=new Intent(HomeScreen.this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    private   void clickedCardEmulatorBtn()
+    {
+        Intent intent=new Intent(HomeScreen.this, CardEmulator.class);
         startActivity(intent);
     }
 
