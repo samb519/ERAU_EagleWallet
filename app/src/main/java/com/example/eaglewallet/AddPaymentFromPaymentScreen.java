@@ -50,7 +50,6 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         loadMeals();
         addCard.setChecked(true);
         clickedAddCard();
-        //ExistCardPScreen_CardLayout.setVisibility(View.GONE);
     }
 
     private  void findSpinnerAndLayouts()
@@ -98,14 +97,15 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
                 clickedPlanOption = position;
                 if(position == 0) //Meal Plans
                 {
+                    System.out.println("Amount doesn't text shows!");
                     amountText.setVisibility(View.GONE);
                     mealOptionsSpinner.setVisibility(View.VISIBLE);
                 }
                 else //Everything else
                 {
-                    mealOptionsSpinner.setVisibility(View.GONE);
+                    System.out.println("Amount text shows!");
                     amountText.setVisibility(View.VISIBLE);
-
+                    mealOptionsSpinner.setVisibility(View.GONE);
                 }
             }
 
@@ -172,16 +172,16 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         //addCard.setChecked(addCardCondition = addCardCondition? true:false);
         if(addCard.isChecked())
         {
-            existCard.setChecked(false);
             addPScreen_Layout.setVisibility(View.VISIBLE);
             ExistCardPScreen_CardLayout.setVisibility(View.GONE);
             fundOptionsLayout.setVisibility(View.VISIBLE);
             fundOptionsLayout.setTranslationY(0);
+            existCard.setChecked(false);
         }
         else
         {
             addPScreen_Layout.setVisibility(View.GONE);
-            fundOptionsLayout.setVisibility(View.GONE);
+            //fundOptionsLayout.setVisibility(View.GONE);
         }
     }
 
@@ -190,16 +190,16 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         //existCard.setChecked(existCardCondition= existCardCondition? true:false);
         if(existCard.isChecked())
         {
-            addCard.setChecked(false);
             addPScreen_Layout.setVisibility(View.GONE);
             ExistCardPScreen_CardLayout.setVisibility(View.VISIBLE);
             fundOptionsLayout.setVisibility(View.VISIBLE);
-            fundOptionsLayout.setTranslationY(-700);
+            fundOptionsLayout.setTranslationY(-800);
+            addCard.setChecked(false);
         }
         else
         {
             ExistCardPScreen_CardLayout.setVisibility(View.GONE);
-            fundOptionsLayout.setVisibility(View.GONE);
+           // fundOptionsLayout.setVisibility(View.GONE);
         }
     }
 
