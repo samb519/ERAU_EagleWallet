@@ -70,7 +70,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="visible"
+        android:scrollbarThumbVertical="@color/grey">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -269,9 +270,6 @@
                 android:autofillHints="@string/add_card"
                 android:backgroundTint="#000000" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="18dp" />
         </LinearLayout>
 
         <Spinner
