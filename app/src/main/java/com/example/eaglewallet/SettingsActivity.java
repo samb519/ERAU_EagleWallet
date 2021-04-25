@@ -28,10 +28,10 @@ public class SettingsActivity extends AppCompatActivity {
         cardSpinner = (Spinner) findViewById(R.id.removeList);
 
 //        //Testing - Will need to be removed
-//        ArrayList<String> cards = new ArrayList<>();
-//        cards.add("User Card 1");
-//        cards.add("User Card 2");
-//        loadCardList(cards);
+        ArrayList<String> cards = new ArrayList<>();
+        cards.add("User Card 1");
+        cards.add("User Card 2");
+        loadCardList(cards);
 
         studentId = (TextView) findViewById(R.id.studentId_text);
         name = (EditText) findViewById(R.id.editFirstNameSettings);
@@ -115,8 +115,8 @@ public class SettingsActivity extends AppCompatActivity {
 
     private  void addToSpinner(Spinner spinner, ArrayList<String> arrayList)
     {
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arrayList);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.spinner_dropwdown_item, arrayList);
+        arrayAdapter.setDropDownViewResource(R.layout.spinner_dropwdown_item);
         spinner.setAdapter(arrayAdapter);
     }
 

@@ -1,20 +1,5 @@
 com/example/eaglewallet/ui/calender/CalenderViewModel.java
  com.example.eaglewallet.ui.calender.CalenderViewModel
-com/example/eaglewallet/AddPaymentFromPaymentScreen.java
- com.example.eaglewallet.AddPaymentFromPaymentScreen
- com.example.eaglewallet.AddPaymentFromPaymentScreen$1
-com/example/eaglewallet/PaymentHomeScreen.java
- com.example.eaglewallet.PaymentHomeScreen
-com/example/eaglewallet/SettingsActivity.java
- com.example.eaglewallet.SettingsActivity
- com.example.eaglewallet.SettingsActivity$1
- com.example.eaglewallet.SettingsActivity$2
-com/example/eaglewallet/ui/calender/CalenderFragment.java
- com.example.eaglewallet.ui.calender.CalenderFragment
-com/example/eaglewallet/BuildConfig.java
- com.example.eaglewallet.BuildConfig
-com/example/eaglewallet/HomeScreen.java
- com.example.eaglewallet.HomeScreen
 com/example/eaglewallet/loginPage.java
  com.example.eaglewallet.loginPage
  com.example.eaglewallet.loginPage$1
@@ -31,3 +16,19 @@ com/example/eaglewallet/CreateAccount.java
  com.example.eaglewallet.CreateAccount$4
  com.example.eaglewallet.CreateAccount$5
  com.example.eaglewallet.CreateAccount$6
+com/example/eaglewallet/SettingsActivity.java
+ com.example.eaglewallet.SettingsActivity
+ com.example.eaglewallet.SettingsActivity$1
+ com.example.eaglewallet.SettingsActivity$2
+com/example/eaglewallet/ui/calender/CalenderFragment.java
+ com.example.eaglewallet.ui.calender.CalenderFragment
+com/example/eaglewallet/BuildConfig.java
+ com.example.eaglewallet.BuildConfig
+com/example/eaglewallet/HomeScreen.java
+ com.example.eaglewallet.HomeScreen
+ com.example.eaglewallet.HomeScreen$1
+com/example/eaglewallet/PaymentHomeScreen.java
+ com.example.eaglewallet.PaymentHomeScreen
+com/example/eaglewallet/AddPaymentFromPaymentScreen.java
+ com.example.eaglewallet.AddPaymentFromPaymentScreen
+ com.example.eaglewallet.AddPaymentFromPaymentScreen$1

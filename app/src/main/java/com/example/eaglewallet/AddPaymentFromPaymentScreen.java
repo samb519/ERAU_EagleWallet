@@ -259,8 +259,8 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
 
     private  void addToSpinner(Spinner spinner, ArrayList<String> arrayList)
     {
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, arrayList);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.spinner_dropwdown_item, arrayList);
+        arrayAdapter.setDropDownViewResource(R.layout.spinner_dropwdown_item);
         spinner.setAdapter(arrayAdapter);
     }
 }

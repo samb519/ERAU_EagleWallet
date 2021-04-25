@@ -4,114 +4,123 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
     tools:context=".PaymentHomeScreen">
-
-    <View
-        android:id="@+id/PScreenBorderTop"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="64dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <ImageButton
-        android:id="@+id/PScreen_ProfilePic"
-        android:layout_width="98dp"
-        android:layout_height="92dp"
-        android:layout_marginStart="165dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="165dp"
-        android:contentDescription="@string/pscreenprofilepic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@android:mipmap/sym_def_app_icon" />
-
-    <View
-        android:id="@+id/PScreenBorderBtm"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="600dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
-
-    <Button
-        android:id="@+id/addFundBtnPScreen"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="288dp"
-        android:layout_marginTop="108dp"
-        android:backgroundTint="?android:attr/colorEdgeEffect"
-        android:text="@string/add_funds"
-        app:cornerRadius="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/paymentPScreenBtn"
-        android:layout_width="108dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="604dp"
-        android:backgroundTint="#FFFFFF"
-        android:contentDescription="@string/payment_for_homescreen"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_eraucmoney_foreground" />
 
     <ImageButton
         android:id="@+id/calenderPScreenBtn"
-        android:layout_width="108dp"
+        android:layout_width="134dp"
         android:layout_height="84dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="604dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="631dp"
+        android:layout_marginEnd="276dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/calender_for_homescreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_eraucalender_foreground" />
 
     <ImageButton
         android:id="@+id/homePScreenBtn"
-        android:layout_width="104dp"
+        android:layout_width="140dp"
         android:layout_height="84dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="604dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="631dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="@string/homescreen_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_home_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/paymentPScreenBtn"
+        android:layout_width="134dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="277dp"
+        android:layout_marginTop="631dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:contentDescription="@string/payment_for_homescreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_eraucmoney_foreground" />
+
+    <View
+        android:id="@+id/PScreenBorderTop"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="666dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/PScreenBorderBtm"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="630dp"
+        android:layout_marginBottom="100dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addFundBtnPScreen"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="273dp"
+        android:layout_marginTop="561dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="115dp"
+        android:backgroundTint="@color/royal_Blue"
+        android:text="@string/add_funds"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#B1AFAF" />
 
     <TextView
         android:id="@+id/PScreen_Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="130dp"
+        android:layout_marginTop="20dp"
         android:text="@string/your_payment_history"
         android:textAlignment="viewStart"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Your Payment History:" />
 
     <ScrollView
-        android:layout_width="364dp"
-        android:layout_height="424dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="190dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/paymentPScreenBtn"
+        android:layout_width="323dp"
+        android:layout_height="460dp"
+        android:layout_marginTop="82dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -119,7 +128,14 @@
             android:id="@+id/historyLinearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"/>
+            android:orientation="vertical" />
     </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

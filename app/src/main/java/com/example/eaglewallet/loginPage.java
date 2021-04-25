@@ -52,7 +52,10 @@ public class loginPage extends AppCompatActivity {
         loginButton = (Button) findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                postUserLogin();
+
+                Intent intent = new Intent(loginPage.this, HomeScreen.class);
+                startActivity(intent);
+               // postUserLogin();
             }
         });
 
