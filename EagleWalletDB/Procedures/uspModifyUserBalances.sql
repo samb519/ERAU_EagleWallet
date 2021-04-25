@@ -6,7 +6,9 @@ GO
 
 /*
 
-EXEC dbo.uspModifyUserBalances @UserId=20, @SodexoBucks=-20.0, @DiningDollars=-20.0, @EagleDollars=-20.0, @MealPlans=0
+EXEC dbo.uspModifyUserBalances @UserId=45, @SodexoBucks=20.0, @DiningDollars=20.0, @EagleDollars=20.0, @MealPlans=0
+
+SELECT * FROM TransactionHistory
 
 */
 CREATE PROCEDURE dbo.uspModifyUserBalances
@@ -58,10 +60,12 @@ BEGIN
         FROM MealPlans MP
         WHERE MP.ExpirationDate > GETDATE() AND MP.UserId = @UserId
         
+        INSERT INTO TransactionHistory(UserId, SodexoBucks, DiningDollars, EagleDollars, MealPlans)
+        VALUES (@UserId, @SodexoBucks, @DiningDollars, @EagleDollars, @MealPlans);
+
         EXEC dbo.uspGetUserBalances @UserId=@UserId
 
     END
     
-
 END
 GO
