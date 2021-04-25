@@ -26,6 +26,7 @@ namespace EagleWalletAPI
             services.AddScoped<IDbConnectionProvider, DbConnectionProvider>();
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<ITransactionRepository, TransactionRepository>();
+            services.AddScoped<ICardRepository, CardRepository>();
 
             services.AddSwaggerGen(c =>
             {
