@@ -53,6 +53,8 @@ public class loginPage extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //postUserLogin();
+                Intent intent = new Intent(loginPage.this, HomeScreen.class);
+                startActivity(intent);
                 pgsBar.setVisibility(View.GONE);
             }
         });

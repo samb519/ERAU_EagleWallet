@@ -107,7 +107,7 @@ public class HomeScreen extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private  void enableScannerProgress()
+    private  void updateMealPlan(String amountTaken, String totalAmount)
     {
         mealPlanText.setText("$" + amountTaken + "/" + totalAmount);
     }

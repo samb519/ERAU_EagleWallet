@@ -84,5 +84,6 @@
     <string name="first_name_settings">First Name</string>
     <string name="dialog_message" />
     <string name="dialog_title" />
+    <string name="emulatorcard">emulatorCard</string>
 
 </resources>

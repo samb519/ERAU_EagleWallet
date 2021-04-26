@@ -297,14 +297,12 @@
 
     <ImageButton
         android:id="@+id/cardEmulatorHScreenBtn"
-        android:layout_width="70dp"
+        android:layout_width="80dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="71dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/PScreenBorderTop2"
-        app:layout_constraintEnd_toStartOf="@+id/HScreen_ProfilePic"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="502dp"
+        android:layout_marginEnd="166dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/cardemulator" />
