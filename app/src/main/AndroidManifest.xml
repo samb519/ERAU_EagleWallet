@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EagleWallet"
         android:usesCleartextTraffic="true">
-        <activity android:name=".AddPaymentFromPaymentScreen"></activity>
+        <activity android:name=".CardEmulator"></activity>
+        <activity android:name=".AddPaymentFromPaymentScreen" />
         <activity android:name=".PaymentHomeScreen" />
         <activity android:name=".HomeScreen" />
         <activity android:name=".SettingsActivity" />

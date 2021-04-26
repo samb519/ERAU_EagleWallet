@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:backgroundTint="#FFFFFF"
+    android:backgroundTint="?android:attr/windowBackground"
     tools:context=".HomeScreen">
 
     <View
@@ -294,6 +294,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/cardEmulatorHScreenBtn"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="502dp"
+        android:layout_marginEnd="166dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cardemulator" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,7 @@ import org.w3c.dom.Text;
 
 public class HomeScreen extends AppCompatActivity {
 
-    ImageButton calenderHScreenBtn, paymentHScreenBtn,settingHScreenBtn, hideDollarsBtn;
+    ImageButton calenderHScreenBtn, paymentHScreenBtn,settingHScreenBtn, hideDollarsBtn, cardEmulatorHScreenBtn;
     ProgressBar pBarHScreen;
     TextView processText, mealPlanText,sodexoText,eagleDollarText,dinningText;
     boolean hideCondition;
@@ -57,6 +57,11 @@ public class HomeScreen extends AppCompatActivity {
         settingHScreenBtn = (ImageButton)findViewById(R.id.settingsHScreenBtn);
         settingHScreenBtn.setOnClickListener(v ->
                 clickedSettingBtn());{}
+
+        cardEmulatorHScreenBtn = (ImageButton)findViewById(R.id.cardEmulatorHScreenBtn);
+        cardEmulatorHScreenBtn.setOnClickListener(v ->
+                clickedCardEmulatorBtn());{}
+
     }
 
     private  void clickedHideDollars()
@@ -96,7 +101,13 @@ public class HomeScreen extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void setMealPlan(String amountTaken, String totalAmount)
+    private   void clickedCardEmulatorBtn()
+    {
+        Intent intent=new Intent(HomeScreen.this, CardEmulator.class);
+        startActivity(intent);
+    }
+
+    private  void updateMealPlan(String amountTaken, String totalAmount)
     {
         mealPlanText.setText("$" + amountTaken + "/" + totalAmount);
     }

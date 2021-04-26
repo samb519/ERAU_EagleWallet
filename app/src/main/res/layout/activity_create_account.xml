@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
     tools:context=".CreateAccount">
 
     <androidx.cardview.widget.CardView
@@ -11,13 +13,14 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="160dp"
         android:layout_marginTop="40dp"
         android:elevation="12dp"
         android:innerRadius="0dp"
         android:shape="ring"
         android:thicknessRatio="1.9"
         app:cardCornerRadius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -36,12 +39,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginTop="320dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/last_name_CreateAccount"
         android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="@color/grey"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/CreatAccountNext"
@@ -49,11 +54,16 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="236dp"
-        android:layout_marginTop="576dp"
-        android:backgroundTint="?android:attr/colorEdgeEffect"
+        android:layout_marginTop="647dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="@color/royal_Blue"
         android:text="@string/nextButtonCreateAccount"
+        android:textColor="#FFFFFF"
         app:cornerRadius="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress2"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,11 +73,17 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="576dp"
+        android:layout_marginTop="647dp"
+        android:layout_marginEnd="239dp"
+        android:layout_marginBottom="36dp"
         android:background="#00FFFFFF"
-        android:backgroundTint="?android:attr/colorEdgeEffect"
+        android:backgroundTint="@color/royal_Blue"
         android:text="@string/backBtnCreateAccount"
+        android:textColor="#FFFFFF"
         app:cornerRadius="15dp"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="#FFFFFF" />
@@ -80,10 +96,12 @@
         android:layout_marginTop="480dp"
         android:ems="10"
         android:hint="@string/email_CreateAccount"
+        android:importantForAutofill="no"
         android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        android:textColorHint="@color/grey"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editStudentID"
@@ -91,12 +109,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginTop="148dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/studentIDCreateAccount"
         android:inputType="number"
+        android:textColor="#000000"
+        android:textColorHint="@color/grey"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonFirstName"
@@ -106,10 +126,12 @@
         android:layout_marginTop="232dp"
         android:ems="10"
         android:hint="@string/first_nameCreateAccount"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="@color/grey"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPassword2"
@@ -119,19 +141,25 @@
         android:layout_marginTop="404dp"
         android:ems="10"
         android:hint="@string/prompt_Password"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textColorHint="@color/grey"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ProgressBar
         android:id="@+id/pBarCreateAccount"
         style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Inverse"
         android:layout_width="147dp"
         android:layout_height="147dp"
-        android:layout_marginStart="132dp"
         android:layout_marginTop="228dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:foregroundTint="@color/royal_Blue"
+        android:indeterminateTint="@color/royal_Blue"
+        android:progressTint="@color/royal_Blue"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonFirstName"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonFirstName"
         app:layout_constraintTop_toTopOf="parent"></ProgressBar>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
