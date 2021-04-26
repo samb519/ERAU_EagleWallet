@@ -44,6 +44,7 @@ public class CreateAccount extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
+        builder = new AlertDialog.Builder(this);
 
         pgsBar = (ProgressBar)findViewById(R.id.pBarCreateAccount);
         pgsBar.setVisibility(View.GONE);

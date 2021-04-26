@@ -73,17 +73,17 @@ public class SettingsActivity extends AppCompatActivity {
 
     private void setFirstName(String name)
     {
-        this.name.setHint(name);
+        this.name.setText(name);
     }
 
     private  void setLastName(String name)
     {
-        lastname.setHint(name);
+        lastname.setText(name);
     }
 
     private void setEmail(String name)
     {
-        email.setHint(name);
+        email.setText(name);
     }
 
     //Call these methods to add to the database upon submit
