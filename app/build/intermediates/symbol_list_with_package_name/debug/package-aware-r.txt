@@ -1463,6 +1463,7 @@ drawable design_snackbar_background
 drawable dollaricon
 drawable eagle
 drawable eaglecard
+drawable face
 drawable ic_arrow_down_24dp
 drawable ic_baseline_remove_red_eye_24
 drawable ic_calendar_black_24dp
@@ -1473,6 +1474,7 @@ drawable ic_eraucalender_background
 drawable ic_eraucalender_foreground
 drawable ic_eraucmoney_background
 drawable ic_eraucmoney_foreground
+drawable ic_face_background
 drawable ic_home_black_24dp
 drawable ic_keyboard_arrow_left_black_24dp
 drawable ic_keyboard_arrow_right_black_24dp
@@ -1485,6 +1487,7 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
+drawable icon
 drawable icons8_us_dollar_24
 drawable loginbackground
 drawable mtrl_dialog_background
@@ -2083,6 +2086,9 @@ mipmap ic_eraucalender
 mipmap ic_eraucalender_round
 mipmap ic_eraucmoney
 mipmap ic_eraucmoney_round
+mipmap ic_face
+mipmap ic_face_foreground
+mipmap ic_face_round
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
