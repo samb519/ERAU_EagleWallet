@@ -6,12 +6,16 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Trace;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.eaglewallet.models.Transaction;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class PaymentHomeScreen extends AppCompatActivity {
 
@@ -36,10 +40,37 @@ public class PaymentHomeScreen extends AppCompatActivity {
         calenderPScreenBtn.setOnClickListener(v ->
                 clickedCalenderBtn( "https://eraudining.sodexomyway.com/dining-near-me/hours"));{}
 
-                //MUST REMOVE: Testing purposes
         ArrayList<String> test = new ArrayList<>();
-        test.add("3/22/2021: Payment of Sodexo bought for $200");
-        test.add("4/22/2021: Payment of Sodexo bought for $200");
+
+        if (getIntent().getExtras() != null) {
+            List<Transaction> userTransactions = (List<Transaction>) getIntent().getSerializableExtra("UserTransactions");
+            for (Transaction trans : userTransactions) {
+                if (trans.getSodexoBucks() > 0) {
+                    test.add("Deposit on " + trans.getDate() + ": $" + trans.getSodexoBucks() + " Sodexo Bucks");
+                }
+                if (trans.getSodexoBucks() < 0) {
+                    test.add("Spent on " + trans.getDate() + ": $" + trans.getSodexoBucks() + " Sodexo Bucks");
+                }
+                if (trans.getDiningDollars() > 0) {
+                    test.add("Deposit on " + trans.getDate() + ": $" + trans.getDiningDollars() + " Dining Dollars");
+                }
+                if (trans.getDiningDollars() < 0) {
+                    test.add("Spent on " + trans.getDate() + ": $" + trans.getDiningDollars() + " Dining Dollars");
+                }
+                if (trans.getEagleDollars() > 0) {
+                    test.add("Deposit on " + trans.getDate() + ": $" + trans.getEagleDollars() + " Eagle Dollars");
+                }
+                if (trans.getEagleDollars() < 0) {
+                    test.add("Spent on " + trans.getDate() + ": $" + trans.getEagleDollars() + " Eagle Dollars");
+                }
+                if (trans.getMealPlans() > 0) {
+                    test.add("Deposit on " + trans.getDate() + ": " + trans.getMealPlans() + " Meal Plans");
+                }
+                if (trans.getMealPlans() < 0) {
+                    test.add("Spent on " + trans.getDate() + ": $" + trans.getMealPlans() + " Meal Plans");
+                }
+            }
+        }
         createHistoryTable(test);
     }
 

@@ -22,7 +22,9 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.eaglewallet.models.Balances;
 
 public class loginPage extends AppCompatActivity {
 
@@ -33,6 +35,9 @@ public class loginPage extends AppCompatActivity {
     String is_signed_in = "";
     ProgressBar pgsBar;
     AlertDialog.Builder builder;
+    static String id;
+    String userEmail;
+    Balances balances;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,9 +57,8 @@ public class loginPage extends AppCompatActivity {
         loginButton = (Button) findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //postUserLogin();
-                Intent intent = new Intent(loginPage.this, HomeScreen.class);
-                startActivity(intent);
+                postUserLogin();
+
                 pgsBar.setVisibility(View.GONE);
             }
         });
@@ -93,15 +97,21 @@ public class loginPage extends AppCompatActivity {
                 Log.i("VOLLEY", response.toString());
 
                 try {
-                    String id = response.getString("id");
-                    String email = response.getString("email");
+                    id = response.getString("id");
+                    userEmail = response.getString("email");
 
                     if (!id.isEmpty()) {
                         editor.putString("issignedin", "true");
                         editor.putString("userid", id);
                         editor.putString("email", email);
 
+                        Log.i("ID", id);
+                        getAccountBalances(id);
+                        Log.i("TEST", Double.toString(balances.getEagleDollars()));
+
                         Intent intent = new Intent(loginPage.this, HomeScreen.class);
+                        intent.putExtra("id", id);
+                        intent.putExtra("Balances", balances);
                         startActivity(intent);
                     }
 
@@ -126,6 +136,46 @@ public class loginPage extends AppCompatActivity {
         queue.add(req);
     }
 
+    public void getAccountBalances(String id) {
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        String url = "https://eaglewallet.wise-net.xyz/api/Transaction/balances" + id;
+        JSONObject jsonBody = new JSONObject();
+
+        JsonObjectRequest req = new JsonObjectRequest(url, jsonBody, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                Log.i("VOLLEY", response.toString());
+
+                balances = new Balances();
+
+                try {
+                    balances.setSodexoBucks(response.getDouble("sodexoBucks"));
+                    balances.setDiningDollars(response.getDouble("diningDollars"));
+                    balances.setEagleDollars(response.getDouble("eagleDollars"));
+                    balances.setMealPlans(response.getInt("mealPlans"));
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("VOLLEY", error.toString());
+                alert(error.toString());
+            }
+        }) {
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+
+        };
+
+        queue.add(req);
+    }
+
     private  void alert(String error)
     {
         builder.setMessage(R.string.dialog_message).setTitle(R.string.dialog_title);
@@ -144,5 +194,9 @@ public class loginPage extends AppCompatActivity {
         //Setting the title manually
         alert.setTitle("Error Logging In");
         alert.show();
+    }
+
+    public static String getId() {
+        return id;
     }
 }
