@@ -26,6 +26,8 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.eaglewallet.models.Balances;
 
+import java.io.Serializable;
+
 public class loginPage extends AppCompatActivity {
 
     Button loginButton;
@@ -107,11 +109,10 @@ public class loginPage extends AppCompatActivity {
 
                         Log.i("ID", id);
                         getAccountBalances(id);
-                        Log.i("TEST", Double.toString(balances.getEagleDollars()));
 
                         Intent intent = new Intent(loginPage.this, HomeScreen.class);
                         intent.putExtra("id", id);
-                        intent.putExtra("Balances", balances);
+                        intent.putExtra("Balances", (Serializable) balances);
                         startActivity(intent);
                     }
 
@@ -138,10 +139,9 @@ public class loginPage extends AppCompatActivity {
 
     public void getAccountBalances(String id) {
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        String url = "https://eaglewallet.wise-net.xyz/api/Transaction/balances" + id;
-        JSONObject jsonBody = new JSONObject();
+        String url = "https://eaglewallet.wise-net.xyz/api/Transaction/balances/" + id;
 
-        JsonObjectRequest req = new JsonObjectRequest(url, jsonBody, new Response.Listener<JSONObject>() {
+        JsonObjectRequest req = new JsonObjectRequest(url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 Log.i("VOLLEY", response.toString());

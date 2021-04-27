@@ -21,6 +21,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.eaglewallet.models.Balances;
 import com.example.eaglewallet.models.Transaction;
 
 import org.json.JSONArray;
@@ -79,6 +80,11 @@ public class HomeScreen extends AppCompatActivity {
         cardEmulatorHScreenBtn.setOnClickListener(v ->
                 clickedCardEmulatorBtn());{}
 
+        Balances balances = (Balances) getIntent().getSerializableExtra("Balances");
+        setEagleDollar(Double.toString(balances.getEagleDollars()));
+        setDinningDollar(Double.toString(balances.getDiningDollars()));
+        setSodexo(Double.toString(balances.getSodexoBucks()));
+
     }
 
     private  void clickedHideDollars()
@@ -108,7 +114,6 @@ public class HomeScreen extends AppCompatActivity {
 
     private void clickedPaymentBtn()
     {
-        String userId = getIntent().getStringExtra("id");
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
         String url = "https://eaglewallet.wise-net.xyz/api/Transaction/history/" + loginPage.getId();
 
@@ -159,13 +164,13 @@ public class HomeScreen extends AppCompatActivity {
         queue.add(req);
     }
 
-    private   void clickedSettingBtn()
+    private void clickedSettingBtn()
     {
         Intent intent=new Intent(HomeScreen.this, SettingsActivity.class);
         startActivity(intent);
     }
 
-    private   void clickedCardEmulatorBtn()
+    private void clickedCardEmulatorBtn()
     {
         Intent intent=new Intent(HomeScreen.this, CardEmulator.class);
         startActivity(intent);
@@ -176,7 +181,7 @@ public class HomeScreen extends AppCompatActivity {
         mealPlanText.setText("$" + amountTaken + "/" + totalAmount);
     }
 
-    private  void setEagleDollar(String amount)
+    private void setEagleDollar(String amount)
     {
         eagleDollarText.setText("$"+amount);
     }
@@ -235,4 +240,6 @@ public class HomeScreen extends AppCompatActivity {
         alert.show();
 
     }
+
+
 }
