@@ -31,14 +31,14 @@ com/example/eaglewallet/BuildConfig.java
  com.example.eaglewallet.BuildConfig
 com/example/eaglewallet/CardEmulator.java
  com.example.eaglewallet.CardEmulator
-com/example/eaglewallet/models/Transaction.java
- com.example.eaglewallet.models.Transaction
 com/example/eaglewallet/HomeScreen.java
  com.example.eaglewallet.HomeScreen
  com.example.eaglewallet.HomeScreen$1
  com.example.eaglewallet.HomeScreen$2
  com.example.eaglewallet.HomeScreen$3
  com.example.eaglewallet.HomeScreen$4
+com/example/eaglewallet/models/Transaction.java
+ com.example.eaglewallet.models.Transaction
 com/example/eaglewallet/PaymentHomeScreen.java
  com.example.eaglewallet.PaymentHomeScreen
 com/example/eaglewallet/AddPaymentFromPaymentScreen.java

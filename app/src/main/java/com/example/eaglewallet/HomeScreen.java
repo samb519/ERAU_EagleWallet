@@ -83,13 +83,13 @@ public class HomeScreen extends AppCompatActivity {
         {
             ProgressBarLayout.setVisibility(View.GONE);
             ProgressNameLayout.setVisibility(View.GONE);
-            hideDollarsBtn.setImageResource(R.drawable.oclusionoff);
+            hideDollarsBtn.setImageResource(R.drawable.ic_hidden_eye);
         }
         else
         {
             ProgressBarLayout.setVisibility(View.VISIBLE);
             ProgressNameLayout.setVisibility(View.VISIBLE);
-            hideDollarsBtn.setImageResource(R.drawable.ic_baseline_remove_red_eye_24);
+            hideDollarsBtn.setImageResource(R.drawable.ic_show_eye);
         }
 
     }
