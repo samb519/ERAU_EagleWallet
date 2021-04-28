@@ -10,6 +10,7 @@ import android.os.Trace;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.Space;
 import android.widget.TextView;
 
 import com.example.eaglewallet.models.Transaction;
@@ -79,11 +80,15 @@ public class PaymentHomeScreen extends AppCompatActivity {
         for(int i = 0; i<history.size();i++)
         {
             TextView text = new TextView(this);
+            Space space = new Space(this);
+            space.setMinimumHeight(15);
             text.setText(history.get(i));
             text.setTextSize(14);
             text.setTextColor(Color.parseColor("#000000"));
             text.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
             ((LinearLayout) layout).addView(text);
+            space.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            ((LinearLayout) layout).addView(space);
         }
     }
 

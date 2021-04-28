@@ -147,12 +147,12 @@
         android:layout_width="365dp"
         android:layout_height="288dp"
         android:layout_marginTop="179dp"
+        android:background="@drawable/customborder"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/customborder">
+        app:layout_constraintTop_toTopOf="parent">
 
         <Space
             android:layout_width="0dp"
