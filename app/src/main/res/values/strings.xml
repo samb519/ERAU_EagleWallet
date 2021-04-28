@@ -85,5 +85,7 @@
     <string name="dialog_message" />
     <string name="dialog_title" />
     <string name="emulatorcard">emulatorCard</string>
+    <string name="logout">logout</string>
+    <string name="welcome_to_the_team">Welcome To The Team!</string>
 
 </resources>

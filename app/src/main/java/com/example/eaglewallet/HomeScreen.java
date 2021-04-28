@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -31,16 +32,22 @@ import java.util.List;
 
 public class HomeScreen extends AppCompatActivity {
 
-    ImageButton calenderHScreenBtn, paymentHScreenBtn,settingHScreenBtn, hideDollarsBtn, cardEmulatorHScreenBtn;
+    ImageButton calenderHScreenBtn, paymentHScreenBtn,settingHScreenBtn, hideDollarsBtn, cardEmulatorHScreenBtn, logout;
     TextView mealPlanText,sodexoText,eagleDollarText,dinningText;
-    boolean hideCondition = true;
-    LinearLayout ProgressBarLayout, ProgressNameLayout;
+    boolean hideCondition;
+    LinearLayout ProgressBarLayout, ProgressNameLayout, hiddenButton;
     AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+        hideCondition = true;
+        logout = (ImageButton) findViewById(R.id.logOutBtn);
+        logout.setOnClickListener(v-> clickedLogOut());
+
+        hiddenButton = (LinearLayout) findViewById(R.id.hiddenButton);
+        hiddenButton.setOnClickListener(v-> hiddenFeature());
 
         mealPlanText = (TextView) findViewById(R.id.mealPlanAmount);
         sodexoText = (TextView) findViewById(R.id.sodexoAmount);
@@ -76,6 +83,11 @@ public class HomeScreen extends AppCompatActivity {
 
     }
 
+    private void hiddenFeature() {
+        Intent intent=new Intent(HomeScreen.this, HiddenPages.class);
+        startActivity(intent);
+    }
+
     private  void clickedHideDollars()
     {
         hideCondition = hideCondition? false:true;
@@ -92,6 +104,12 @@ public class HomeScreen extends AppCompatActivity {
             hideDollarsBtn.setImageResource(R.drawable.ic_show_eye);
         }
 
+    }
+
+    private  void clickedLogOut()
+    {
+        Intent intent=new Intent(HomeScreen.this, loginPage.class);
+        startActivity(intent);
     }
 
     private void clickedCalenderBtn(String url){
