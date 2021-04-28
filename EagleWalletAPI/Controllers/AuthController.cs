@@ -24,12 +24,14 @@ namespace EagleWalletAPI.Controllers
     {
 
         private readonly IAuthRepository repository;
+        private readonly ITransactionRepository transRepository;
 
         private static readonly char[] INVALID_CHARACTERS = new char[14] { ';', '$', '%', '{', '}', '>', '<', '?', '#', '(', ')', ']', '[', '`' };
 
-        public AuthController(IAuthRepository repository)
+        public AuthController(IAuthRepository repository, ITransactionRepository transRepository)
         {
             this.repository = repository ?? throw new ArgumentNullException(nameof(repository));
+            this.transRepository = transRepository ?? throw new ArgumentNullException(nameof(transRepository));
         }
 
         /// <summary>
@@ -138,7 +140,7 @@ namespace EagleWalletAPI.Controllers
 
             if (user == null)
                 return Unauthorized();
-
+            user.Balances = await transRepository.GetUserBalances(user.Id);
             return Ok(user);
         }
 

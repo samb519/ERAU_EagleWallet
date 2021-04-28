@@ -9,5 +9,6 @@ namespace EagleWalletAPI.Models
     {
         public int Id { get; set; }
         public string Email { get; set; }
+        public UserBalances Balances {get; set;}
     }
 }
