@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.eaglewallet.models.Transaction;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +23,8 @@ public class PaymentHomeScreen extends AppCompatActivity {
     ImageButton homePScreenBtn, calenderPScreenBtn;
     Button addFundBtnPScreen;
     LinearLayout layout;
+    List<Transaction> userTransactions;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +46,7 @@ public class PaymentHomeScreen extends AppCompatActivity {
         ArrayList<String> test = new ArrayList<>();
 
         if (getIntent().getExtras() != null) {
-            List<Transaction> userTransactions = (List<Transaction>) getIntent().getSerializableExtra("UserTransactions");
+            userTransactions = (List<Transaction>) getIntent().getSerializableExtra("UserTransactions");
             for (Transaction trans : userTransactions) {
                 if (trans.getSodexoBucks() > 0) {
                     test.add("Deposit on " + trans.getDate() + ": $" + trans.getSodexoBucks() + " Sodexo Bucks");
@@ -89,6 +92,7 @@ public class PaymentHomeScreen extends AppCompatActivity {
 
     private void clickedAddFundBtn() {
         Intent intent = new Intent(PaymentHomeScreen.this, AddPaymentFromPaymentScreen.class);
+        intent.putExtra("Transactions", (Serializable) userTransactions);
         startActivity(intent);
     }
 

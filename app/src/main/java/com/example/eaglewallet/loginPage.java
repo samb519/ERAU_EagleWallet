@@ -97,18 +97,19 @@ public class loginPage extends AppCompatActivity {
             @Override
             public void onResponse(JSONObject response) {
                 Log.i("VOLLEY", response.toString());
+                balances = new Balances();
 
                 try {
                     id = response.getString("id");
                     userEmail = response.getString("email");
 
-                    if (!id.isEmpty()) {
-                        editor.putString("issignedin", "true");
-                        editor.putString("userid", id);
-                        editor.putString("email", email);
+                    JSONObject balanceData = response.getJSONObject("balances");
+                    balances.setSodexoBucks(balanceData.getDouble("sodexoBucks"));
+                    balances.setDiningDollars(balanceData.getDouble("diningDollars"));
+                    balances.setEagleDollars(balanceData.getDouble("eagleDollars"));
+                    balances.setMealPlans(balanceData.getInt("mealPlans"));
 
-                        Log.i("ID", id);
-                        getAccountBalances(id);
+                    if (!id.isEmpty()) {
 
                         Intent intent = new Intent(loginPage.this, HomeScreen.class);
                         intent.putExtra("id", id);
