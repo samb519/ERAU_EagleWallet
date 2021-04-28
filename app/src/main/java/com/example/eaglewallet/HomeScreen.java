@@ -9,7 +9,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -19,15 +18,12 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.eaglewallet.models.Balances;
 import com.example.eaglewallet.models.Transaction;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -36,9 +32,8 @@ import java.util.List;
 public class HomeScreen extends AppCompatActivity {
 
     ImageButton calenderHScreenBtn, paymentHScreenBtn,settingHScreenBtn, hideDollarsBtn, cardEmulatorHScreenBtn;
-    ProgressBar pBarHScreen;
-    TextView processText, mealPlanText,sodexoText,eagleDollarText,dinningText;
-    boolean hideCondition;
+    TextView mealPlanText,sodexoText,eagleDollarText,dinningText;
+    boolean hideCondition = true;
     LinearLayout ProgressBarLayout, ProgressNameLayout;
     AlertDialog.Builder builder;
 
@@ -56,13 +51,7 @@ public class HomeScreen extends AppCompatActivity {
         ProgressBarLayout = (LinearLayout)findViewById(R.id.ProgressBarLayout);
 
         hideDollarsBtn = (ImageButton) findViewById(R.id.hideDollarsBtn);
-        hideCondition = true;
         hideDollarsBtn.setOnClickListener(v -> clickedHideDollars());
-
-        pBarHScreen = (ProgressBar)findViewById(R.id.pBarHScreen);
-        disEnableScannerProgress();
-
-        processText = (TextView) findViewById(R.id.scannerProcessText);
 
         calenderHScreenBtn = (ImageButton) findViewById(R.id.calenderHScreenBtn);
         calenderHScreenBtn.setOnClickListener(v ->
@@ -80,10 +69,10 @@ public class HomeScreen extends AppCompatActivity {
         cardEmulatorHScreenBtn.setOnClickListener(v ->
                 clickedCardEmulatorBtn());{}
 
-        Balances balances = (Balances) getIntent().getSerializableExtra("Balances");
-        setEagleDollar(Double.toString(balances.getEagleDollars()));
-        setDinningDollar(Double.toString(balances.getDiningDollars()));
-        setSodexo(Double.toString(balances.getSodexoBucks()));
+//        Balances balances = (Balances) getIntent().getSerializableExtra("Balances");
+//        setEagleDollar(Double.toString(balances.getEagleDollars()));
+//        setDinningDollar(Double.toString(balances.getDiningDollars()));
+//        setSodexo(Double.toString(balances.getSodexoBucks()));
 
     }
 
@@ -183,47 +172,31 @@ public class HomeScreen extends AppCompatActivity {
 
     private void setEagleDollar(String amount)
     {
-        eagleDollarText.setText("$"+amount);
+        eagleDollarText.setText("$"+ checkSetNull(amount));
     }
 
     private void setDinningDollar(String amount)
     {
-        dinningText.setText("$"+amount);
+        dinningText.setText("$"+ checkSetNull(amount));
     }
 
     private void setSodexo(String amount)
     {
-        sodexoText.setText("$"+amount);
+        sodexoText.setText("$"+ checkSetNull(amount));
     }
 
-    private  void enableScannerProgress()
+    private String checkSetNull(String string)
     {
-        pBarHScreen.setVisibility(View.VISIBLE);
+        if(string == null)
+        {
+            return "0";
+        }
+        return string;
     }
 
-    private void disEnableScannerProgress()
-    {
-        pBarHScreen.setVisibility(View.GONE);
-    }
-
-    private  void processCurrently()
-    {
-        processText.setText("Processing");
-    }
-
-    private  void disProcessText()
-    {
-        processText.setVisibility(View.GONE);
-    }
-
-    private  void enableProcessText()
-    {
-        processText.setVisibility(View.VISIBLE);
-    }
 
     private void alert(String error)
     {
-        disProcessText();
         builder.setMessage(R.string.dialog_message).setTitle(R.string.dialog_title);
         //Setting message manually and performing action on button click
         builder.setMessage("Error: " + error)
@@ -238,7 +211,6 @@ public class HomeScreen extends AppCompatActivity {
         //Setting the title manually
         alert.setTitle("Transaction Error:");
         alert.show();
-
     }
 
 
