@@ -141,3 +141,6 @@ EagleWalletAPI/EagleWalletAPI.sh
 *.apk
 *.json
 *.lock
+*.bin
+*.lock
+*.properties
