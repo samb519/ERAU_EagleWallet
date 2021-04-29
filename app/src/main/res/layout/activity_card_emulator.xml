@@ -63,7 +63,7 @@
         android:layout_marginTop="35dp"
         android:layout_marginEnd="127dp"
         android:layout_marginBottom="33dp"
-        android:text="Name: John Smith"
+        android:text="Name: John Wick"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"

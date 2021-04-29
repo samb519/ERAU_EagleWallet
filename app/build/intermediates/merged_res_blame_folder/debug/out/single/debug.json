@@ -8,12 +8,12 @@
         "source": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\dollaricon.png"
     },
     {
-        "merged": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_eraucmoney_round.png.flat",
-        "source": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_eraucmoney_round.png"
-    },
-    {
         "merged": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_eraucalender_foreground.xml.flat",
         "source": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\ic_eraucalender_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_eraucmoney_round.png.flat",
+        "source": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-xhdpi\\ic_eraucmoney_round.png"
     },
     {
         "merged": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_eraucalender_round.png.flat",
@@ -80,12 +80,12 @@
         "source": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_face_round.png.flat",
-        "source": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-hdpi\\ic_face_round.png"
-    },
-    {
         "merged": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_face_round.png.flat",
         "source": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_face_round.png"
+    },
+    {
+        "merged": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_face_round.png.flat",
+        "source": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-hdpi\\ic_face_round.png"
     },
     {
         "merged": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
@@ -108,12 +108,12 @@
         "source": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\drawable_eaglecard.png.flat",
         "source": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\drawable\\eaglecard.png"
+    },
+    {
+        "merged": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
