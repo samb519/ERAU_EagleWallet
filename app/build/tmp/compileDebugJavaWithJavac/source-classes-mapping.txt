@@ -1,7 +1,9 @@
 com/example/eaglewallet/ui/calender/CalenderViewModel.java
  com.example.eaglewallet.ui.calender.CalenderViewModel
-com/example/eaglewallet/PaymentHomeScreen.java
- com.example.eaglewallet.PaymentHomeScreen
+com/example/eaglewallet/SettingsActivity.java
+ com.example.eaglewallet.SettingsActivity
+ com.example.eaglewallet.SettingsActivity$1
+ com.example.eaglewallet.SettingsActivity$2
 com/example/eaglewallet/ui/calender/CalenderFragment.java
  com.example.eaglewallet.ui.calender.CalenderFragment
 com/example/eaglewallet/models/Card.java
@@ -53,12 +55,10 @@ com/example/eaglewallet/models/Transaction.java
  com.example.eaglewallet.models.Transaction
 com/example/eaglewallet/CardEmulator.java
  com.example.eaglewallet.CardEmulator
-com/example/eaglewallet/HiddenPages.java
- com.example.eaglewallet.HiddenPages
-com/example/eaglewallet/SettingsActivity.java
- com.example.eaglewallet.SettingsActivity
- com.example.eaglewallet.SettingsActivity$1
- com.example.eaglewallet.SettingsActivity$2
 com/example/eaglewallet/HomeScreen.java
  com.example.eaglewallet.HomeScreen
  com.example.eaglewallet.HomeScreen$1
+com/example/eaglewallet/HiddenPages.java
+ com.example.eaglewallet.HiddenPages
+com/example/eaglewallet/PaymentHomeScreen.java
+ com.example.eaglewallet.PaymentHomeScreen
