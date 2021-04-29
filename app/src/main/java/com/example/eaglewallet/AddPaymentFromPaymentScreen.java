@@ -61,6 +61,7 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
 
         userTransactions = (List<Transaction>) getIntent().getSerializableExtra("Transactions");
         cards = (List<Card>) getIntent().getSerializableExtra("Cards");
+        balances = (Balances) getIntent().getSerializableExtra("balances");
 
 //        //Testing - Will need to be removed
 //        ArrayList<String> cards = new ArrayList<>();
@@ -141,64 +142,69 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
     }
 
     private void clickedBack() {
-        Intent intent=new Intent(AddPaymentFromPaymentScreen.this, HomeScreen.class);
+        Intent intent=new Intent(AddPaymentFromPaymentScreen.this, PaymentHomeScreen.class);
+        intent.putExtra("balances", balances);
         startActivity(intent);
     }
 
     private void clickedSubmit() {
-        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        String url = "https://eaglewallet.wise-net.xyz/api/Card/create";
-        JSONObject jsonBody = new JSONObject();
+        if (existCard.isChecked() ) {
+            modifyBalances();
+        } else {
+            RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+            String url = "https://eaglewallet.wise-net.xyz/api/Card/create";
+            JSONObject jsonBody = new JSONObject();
 
-        findEditText();
+            findEditText();
 
-        String cardNum = credCardNum.getText().toString();
-        String cvc = CVC.getText().toString();
-        String expDate = ExpDate.getText().toString();
-        String fullName = FullName.getText().toString();
-        String street = StreetAddr.getText().toString();
-        String city = City.getText().toString();
-        String state = State.getText().toString();
-        String zip = Zip.getText().toString();
+            String cardNum = credCardNum.getText().toString();
+            String cvc = CVC.getText().toString();
+            String expDate = ExpDate.getText().toString();
+            String fullName = FullName.getText().toString();
+            String street = StreetAddr.getText().toString();
+            String city = City.getText().toString();
+            String state = State.getText().toString();
+            String zip = Zip.getText().toString();
 
-        Log.i("ID", String.valueOf(userTransactions.get(0).getUserId()));
+            Log.i("ID", String.valueOf(userTransactions.get(0).getUserId()));
 
-        try {
-            jsonBody.put("cardId", 0);
-            jsonBody.put("userId", userTransactions.get(0).getUserId());
-            jsonBody.put("cardNumber", cardNum);
-            jsonBody.put("cvc", cvc);
-            jsonBody.put("expirationDate", expDate);
-            jsonBody.put("fullName", fullName);
-            jsonBody.put("streetAddress", street);
-            jsonBody.put("city", city);
-            jsonBody.put("state", state);
-            jsonBody.put("zipCode", zip);
-        } catch (JSONException e) {
-            e.printStackTrace();
+            try {
+                jsonBody.put("cardId", 0);
+                jsonBody.put("userId", userTransactions.get(0).getUserId());
+                jsonBody.put("cardNumber", cardNum);
+                jsonBody.put("cvc", cvc);
+                jsonBody.put("expirationDate", expDate);
+                jsonBody.put("fullName", fullName);
+                jsonBody.put("streetAddress", street);
+                jsonBody.put("city", city);
+                jsonBody.put("state", state);
+                jsonBody.put("zipCode", zip);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            JsonObjectRequest req = new JsonObjectRequest(url, jsonBody, new Response.Listener<JSONObject>() {
+                @Override
+                public void onResponse(JSONObject response) {
+                    Log.i("VOLLEY", response.toString());
+
+                    modifyBalances();
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Log.e("VOLLEY", error.toString());
+                }
+            }) {
+                @Override
+                public String getBodyContentType() {
+                    return "application/json; charset=utf-8";
+                }
+
+            };
+
+            queue.add(req);
         }
-
-        JsonObjectRequest req = new JsonObjectRequest(url, jsonBody, new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
-                Log.i("VOLLEY", response.toString());
-
-                modifyBalances();
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e("VOLLEY", error.toString());
-            }
-        }) {
-            @Override
-            public String getBodyContentType() {
-                return "application/json; charset=utf-8";
-            }
-
-        };
-
-        queue.add(req);
 
         if(addCard.isChecked())
         {
