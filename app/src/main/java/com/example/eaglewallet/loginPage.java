@@ -18,6 +18,7 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -92,6 +93,7 @@ public class loginPage extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
         JsonObjectRequest req = new JsonObjectRequest(url, jsonBody, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -101,6 +103,7 @@ public class loginPage extends AppCompatActivity {
 
                 try {
                     id = response.getString("id");
+                    StorageClass.getInstance().userId = response.getInt("id");
                     userEmail = response.getString("email");
                     Log.i("TEST", String.valueOf(balances.getSodexoBucks()));
 
@@ -111,6 +114,7 @@ public class loginPage extends AppCompatActivity {
                     balances.setEagleDollars(balanceData.getDouble("eagleDollars"));
                     balances.setMealPlans(balanceData.getInt("mealPlans"));
 
+                    StorageClass.getInstance().balances = balances;
                     if (!id.isEmpty()) {
 
                         Intent intent = new Intent(loginPage.this, HomeScreen.class);

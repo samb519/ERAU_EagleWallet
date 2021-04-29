@@ -141,7 +141,7 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
     }
 
     private void clickedBack() {
-        Intent intent=new Intent(AddPaymentFromPaymentScreen.this, PaymentHomeScreen.class);
+        Intent intent=new Intent(AddPaymentFromPaymentScreen.this, HomeScreen.class);
         startActivity(intent);
     }
 

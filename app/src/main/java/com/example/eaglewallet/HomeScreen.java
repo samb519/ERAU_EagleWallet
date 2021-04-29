@@ -39,8 +39,8 @@ public class HomeScreen extends AppCompatActivity {
     boolean hideCondition;
     LinearLayout ProgressBarLayout, ProgressNameLayout, hiddenButton;
     AlertDialog.Builder builder;
-    List<Transaction> userTransactions;
-    List<Card> cards;
+    ArrayList<Transaction> userTransactions;
+    ArrayList<Card> cards;
     Balances balances;
 
     @Override
@@ -82,6 +82,7 @@ public class HomeScreen extends AppCompatActivity {
                 clickedCardEmulatorBtn());{}
 
         //Balances balances = (Balances) getIntent().getSerializableExtra("balances");
+        Balances balances = StorageClass.getInstance().getCurrentBalances(Volley.newRequestQueue(getApplicationContext()));
         Log.i("EAGLE", String.valueOf(balances.getEagleDollars()));
         setEagleDollar(Double.toString(balances.getEagleDollars()));
         setDinningDollar(Double.toString(balances.getDiningDollars()));
@@ -152,8 +153,8 @@ public class HomeScreen extends AppCompatActivity {
                         userTransactions.add(trans);
                     }
 
+                    StorageClass.getInstance().transactions = userTransactions;
                     getCards();
-
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.Space;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.Volley;
 import com.example.eaglewallet.models.Card;
 import com.example.eaglewallet.models.Transaction;
 
@@ -51,7 +52,7 @@ public class PaymentHomeScreen extends AppCompatActivity {
         cards = (List<Card>) getIntent().getSerializableExtra("Cards");
 
         if (getIntent().getExtras() != null) {
-            userTransactions = (List<Transaction>) getIntent().getSerializableExtra("UserTransactions");
+            userTransactions = StorageClass.getInstance().getTransactionHistory(Volley.newRequestQueue(getApplicationContext()));
             for (Transaction trans : userTransactions) {
                 if (trans.getSodexoBucks() > 0) {
                     test.add("Deposit on " + trans.getDate() + ": $" + trans.getSodexoBucks() + " Sodexo Bucks");

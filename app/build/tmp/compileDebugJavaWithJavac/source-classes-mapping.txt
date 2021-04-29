@@ -12,6 +12,14 @@ com/example/eaglewallet/models/Balances.java
  com.example.eaglewallet.models.Balances
 com/example/eaglewallet/models/Transaction.java
  com.example.eaglewallet.models.Transaction
+com/example/eaglewallet/StorageClass.java
+ com.example.eaglewallet.StorageClass
+ com.example.eaglewallet.StorageClass$1
+ com.example.eaglewallet.StorageClass$2
+ com.example.eaglewallet.StorageClass$3
+ com.example.eaglewallet.StorageClass$4
+ com.example.eaglewallet.StorageClass$5
+ com.example.eaglewallet.StorageClass$6
 com/example/eaglewallet/CreateAccount.java
  com.example.eaglewallet.CreateAccount
  com.example.eaglewallet.CreateAccount$1
