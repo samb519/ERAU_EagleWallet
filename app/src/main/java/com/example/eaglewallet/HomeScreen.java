@@ -7,27 +7,47 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
+import com.example.eaglewallet.models.Balances;
+import com.example.eaglewallet.models.Transaction;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeScreen extends AppCompatActivity {
 
-    ImageButton calenderHScreenBtn, paymentHScreenBtn,settingHScreenBtn, hideDollarsBtn, cardEmulatorHScreenBtn;
-    ProgressBar pBarHScreen;
-    TextView processText, mealPlanText,sodexoText,eagleDollarText,dinningText;
+    ImageButton calenderHScreenBtn, paymentHScreenBtn,settingHScreenBtn, hideDollarsBtn, cardEmulatorHScreenBtn, logout;
+    TextView mealPlanText,sodexoText,eagleDollarText,dinningText;
     boolean hideCondition;
-    LinearLayout ProgressBarLayout, ProgressNameLayout;
+    LinearLayout ProgressBarLayout, ProgressNameLayout, hiddenButton;
     AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+        hideCondition = true;
+        logout = (ImageButton) findViewById(R.id.logOutBtn);
+        logout.setOnClickListener(v-> clickedLogOut());
+
+        hiddenButton = (LinearLayout) findViewById(R.id.hiddenButton);
+        hiddenButton.setOnClickListener(v-> hiddenFeature());
 
         mealPlanText = (TextView) findViewById(R.id.mealPlanAmount);
         sodexoText = (TextView) findViewById(R.id.sodexoAmount);
@@ -38,13 +58,7 @@ public class HomeScreen extends AppCompatActivity {
         ProgressBarLayout = (LinearLayout)findViewById(R.id.ProgressBarLayout);
 
         hideDollarsBtn = (ImageButton) findViewById(R.id.hideDollarsBtn);
-        hideCondition = true;
         hideDollarsBtn.setOnClickListener(v -> clickedHideDollars());
-
-        pBarHScreen = (ProgressBar)findViewById(R.id.pBarHScreen);
-        disEnableScannerProgress();
-
-        processText = (TextView) findViewById(R.id.scannerProcessText);
 
         calenderHScreenBtn = (ImageButton) findViewById(R.id.calenderHScreenBtn);
         calenderHScreenBtn.setOnClickListener(v ->
@@ -62,6 +76,16 @@ public class HomeScreen extends AppCompatActivity {
         cardEmulatorHScreenBtn.setOnClickListener(v ->
                 clickedCardEmulatorBtn());{}
 
+//        Balances balances = (Balances) getIntent().getSerializableExtra("Balances");
+//        setEagleDollar(Double.toString(balances.getEagleDollars()));
+//        setDinningDollar(Double.toString(balances.getDiningDollars()));
+//        setSodexo(Double.toString(balances.getSodexoBucks()));
+
+    }
+
+    private void hiddenFeature() {
+        Intent intent=new Intent(HomeScreen.this, HiddenPages.class);
+        startActivity(intent);
     }
 
     private  void clickedHideDollars()
@@ -71,15 +95,21 @@ public class HomeScreen extends AppCompatActivity {
         {
             ProgressBarLayout.setVisibility(View.GONE);
             ProgressNameLayout.setVisibility(View.GONE);
-            hideDollarsBtn.setImageResource(R.drawable.oclusionoff);
+            hideDollarsBtn.setImageResource(R.drawable.ic_hidden_eye);
         }
         else
         {
             ProgressBarLayout.setVisibility(View.VISIBLE);
             ProgressNameLayout.setVisibility(View.VISIBLE);
-            hideDollarsBtn.setImageResource(R.drawable.ic_baseline_remove_red_eye_24);
+            hideDollarsBtn.setImageResource(R.drawable.ic_show_eye);
         }
 
+    }
+
+    private  void clickedLogOut()
+    {
+        Intent intent=new Intent(HomeScreen.this, loginPage.class);
+        startActivity(intent);
     }
 
     private void clickedCalenderBtn(String url){
@@ -89,19 +119,65 @@ public class HomeScreen extends AppCompatActivity {
 
     }
 
-    private   void clickedPaymentBtn()
+    private void clickedPaymentBtn()
     {
-        Intent intent=new Intent(HomeScreen.this, PaymentHomeScreen.class);
-        startActivity(intent);
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        String url = "https://eaglewallet.wise-net.xyz/api/Transaction/history/" + loginPage.getId();
+
+        JsonArrayRequest req = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                Log.i("VOLLEY", response.toString());
+                List<Transaction> userTransactions = new ArrayList<Transaction>();
+
+                try {
+                    for (int i = 0; i < response.length(); i++) {
+                        JSONObject jsonObject = response.getJSONObject(i);
+                        Transaction trans = new Transaction();
+
+                        trans.setDate(jsonObject.getString("transactionDate"));
+                        trans.setDiningDollars(jsonObject.getDouble("diningDollars"));
+                        trans.setEagleDollars(jsonObject.getDouble("eagleDollars"));
+                        trans.setMealPlans(jsonObject.getDouble("mealPlans"));
+                        trans.setSodexoBucks(jsonObject.getDouble("sodexoBucks"));
+                        trans.setTransId(jsonObject.getInt("transactionId"));
+                        trans.setUserId(jsonObject.getInt("userId"));
+
+                        userTransactions.add(trans);
+                    }
+
+                    Intent intent=new Intent(HomeScreen.this, PaymentHomeScreen.class);
+                    intent.putExtra("UserTransactions", (Serializable) userTransactions);
+                    startActivity(intent);
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("VOLLEY", error.toString());
+                alert(error.toString());
+            }
+        }) {
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+
+        };
+
+        queue.add(req);
     }
 
-    private   void clickedSettingBtn()
+    private void clickedSettingBtn()
     {
         Intent intent=new Intent(HomeScreen.this, SettingsActivity.class);
         startActivity(intent);
     }
 
-    private   void clickedCardEmulatorBtn()
+    private void clickedCardEmulatorBtn()
     {
         Intent intent=new Intent(HomeScreen.this, CardEmulator.class);
         startActivity(intent);
@@ -112,49 +188,33 @@ public class HomeScreen extends AppCompatActivity {
         mealPlanText.setText("$" + amountTaken + "/" + totalAmount);
     }
 
-    private  void setEagleDollar(String amount)
+    private void setEagleDollar(String amount)
     {
-        eagleDollarText.setText("$"+amount);
+        eagleDollarText.setText("$"+ checkSetNull(amount));
     }
 
     private void setDinningDollar(String amount)
     {
-        dinningText.setText("$"+amount);
+        dinningText.setText("$"+ checkSetNull(amount));
     }
 
     private void setSodexo(String amount)
     {
-        sodexoText.setText("$"+amount);
+        sodexoText.setText("$"+ checkSetNull(amount));
     }
 
-    private  void enableScannerProgress()
+    private String checkSetNull(String string)
     {
-        pBarHScreen.setVisibility(View.VISIBLE);
+        if(string == null)
+        {
+            return "0";
+        }
+        return string;
     }
 
-    private void disEnableScannerProgress()
-    {
-        pBarHScreen.setVisibility(View.GONE);
-    }
-
-    private  void processCurrently()
-    {
-        processText.setText("Processing");
-    }
-
-    private  void disProcessText()
-    {
-        processText.setVisibility(View.GONE);
-    }
-
-    private  void enableProcessText()
-    {
-        processText.setVisibility(View.VISIBLE);
-    }
 
     private void alert(String error)
     {
-        disProcessText();
         builder.setMessage(R.string.dialog_message).setTitle(R.string.dialog_title);
         //Setting message manually and performing action on button click
         builder.setMessage("Error: " + error)
@@ -169,6 +229,7 @@ public class HomeScreen extends AppCompatActivity {
         //Setting the title manually
         alert.setTitle("Transaction Error:");
         alert.show();
-
     }
+
+
 }
