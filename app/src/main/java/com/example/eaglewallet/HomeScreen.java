@@ -76,10 +76,10 @@ public class HomeScreen extends AppCompatActivity {
         cardEmulatorHScreenBtn.setOnClickListener(v ->
                 clickedCardEmulatorBtn());{}
 
-//        Balances balances = (Balances) getIntent().getSerializableExtra("Balances");
-//        setEagleDollar(Double.toString(balances.getEagleDollars()));
-//        setDinningDollar(Double.toString(balances.getDiningDollars()));
-//        setSodexo(Double.toString(balances.getSodexoBucks()));
+        Balances balances = (Balances) getIntent().getSerializableExtra("Balances");
+        setEagleDollar(Double.toString(balances.getEagleDollars()));
+        setDinningDollar(Double.toString(balances.getDiningDollars()));
+        setSodexo(Double.toString(balances.getSodexoBucks()));
 
     }
 
