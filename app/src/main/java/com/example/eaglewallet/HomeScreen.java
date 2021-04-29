@@ -45,6 +45,7 @@ public class HomeScreen extends AppCompatActivity {
     AlertDialog.Builder builder;
     List<Transaction> userTransactions;
     List<Card> cards;
+    Balances balances;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -200,6 +201,7 @@ public class HomeScreen extends AppCompatActivity {
                     Intent intent=new Intent(HomeScreen.this, PaymentHomeScreen.class);
                     intent.putExtra("UserTransactions", (Serializable) userTransactions);
                     intent.putExtra("Cards", (Serializable) cards);
+                    intent.putExtra("Balances", (Serializable) balances);
                     startActivity(intent);
 
                 } catch (Exception e) {

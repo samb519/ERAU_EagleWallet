@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.eaglewallet.models.Balances;
 import com.example.eaglewallet.models.Card;
 import com.example.eaglewallet.models.Transaction;
 
@@ -26,6 +27,7 @@ public class PaymentHomeScreen extends AppCompatActivity {
     LinearLayout layout;
     List<Transaction> userTransactions;
     List<Card> cards;
+    Balances balances;
 
 
     @Override
@@ -46,6 +48,8 @@ public class PaymentHomeScreen extends AppCompatActivity {
                 clickedCalenderBtn( "https://eraudining.sodexomyway.com/dining-near-me/hours"));{}
 
         ArrayList<String> test = new ArrayList<>();
+
+        balances = (Balances) getIntent().getSerializableExtra("balances");
 
         cards = (List<Card>) getIntent().getSerializableExtra("Cards");
 
@@ -98,11 +102,13 @@ public class PaymentHomeScreen extends AppCompatActivity {
         Intent intent = new Intent(PaymentHomeScreen.this, AddPaymentFromPaymentScreen.class);
         intent.putExtra("Transactions", (Serializable) userTransactions);
         intent.putExtra("Cards", (Serializable) cards);
+        intent.putExtra("balances", (Serializable) balances);
         startActivity(intent);
     }
 
     private void clickedHomeBtn() {
         Intent intent = new Intent(PaymentHomeScreen.this, HomeScreen.class);
+        intent.putExtra("balances", (Serializable) balances);
         startActivity(intent);
     }
 
