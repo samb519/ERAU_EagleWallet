@@ -22,6 +22,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.eaglewallet.models.Balances;
+import com.example.eaglewallet.models.Card;
 import com.example.eaglewallet.models.Transaction;
 
 import org.json.JSONArray;
@@ -45,7 +46,9 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
     Button AddPScreen_Back, AddPScreen_Submit;
     EditText credCardNum,CVC,ExpDate,FullName,StreetAddr, City,State,Zip, amountText;
     List<Transaction> userTransactions;
+    List<Card> cards;
     Balances balances;
+    Double amount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +60,7 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         findBtns();
 
         userTransactions = (List<Transaction>) getIntent().getSerializableExtra("Transactions");
+        cards = (List<Card>) getIntent().getSerializableExtra("Cards");
 
 //        //Testing - Will need to be removed
 //        ArrayList<String> cards = new ArrayList<>();
@@ -148,16 +152,28 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
 
         findEditText();
 
+        String cardNum = credCardNum.getText().toString();
+        String cvc = CVC.getText().toString();
+        String expDate = ExpDate.getText().toString();
+        String fullName = FullName.getText().toString();
+        String street = StreetAddr.getText().toString();
+        String city = City.getText().toString();
+        String state = State.getText().toString();
+        String zip = Zip.getText().toString();
+
+        Log.i("ID", String.valueOf(userTransactions.get(0).getUserId()));
+
         try {
+            jsonBody.put("cardId", 0);
             jsonBody.put("userId", userTransactions.get(0).getUserId());
-            jsonBody.put("cardNumber", credCardNum);
-            jsonBody.put("cvc", CVC);
-            jsonBody.put("expirationDate", ExpDate);
-            jsonBody.put("fullName", FullName);
-            jsonBody.put("streetAddress", StreetAddr);
-            jsonBody.put("city", City);
-            jsonBody.put("state", State);
-            jsonBody.put("zipCode", Zip);
+            jsonBody.put("cardNumber", cardNum);
+            jsonBody.put("cvc", cvc);
+            jsonBody.put("expirationDate", expDate);
+            jsonBody.put("fullName", fullName);
+            jsonBody.put("streetAddress", street);
+            jsonBody.put("city", city);
+            jsonBody.put("state", state);
+            jsonBody.put("zipCode", zip);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -167,6 +183,7 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
             public void onResponse(JSONObject response) {
                 Log.i("VOLLEY", response.toString());
 
+                modifyBalances();
             }
         }, new Response.ErrorListener() {
             @Override
@@ -194,16 +211,103 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
             fundsSelectedForSubmit();//Find the selected plan
         }
 
-        Intent intent=new Intent(AddPaymentFromPaymentScreen.this, HomeScreen.class);
-        startActivity(intent);
     }
 
-    private  int getSelectedCard()
+    private void modifyBalances() {
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        String url = "https://eaglewallet.wise-net.xyz/api/Transaction/modifyBalances";
+        JSONObject jsonBody = new JSONObject();
+
+        amount = Double.parseDouble(amountText.getText().toString());
+
+        String jsonString = "";
+
+        if (clickedPlanOption == 1) {
+            jsonString = "sodexoBucks";
+        } else if (clickedPlanOption == 2) {
+            jsonString = "diningDollars";
+        } else if (clickedPlanOption == 3) {
+            jsonString = "eagleDollars";
+        } else if (clickedPlanOption == 0) {
+            jsonString = "mealPlans";
+        }
+
+        try {
+            jsonBody.put("userId", userTransactions.get(0).getUserId());
+            jsonBody.put(jsonString, amount);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        JsonObjectRequest req = new JsonObjectRequest(url, jsonBody, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                Log.i("VOLLEY", response.toString());
+
+                getBalances();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("VOLLEY", error.toString());
+            }
+        }) {
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+
+        };
+
+        queue.add(req);
+    }
+
+    private void getBalances() {
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        String url = "https://eaglewallet.wise-net.xyz/api/Transaction/balances/" + userTransactions.get(0).getUserId();
+
+        JsonObjectRequest req = new JsonObjectRequest(url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                Log.i("VOLLEY", response.toString());
+                balances = new Balances();
+
+                try {
+                    balances.setSodexoBucks(response.getDouble("sodexoBucks"));
+                    balances.setDiningDollars(response.getDouble("diningDollars"));
+                    balances.setEagleDollars(response.getDouble("eagleDollars"));
+                    balances.setMealPlans(response.getInt("mealPlans"));
+
+                    Intent intent=new Intent(AddPaymentFromPaymentScreen.this, HomeScreen.class);
+                    intent.putExtra("balances", (Serializable) balances);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("VOLLEY", error.toString());
+            }
+        }) {
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+
+        };
+
+        queue.add(req);
+    }
+
+    private int getSelectedCard()
     {
         return cardSpinner.getSelectedItemPosition();
     }
 
-    private  void fundsSelectedForSubmit()
+    private void fundsSelectedForSubmit()
     {
         if(clickedPlanOption == 0) //Meal Plans
         {
@@ -318,68 +422,4 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         spinner.setAdapter(arrayAdapter);
     }
 
-    private void postUserRegistration() {
-
-        EditText firstNameText = (EditText) findViewById(R.id.editTextTextPersonFirstName);
-        String firstName = firstNameText.getText().toString();
-
-        EditText lastNameText = (EditText) findViewById(R.id.editTextTextPersonLastName);
-        String lastName = lastNameText.getText().toString();
-
-        EditText studentIDText = (EditText) findViewById(R.id.editStudentID);
-        int studentID = Integer.parseInt(studentIDText.getText().toString());
-
-        EditText passwordText = (EditText) findViewById(R.id.editTextTextPassword2);
-        String password = passwordText.getText().toString();
-
-        EditText emailText = (EditText) findViewById(R.id.editTextTextEmailAddress2);
-        String email = emailText.getText().toString();
-
-        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        String url ="https://eaglewallet.wise-net.xyz/api/Auth/register";
-        JSONObject jsonBody = new JSONObject();
-        try {
-            jsonBody.put("studentID", studentID);
-            jsonBody.put("firstName", firstName);
-            jsonBody.put("lastName", lastName);
-            jsonBody.put("password", password);
-            jsonBody.put("email", email);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        JsonObjectRequest req = new JsonObjectRequest(url, jsonBody, new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
-                Log.i("VOLLEY", response.toString());
-
-                try {
-                    String id = response.getString("id");
-                    String email = response.getString("email");
-
-                   // if (!id.isEmpty()) {
-                    //    Intent intent = new Intent(CreateAccount.this, loginPage.class );
-                     //   startActivity(intent);
-                    //}
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e("VOLLEY", error.toString());
-            }
-        }) {
-            @Override
-            public String getBodyContentType() {
-                return "application/json; charset=utf-8";
-            }
-
-        };
-
-        queue.add(req);
-    }
 }

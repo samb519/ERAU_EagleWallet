@@ -1,6 +1,8 @@
 package com.example.eaglewallet.models;
 
-public class Card {
+import java.io.Serializable;
+
+public class Card implements Serializable {
     int userId;
     String cardNumber, cvc, expirationDate, fullName, streetAddress, city, state, zipCode;
 

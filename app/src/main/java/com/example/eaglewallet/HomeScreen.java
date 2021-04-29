@@ -15,12 +15,14 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.eaglewallet.models.Balances;
+import com.example.eaglewallet.models.Card;
 import com.example.eaglewallet.models.Transaction;
 
 import org.json.JSONArray;
@@ -37,6 +39,8 @@ public class HomeScreen extends AppCompatActivity {
     boolean hideCondition;
     LinearLayout ProgressBarLayout, ProgressNameLayout, hiddenButton;
     AlertDialog.Builder builder;
+    List<Transaction> userTransactions;
+    List<Card> cards;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +80,8 @@ public class HomeScreen extends AppCompatActivity {
         cardEmulatorHScreenBtn.setOnClickListener(v ->
                 clickedCardEmulatorBtn());{}
 
-        Balances balances = (Balances) getIntent().getSerializableExtra("Balances");
+        Balances balances = (Balances) getIntent().getSerializableExtra("balances");
+        Log.i("EAGLE", String.valueOf(balances.getEagleDollars()));
         setEagleDollar(Double.toString(balances.getEagleDollars()));
         setDinningDollar(Double.toString(balances.getDiningDollars()));
         setSodexo(Double.toString(balances.getSodexoBucks()));
@@ -128,7 +133,7 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onResponse(JSONArray response) {
                 Log.i("VOLLEY", response.toString());
-                List<Transaction> userTransactions = new ArrayList<Transaction>();
+                userTransactions = new ArrayList<Transaction>();
 
                 try {
                     for (int i = 0; i < response.length(); i++) {
@@ -146,8 +151,62 @@ public class HomeScreen extends AppCompatActivity {
                         userTransactions.add(trans);
                     }
 
+                    getCards();
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("VOLLEY", error.toString());
+                alert(error.toString());
+            }
+        }) {
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+
+        };
+
+        queue.add(req);
+    }
+
+    public void getCards() {
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        String url = "https://eaglewallet.wise-net.xyz/api/Card/getCards/" + loginPage.getId();
+
+        JSONArray jsonObject = new JSONArray();
+
+        JsonArrayRequest req = new JsonArrayRequest(Request.Method.POST, url, jsonObject, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                Log.i("VOLLEY", response.toString());
+                cards = new ArrayList<Card>();
+
+                try {
+                    for (int i = 0; i < response.length(); i++) {
+                        JSONObject jsonObject = response.getJSONObject(i);
+                        Card card = new Card();
+
+                        card.setUserId(jsonObject.getInt("userId"));
+                        card.setCardNumber(jsonObject.getString("cardNumber"));
+                        card.setCvc(jsonObject.getString("cvc"));
+                        card.setExpirationDate(jsonObject.getString("expirationDate"));
+                        card.setFullName(jsonObject.getString("fullName"));
+                        card.setStreetAddress(jsonObject.getString("streetAddress"));
+                        card.setCity(jsonObject.getString("city"));
+                        card.setState(jsonObject.getString("state"));
+                        card.setZipCode(jsonObject.getString("zipCode"));
+
+                        cards.add(card);
+                    }
+
                     Intent intent=new Intent(HomeScreen.this, PaymentHomeScreen.class);
                     intent.putExtra("UserTransactions", (Serializable) userTransactions);
+                    intent.putExtra("Cards", (Serializable) cards);
                     startActivity(intent);
 
                 } catch (Exception e) {
