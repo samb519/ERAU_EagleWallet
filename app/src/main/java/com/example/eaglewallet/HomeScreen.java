@@ -41,6 +41,12 @@ public class HomeScreen extends AppCompatActivity {
     AlertDialog.Builder builder;
     List<Transaction> userTransactions;
     List<Card> cards;
+    Balances balances;
+
+    HomeScreen(Balances balances)
+    {
+        
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
