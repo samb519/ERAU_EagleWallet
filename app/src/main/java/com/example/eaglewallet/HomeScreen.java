@@ -2,6 +2,8 @@ package com.example.eaglewallet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,18 +13,26 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class HomeScreen extends AppCompatActivity {
 
     ImageButton calenderHScreenBtn, paymentHScreenBtn,settingHScreenBtn, hideDollarsBtn, cardEmulatorHScreenBtn;
     ProgressBar pBarHScreen;
-    TextView processText;
+    TextView processText, mealPlanText,sodexoText,eagleDollarText,dinningText;
     boolean hideCondition;
     LinearLayout ProgressBarLayout, ProgressNameLayout;
+    AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
+        mealPlanText = (TextView) findViewById(R.id.mealPlanAmount);
+        sodexoText = (TextView) findViewById(R.id.sodexoAmount);
+        eagleDollarText = (TextView) findViewById(R.id.eagleDollarsText);
+        dinningText = (TextView) findViewById(R.id.dinningDollarText);
 
         ProgressNameLayout = (LinearLayout)findViewById(R.id.ProgressNameLayout);
         ProgressBarLayout = (LinearLayout)findViewById(R.id.ProgressBarLayout);
@@ -35,7 +45,6 @@ public class HomeScreen extends AppCompatActivity {
         disEnableScannerProgress();
 
         processText = (TextView) findViewById(R.id.scannerProcessText);
-        disProcessText();
 
         calenderHScreenBtn = (ImageButton) findViewById(R.id.calenderHScreenBtn);
         calenderHScreenBtn.setOnClickListener(v ->
@@ -98,6 +107,26 @@ public class HomeScreen extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private  void updateMealPlan(String amountTaken, String totalAmount)
+    {
+        mealPlanText.setText("$" + amountTaken + "/" + totalAmount);
+    }
+
+    private  void setEagleDollar(String amount)
+    {
+        eagleDollarText.setText("$"+amount);
+    }
+
+    private void setDinningDollar(String amount)
+    {
+        dinningText.setText("$"+amount);
+    }
+
+    private void setSodexo(String amount)
+    {
+        sodexoText.setText("$"+amount);
+    }
+
     private  void enableScannerProgress()
     {
         pBarHScreen.setVisibility(View.VISIBLE);
@@ -108,19 +137,9 @@ public class HomeScreen extends AppCompatActivity {
         pBarHScreen.setVisibility(View.GONE);
     }
 
-    private  void processFailed()
-    {
-        processText.setText("Process Failed");
-    }
-
     private  void processCurrently()
     {
         processText.setText("Processing");
-    }
-
-    private  void processComplete()
-    {
-        processText.setText("Process Completed");
     }
 
     private  void disProcessText()
@@ -131,5 +150,25 @@ public class HomeScreen extends AppCompatActivity {
     private  void enableProcessText()
     {
         processText.setVisibility(View.VISIBLE);
+    }
+
+    private void alert(String error)
+    {
+        disProcessText();
+        builder.setMessage(R.string.dialog_message).setTitle(R.string.dialog_title);
+        //Setting message manually and performing action on button click
+        builder.setMessage("Error: " + error)
+                .setCancelable(false)
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        //Creating dialog box
+        AlertDialog alert = builder.create();
+        //Setting the title manually
+        alert.setTitle("Transaction Error:");
+        alert.show();
+
     }
 }

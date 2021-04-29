@@ -11,5 +11,6 @@ namespace EagleWalletAPI.Repositories
     {
         Task<Tuple<int, string>> Register(UserCreateDto user);
         Task<User> Login(string username, string password);
+        Task<bool> ValidateUser(int userId);
     }
 }

@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
         android:layout_marginTop="258dp"
+        android:layout_marginEnd="94dp"
         android:background="@drawable/round"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
@@ -35,6 +36,7 @@
         android:shadowRadius="0"
         android:textAlignment="center"
         android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,8 +46,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
         android:layout_marginTop="320dp"
-        android:background="@drawable/round"
+        android:layout_marginEnd="94dp"
 
+        android:background="@drawable/round"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="@string/prompt_Password"
@@ -54,6 +57,7 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:theme="@style/Theme.EagleWallet"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,21 +67,28 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="164dp"
         android:layout_marginTop="396dp"
-        android:backgroundTint="?android:attr/colorEdgeEffect"
+        android:layout_marginEnd="147dp"
+        android:backgroundTint="@color/royal_Blue"
         android:text="@string/login_button"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         app:cornerRadius="15dp"
-        app:iconTint="?android:attr/colorEdgeEffect"
+        app:iconTint="@color/royal_Blue"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#B1AFAF" />
 
     <ProgressBar
         android:id="@+id/pBarHScreen"
         style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Inverse"
         android:layout_width="147dp"
         android:layout_height="147dp"
-        android:layout_marginStart="132dp"
+        android:layout_marginStart="144dp"
         android:layout_marginTop="228dp"
+        android:layout_marginEnd="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></ProgressBar>
 
@@ -93,17 +104,6 @@
         android:defaultFocusHighlightEnabled="true"
         android:text="@string/create_accountTxt"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/loginWarningText"
-        android:layout_width="234dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="452dp"
-        android:text="@string/loginWarningMessage"
-        android:textColor="#FF0000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

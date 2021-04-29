@@ -14,10 +14,10 @@
         android:layout_marginTop="146dp"
         android:layout_marginEnd="111dp"
         android:layout_marginBottom="303dp"
+        android:contentDescription="@string/emulatorcard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/eaglecard"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/eaglecard" />
 </androidx.constraintlayout.widget.ConstraintLayout>

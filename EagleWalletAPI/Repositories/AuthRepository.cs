@@ -17,19 +17,18 @@ namespace EagleWalletAPI.Repositories
             this.context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task<User> Login(string username, string password)
+        public async Task<User> Login(string email, string password)
         {
             using (var conn = context.GetEagleWalletConnection())
             using (var cmd = conn.CreateStoredProc("uspGetUserLogin"))
             {
-                cmd.Parameters.AddWithValue("@Username", username);
+                cmd.Parameters.AddWithValue("@Email", email);
                 using (var reader = await cmd.ExecuteReaderAsync())
                 {
-                    string Username, Email;
+                    string Email;
                     byte[] PasswordHash, PasswordSalt;
                     while (reader.Read())
                     {
-                        Username = reader["Username"].ToString();
                         Email = reader["Email"].ToString();
                         PasswordHash = (byte[])reader["PasswordHash"];
                         PasswordSalt = (byte[])reader["PasswordSalt"];
@@ -40,7 +39,6 @@ namespace EagleWalletAPI.Repositories
                             {
                                 Id = int.Parse(reader["Id"].ToString()),
                                 Email = Email,
-                                Username = Username
                             };
                         } 
                         else
@@ -78,7 +76,9 @@ namespace EagleWalletAPI.Repositories
             using (var conn = context.GetEagleWalletConnection())
             using (var cmd = conn.CreateStoredProc("uspCreateUser"))
             {
-                cmd.Parameters.AddWithValue("@Username", user.Username);
+                cmd.Parameters.AddWithValue("@StudentID", user.StudentID);
+                cmd.Parameters.AddWithValue("@FirstName", user.FirstName);
+                cmd.Parameters.AddWithValue("@LastName", user.LastName);
                 cmd.Parameters.AddWithValue("@Email", user.Email);
                 cmd.Parameters.AddWithValue("@PasswordHash", hash);
                 cmd.Parameters.AddWithValue("@PasswordSalt", salt);
@@ -92,6 +92,23 @@ namespace EagleWalletAPI.Repositories
                     return null;
                 }
 
+            }
+        }
+
+        public async Task<bool> ValidateUser(int userId){
+
+            using (var conn = context.GetEagleWalletConnection())
+            using (var cmd = conn.CreateStoredProc("uspValidateUser"))
+            {
+                cmd.Parameters.AddWithValue("@UserID", userId);
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    while (reader.Read())
+                    {
+                        return true;
+                    }
+                    return false;
+                }
             }
         }
 

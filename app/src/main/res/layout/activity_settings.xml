@@ -4,7 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
     tools:context=".SettingsActivity">
+
+    <View
+        android:id="@+id/SetScreenBorderTop"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="64dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/SettingsSubmit"
@@ -13,11 +25,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="232dp"
         android:layout_marginTop="612dp"
-        android:backgroundTint="#2196F3"
-        android:text="Submit"
+        android:layout_marginEnd="79dp"
+        android:backgroundTint="@color/royal_Blue"
+        android:text="@string/submit_settings"
+        android:textColor="#FFFFFF"
         app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#B1AFAF" />
 
     <Button
         android:id="@+id/SettingsBack"
@@ -26,33 +42,38 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginTop="612dp"
+        android:layout_marginEnd="239dp"
         android:background="#00FFFFFF"
-        android:backgroundTint="#2196F3"
-        android:text="Back"
+        android:backgroundTint="@color/royal_Blue"
+        android:text="@string/back_settings"
+        android:textColor="#FFFFFF"
         app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:rippleColor="#FFFFFF" />
+        app:rippleColor="#B1AFAF" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/view2"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="25dp"
         android:elevation="12dp"
         android:innerRadius="0dp"
         android:shape="ring"
         android:thicknessRatio="1.9"
         app:cardCornerRadius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/addProfileImageBtn"
+            android:id="@+id/HScreen_ProfilePic"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:contentDescription="@string/profileimagebtncreateaccount"
             app:srcCompat="@mipmap/ic_launcher" />
 
     </androidx.cardview.widget.CardView>
@@ -61,83 +82,111 @@
         android:id="@+id/StudentIDLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="160dp"
-        android:text="StudentID:"
+        android:layout_marginStart="74dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="255dp"
+        android:text="@string/studentid_settings"
         android:textColor="#000000"
-        android:textSize="18dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="StudentID:" />
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress3"
-        android:layout_width="264dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="356dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:text="Email From Databse"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonLastName2"
-        android:layout_width="264dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="284dp"
-        android:ems="10"
-        android:hint="Last Name"
-        android:inputType="textPersonName"
-        android:text="LastName: From Databse"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
-        android:id="@+id/studentIDText"
+        android:id="@+id/studentId_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="160dp"
-        android:text="#######"
-        android:textSize="18dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="245dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#000000"/>
 
-    <EditText
-        android:id="@+id/editTextTextPersonFirstName2"
+    <LinearLayout
         android:layout_width="264dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="212dp"
-        android:ems="10"
-        android:hint="First Name"
-        android:inputType="textPersonName"
-        android:text="FirstName: From Databse"
+        android:layout_height="239dp"
+        android:layout_marginTop="184dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Spinner
-        android:id="@+id/PaymentList"
-        android:layout_width="264dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="464dp"
-        android:spinnerMode="dropdown"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/editFirstNameSettings"
+            android:layout_width="264dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/first_name_settings"
+            android:importantForAutofill="auto"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:visibility="visible"
+            android:textColorHint="@color/grey"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="28dp" />
+
+        <EditText
+            android:id="@+id/editLastNameSettings"
+            android:layout_width="264dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/last_name_settings"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            android:textColorHint="@color/grey"
+            android:visibility="visible" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="28dp" />
+
+        <EditText
+            android:id="@+id/editEmailSettings"
+            android:layout_width="264dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/email_settings"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000"
+            android:textColorHint="@color/grey"
+            android:visibility="visible" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="264dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="73dp"
         android:layout_marginTop="431dp"
-        android:text="Select Card To Remove:"
-        android:textSize="18dp"
+        android:text="@string/select_card_to_remove"
+        android:textColor="#000000"
+        android:textColorHint="@color/grey"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/removeList"
+        android:layout_width="264dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="464dp"
+        android:backgroundTint="#000000"
+        android:dropDownSelector="@color/white"
+        android:foregroundTint="#FFFFFF"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

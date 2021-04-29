@@ -3,14 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF">
 
     <View
         android:id="@+id/PScreenBorderTop3"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="64dp"
         android:background="?android:attr/listDivider"
+        android:backgroundTint="#000000"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -29,11 +32,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
         android:layout_marginTop="620dp"
-        android:backgroundTint="?android:attr/colorEdgeEffect"
+        android:layout_marginEnd="239dp"
+        android:backgroundTint="@color/royal_Blue"
         android:text="@string/back"
+        android:textColor="#FFFFFF"
         app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#B1AFAF" />
 
     <Button
         android:id="@+id/AddPScreen_Submit"
@@ -41,24 +48,30 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="236dp"
         android:layout_marginTop="620dp"
-        android:backgroundTint="?android:attr/colorEdgeEffect"
+        android:layout_marginEnd="75dp"
+        android:backgroundTint="@color/royal_Blue"
         android:text="@string/submit"
+        android:textColor="#FFFFFF"
         app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#B1AFAF" />
 
     <ScrollView
         android:id="@+id/AddPScreen_Layout"
         android:layout_width="291dp"
         android:layout_height="248dp"
-        android:layout_marginStart="59dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="160dp"
         android:translationX="0dp"
         android:translationY="0dp"
         android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="visible"
+        android:scrollbarThumbVertical="@color/grey">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,7 +85,9 @@
                 android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/credit_card"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey" />
 
             <Space
                 android:layout_width="match_parent"
@@ -82,10 +97,12 @@
                 android:id="@+id/AddPScreen_CVC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/cvc"
                 android:inputType="number"
-                android:autofillHints="" />
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey" />
 
             <Space
                 android:layout_width="match_parent"
@@ -95,10 +112,12 @@
                 android:id="@+id/AddPScreen_ExpirationDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/exp_date"
                 android:inputType="date"
-                android:autofillHints="" />
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey" />
 
             <Space
                 android:layout_width="match_parent"
@@ -112,7 +131,8 @@
                 android:ems="10"
                 android:hint="@string/full_name"
                 android:inputType="textPersonName"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textColorHint="@color/grey" />
 
             <Space
                 android:layout_width="match_parent"
@@ -125,7 +145,9 @@
                 android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/street_address"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey" />
 
             <Space
                 android:layout_width="match_parent"
@@ -138,7 +160,9 @@
                 android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/city"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey" />
 
             <Space
                 android:layout_width="match_parent"
@@ -151,7 +175,9 @@
                 android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/state"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey" />
 
             <Space
                 android:layout_width="match_parent"
@@ -164,56 +190,55 @@
                 android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/zip_code"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey" />
 
         </LinearLayout>
     </ScrollView>
 
     <LinearLayout
-        android:layout_width="338dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="230dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="583dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <CheckBox
             android:id="@+id/AddPScreen_CheckB0"
-            android:layout_width="111dp"
+            android:layout_width="114dp"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="@string/add_card" />
+            android:text="@string/add_card"
+            android:textColor="#000000" />
 
         <CheckBox
             android:id="@+id/AddPScreen_CheckB1"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="@string/existing_card" />
-
-        <CheckBox
-            android:id="@+id/AddPScreen_CheckB2"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="@string/google_pay" />
+            android:text="@string/existing_card"
+            android:textColor="#000000" />
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/AddPScreen_Title"
-        android:layout_width="406dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="315dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
         android:text="@string/adding_funds_to_your_account"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -221,12 +246,11 @@
         android:id="@+id/fundOption_Layout"
         android:layout_width="291dp"
         android:layout_height="150dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="443dp"
-        android:layout_marginEnd="62dp"
+        android:layout_marginTop="415dp"
         android:orientation="vertical"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible">
@@ -235,23 +259,24 @@
             android:id="@+id/ExistCardPScreen_CardLayout"
             android:layout_width="match_parent"
             android:layout_height="42dp"
+            android:backgroundTint="#000000"
             android:orientation="vertical"
             android:visibility="gone">
 
             <Spinner
                 android:id="@+id/AddPScreen_CardSpinner"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/add_card"
+                android:backgroundTint="#000000" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="18dp" />
         </LinearLayout>
 
         <Spinner
             android:id="@+id/planOptions"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000000" />
 
         <LinearLayout
             android:id="@+id/mealOptionsLayout"
@@ -266,18 +291,25 @@
             <Spinner
                 android:id="@+id/mealOptions"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:backgroundTint="#000000" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="18dp" />
 
         </LinearLayout>
 
         <EditText
             android:id="@+id/AddPScreen_Amount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="291dp"
+            android:layout_height="45dp"
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/amount"
             android:inputType="number"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
             android:visibility="gone" />
 
     </LinearLayout>
