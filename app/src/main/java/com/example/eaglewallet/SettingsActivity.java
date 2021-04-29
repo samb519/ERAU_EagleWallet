@@ -28,10 +28,10 @@ public class SettingsActivity extends AppCompatActivity {
         cardSpinner = (Spinner) findViewById(R.id.removeList);
 
 //        //Testing - Will need to be removed
-        ArrayList<String> cards = new ArrayList<>();
-        cards.add("User Card 1");
-        cards.add("User Card 2");
-        loadCardList(cards);
+//        ArrayList<String> cards = new ArrayList<>();
+//        cards.add("User Card 1");
+//        cards.add("User Card 2");
+        loadCardList(StorageClass.getInstance().cards);
 
         studentId = (TextView) findViewById(R.id.studentId_text);
         name = (EditText) findViewById(R.id.editFirstNameSettings);
@@ -50,6 +50,7 @@ public class SettingsActivity extends AppCompatActivity {
                 {
                     //It is -1 because None is position 0. I assume you don't have none in your database; therefore, to match it I -1
                     int cardRemove = getSelectedCard()-1;
+                    StorageClass.getInstance().cards.remove(cardRemove);
                 }
 
             }
@@ -105,7 +106,6 @@ public class SettingsActivity extends AppCompatActivity {
     //Load list of cards from the database
     private  void loadCardList(ArrayList<String> cards)
     {
-        cardList.add("None");
         for(String currentCard : cards)
         {
             cardList.add(currentCard);
