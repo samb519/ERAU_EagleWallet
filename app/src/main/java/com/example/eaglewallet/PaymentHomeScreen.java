@@ -51,11 +51,8 @@ public class PaymentHomeScreen extends AppCompatActivity {
 
         ArrayList<String> test = new ArrayList<>();
 
-        balances = (Balances) getIntent().getSerializableExtra("balances");
 
-        cards = (List<Card>) getIntent().getSerializableExtra("Cards");
 
-        if (getIntent().getExtras() != null) {
             userTransactions = StorageClass.getInstance().getTransactionHistory(Volley.newRequestQueue(getApplicationContext()));
             for (Transaction trans : userTransactions) {
                 if (trans.getSodexoBucks() > 0) {
@@ -83,7 +80,7 @@ public class PaymentHomeScreen extends AppCompatActivity {
                     test.add("Spent on " + trans.getDate() + ": $" + trans.getMealPlans() + " Meal Plans");
                 }
             }
-        }
+
         createHistoryTable(test);
     }
 

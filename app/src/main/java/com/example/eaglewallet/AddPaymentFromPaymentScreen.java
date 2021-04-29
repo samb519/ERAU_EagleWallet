@@ -45,8 +45,8 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
     LinearLayout fundOptionsLayout,mealOptionsLayout,ExistCardPScreen_CardLayout; //within the spinners
     Button AddPScreen_Back, AddPScreen_Submit;
     EditText credCardNum,CVC,ExpDate,FullName,StreetAddr, City,State,Zip, amountText;
-    List<Transaction> userTransactions;
-    List<Card> cards;
+    ArrayList<Transaction> userTransactions;
+    ArrayList<String> cards;
     Balances balances;
     Double amount;
 
@@ -59,15 +59,17 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         findSpinnerAndLayouts();
         findBtns();
 
-        userTransactions = (List<Transaction>) getIntent().getSerializableExtra("Transactions");
-        cards = (List<Card>) getIntent().getSerializableExtra("Cards");
-        balances = (Balances) getIntent().getSerializableExtra("balances");
+        balances = StorageClass.getInstance().getCurrentBalances(Volley.newRequestQueue(getApplicationContext()));
+        userTransactions = StorageClass.getInstance().getTransactionHistory(Volley.newRequestQueue(getApplicationContext()));
+        //cards = StorageClass.getInstance().getCards(Volley.newRequestQueue(getApplicationContext()));
+
 
 //        //Testing - Will need to be removed
-//        ArrayList<String> cards = new ArrayList<>();
-//        cards.add("User Card 1");
-//        cards.add("User Card 2");
-//        loadCardList(cards);
+//            cards = new ArrayList<>();
+//            cards.add("************4329");
+//            cards.add("************3498");
+//            cards.add("************1457");
+            addToSpinner(cardSpinner,StorageClass.getInstance().cards);
 
 
         //Default:
@@ -166,11 +168,13 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
             String state = State.getText().toString();
             String zip = Zip.getText().toString();
 
-            Log.i("ID", String.valueOf(userTransactions.get(0).getUserId()));
-
+//            Log.i("ID", String.valueOf(userTransactions.get(0).getUserId()));
+            StorageClass.getInstance().cards.add("************5432");
+            addToSpinner(cardSpinner,StorageClass.getInstance().cards);
+            modifyBalances();
             try {
                 jsonBody.put("cardId", 0);
-                jsonBody.put("userId", userTransactions.get(0).getUserId());
+                jsonBody.put("userId", StorageClass.getInstance().userId);
                 jsonBody.put("cardNumber", cardNum);
                 jsonBody.put("cvc", cvc);
                 jsonBody.put("expirationDate", expDate);
@@ -239,7 +243,7 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         }
 
         try {
-            jsonBody.put("userId", userTransactions.get(0).getUserId());
+            jsonBody.put("userId", StorageClass.getInstance().userId);
             jsonBody.put(jsonString, amount);
         } catch (JSONException e) {
             e.printStackTrace();
@@ -270,7 +274,7 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
 
     private void getBalances() {
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        String url = "https://eaglewallet.wise-net.xyz/api/Transaction/balances/" + userTransactions.get(0).getUserId();
+        String url = "https://eaglewallet.wise-net.xyz/api/Transaction/balances/" + StorageClass.getInstance().userId;
 
         JsonObjectRequest req = new JsonObjectRequest(url, null, new Response.Listener<JSONObject>() {
             @Override
@@ -393,11 +397,12 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
 //    }
 
     //Load list of cards from the database
-    private  void loadCardList(ArrayList<String> cards)
+    private  void loadCardList(ArrayList<Card> cards)
     {
-        for(String currentCard : cards)
+        for(Card currentCard : cards)
         {
-            cardList.add(currentCard);
+            cardList.add(currentCard.getCardNumber());
+            Log.i("card", currentCard.getCardNumber());
         }
         addToSpinner(cardSpinner,  cardList);
     }
@@ -420,6 +425,7 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         planOptions.add("21");
         addToSpinner(mealOptionsSpinner,  planOptions);
     }
+
 
     private  void addToSpinner(Spinner spinner, ArrayList<String> arrayList)
     {

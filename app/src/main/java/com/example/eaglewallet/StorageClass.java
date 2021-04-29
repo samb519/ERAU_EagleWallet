@@ -30,7 +30,8 @@ public class StorageClass {
     }
 
     public Balances balances;
-    public ArrayList<Card> cards;
+    public ArrayList<String> cards;
+
     public ArrayList<Transaction> transactions;
 
     public int userId;
@@ -38,6 +39,9 @@ public class StorageClass {
     public StorageClass(){
         balances = new Balances();
         cards = new ArrayList<>();
+        cards.add("************4329");
+        cards.add("************3498");
+        cards.add("************1457");
         transactions = new ArrayList<>();
     }
 
@@ -140,4 +144,5 @@ public class StorageClass {
 
         return transactions;
     }
+
 }
