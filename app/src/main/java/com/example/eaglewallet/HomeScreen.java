@@ -43,11 +43,6 @@ public class HomeScreen extends AppCompatActivity {
     List<Card> cards;
     Balances balances;
 
-    HomeScreen(Balances balances)
-    {
-        
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,7 +81,7 @@ public class HomeScreen extends AppCompatActivity {
         cardEmulatorHScreenBtn.setOnClickListener(v ->
                 clickedCardEmulatorBtn());{}
 
-        Balances balances = (Balances) getIntent().getSerializableExtra("balances");
+        //Balances balances = (Balances) getIntent().getSerializableExtra("balances");
         Log.i("EAGLE", String.valueOf(balances.getEagleDollars()));
         setEagleDollar(Double.toString(balances.getEagleDollars()));
         setDinningDollar(Double.toString(balances.getDiningDollars()));
