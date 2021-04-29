@@ -23,6 +23,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.EagleWallet"
         android:usesCleartextTraffic="true" >
+        <activity android:name="com.example.eaglewallet.HiddenPages" />
         <activity android:name="com.example.eaglewallet.CardEmulator" />
         <activity android:name="com.example.eaglewallet.AddPaymentFromPaymentScreen" />
         <activity android:name="com.example.eaglewallet.PaymentHomeScreen" />

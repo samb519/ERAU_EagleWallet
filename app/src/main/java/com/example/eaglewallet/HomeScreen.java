@@ -121,54 +121,54 @@ public class HomeScreen extends AppCompatActivity {
 
     private void clickedPaymentBtn()
     {
-        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        String url = "https://eaglewallet.wise-net.xyz/api/Transaction/history/" + loginPage.getId();
-
-        JsonArrayRequest req = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
-            @Override
-            public void onResponse(JSONArray response) {
-                Log.i("VOLLEY", response.toString());
-                List<Transaction> userTransactions = new ArrayList<Transaction>();
-
-                try {
-                    for (int i = 0; i < response.length(); i++) {
-                        JSONObject jsonObject = response.getJSONObject(i);
-                        Transaction trans = new Transaction();
-
-                        trans.setDate(jsonObject.getString("transactionDate"));
-                        trans.setDiningDollars(jsonObject.getDouble("diningDollars"));
-                        trans.setEagleDollars(jsonObject.getDouble("eagleDollars"));
-                        trans.setMealPlans(jsonObject.getDouble("mealPlans"));
-                        trans.setSodexoBucks(jsonObject.getDouble("sodexoBucks"));
-                        trans.setTransId(jsonObject.getInt("transactionId"));
-                        trans.setUserId(jsonObject.getInt("userId"));
-
-                        userTransactions.add(trans);
-                    }
-
+//        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+//        String url = "https://eaglewallet.wise-net.xyz/api/Transaction/history/" + loginPage.getId();
+//
+//        JsonArrayRequest req = new JsonArrayRequest(url, new Response.Listener<JSONArray>() {
+//            @Override
+//            public void onResponse(JSONArray response) {
+//                Log.i("VOLLEY", response.toString());
+//                List<Transaction> userTransactions = new ArrayList<Transaction>();
+//
+//                try {
+//                    for (int i = 0; i < response.length(); i++) {
+//                        JSONObject jsonObject = response.getJSONObject(i);
+//                        Transaction trans = new Transaction();
+//
+//                        trans.setDate(jsonObject.getString("transactionDate"));
+//                        trans.setDiningDollars(jsonObject.getDouble("diningDollars"));
+//                        trans.setEagleDollars(jsonObject.getDouble("eagleDollars"));
+//                        trans.setMealPlans(jsonObject.getDouble("mealPlans"));
+//                        trans.setSodexoBucks(jsonObject.getDouble("sodexoBucks"));
+//                        trans.setTransId(jsonObject.getInt("transactionId"));
+//                        trans.setUserId(jsonObject.getInt("userId"));
+//
+//                        userTransactions.add(trans);
+//                    }
+//
                     Intent intent=new Intent(HomeScreen.this, PaymentHomeScreen.class);
-                    intent.putExtra("UserTransactions", (Serializable) userTransactions);
+                  //  intent.putExtra("UserTransactions", (Serializable) userTransactions);
                     startActivity(intent);
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e("VOLLEY", error.toString());
-                alert(error.toString());
-            }
-        }) {
-            @Override
-            public String getBodyContentType() {
-                return "application/json; charset=utf-8";
-            }
-
-        };
-
-        queue.add(req);
+//
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                Log.e("VOLLEY", error.toString());
+//                alert(error.toString());
+//            }
+//        }) {
+//            @Override
+//            public String getBodyContentType() {
+//                return "application/json; charset=utf-8";
+//            }
+//
+//        };
+//
+//        queue.add(req);
     }
 
     private void clickedSettingBtn()

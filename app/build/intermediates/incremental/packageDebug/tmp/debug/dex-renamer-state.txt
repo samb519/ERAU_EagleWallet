@@ -1,7 +1,7 @@
-#Thu Apr 29 00:58:04 EDT 2021
-base.0=C\:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+#Thu Apr 29 01:57:53 EDT 2021
+base.0=P\:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\drayg\\OneDrive\\Documents\\GitHub\\ERAU_EagleWallet\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+base.1=P\:\\GitHub\\EagleWallet\\ERAU_EagleWallet\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex

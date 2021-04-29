@@ -36,9 +36,6 @@ com/example/eaglewallet/SettingsActivity.java
 com/example/eaglewallet/HomeScreen.java
  com.example.eaglewallet.HomeScreen
  com.example.eaglewallet.HomeScreen$1
- com.example.eaglewallet.HomeScreen$2
- com.example.eaglewallet.HomeScreen$3
- com.example.eaglewallet.HomeScreen$4
 com/example/eaglewallet/HiddenPages.java
  com.example.eaglewallet.HiddenPages
 com/example/eaglewallet/PaymentHomeScreen.java
