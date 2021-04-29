@@ -111,7 +111,8 @@
 
                 <ImageView
                     android:layout_width="100dp"
-                    android:layout_height="100dp" />
+                    android:layout_height="100dp"
+                    android:background="@mipmap/ic_sam_profile" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -133,7 +134,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:background="@android:mipmap/sym_def_app_icon" />
+                    android:background="@mipmap/ic_will_profile" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -155,7 +156,8 @@
                 <ImageView
                     android:id="@+id/Button1"
                     android:layout_width="100dp"
-                    android:layout_height="100dp" />
+                    android:layout_height="100dp"
+                    android:background="@mipmap/ic_mike_profile" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -197,7 +199,8 @@
 
                 <ImageView
                     android:layout_width="100dp"
-                    android:layout_height="100dp" />
+                    android:layout_height="100dp"
+                    android:background="@mipmap/ic_daniela_profile" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -214,17 +217,75 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="100dp"
-                    android:layout_height="100dp" />
+                    android:layout_height="100dp"
+                    android:background="@mipmap/ic_tyler_profile" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:paddingTop="45dp"
                     android:text="Tyler Wise" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">>
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:background="@mipmap/ic_team_profile"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/youtubeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:paddingTop="10dp"
+                    android:scaleType="centerInside"
+                    android:text="Youtube Video!"
+                    android:textColor="#1976D2" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"><![CDATA[>
+
+
+
+
+
+                ]]>
+
+                <TextView
+                    android:id="@+id/discoveryBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:paddingTop="10dp"
+                    android:scaleType="centerInside"
+                    android:text="Discovery Day!"
+                    android:textColor="#1976D2" />
 
             </LinearLayout>
         </LinearLayout>

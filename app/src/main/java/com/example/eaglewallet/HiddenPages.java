@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class HiddenPages extends AppCompatActivity {
 
     ImageButton homeBtn,calenderBtn,paymentBtn;
+    TextView video,discoveryDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,10 @@ public class HiddenPages extends AppCompatActivity {
         calenderBtn.setOnClickListener(v->clickedCalender("https://eraudining.sodexomyway.com/dining-near-me/hours"));
         paymentBtn = (ImageButton) findViewById(R.id.hiddenPagePayBtn);
         paymentBtn.setOnClickListener(v->clickedPayment());
+        video = (TextView) findViewById(R.id.youtubeBtn);
+        video.setOnClickListener(v-> clickedCalender("https://youtu.be/Y7g2iNrWVIA"));
+        discoveryDay = (TextView) findViewById(R.id.discoveryBtn);
+        discoveryDay.setOnClickListener(v->clickedCalender("https://commons.erau.edu/discovery-day/db-discovery-day-2021/poster-session/32/"));
     }
 
     private void clickedPayment() {
