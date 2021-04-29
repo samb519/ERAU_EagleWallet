@@ -98,13 +98,16 @@ public class loginPage extends AppCompatActivity {
             public void onResponse(JSONObject response) {
                 Log.i("VOLLEY", response.toString());
                 balances = new Balances();
+                balances.setSodexoBucks(0);
 
                 try {
                     id = response.getString("id");
                     userEmail = response.getString("email");
+                    Log.i("TEST", String.valueOf(balances.getSodexoBucks()));
 
                     JSONObject balanceData = response.getJSONObject("balances");
                     balances.setSodexoBucks(balanceData.getDouble("sodexoBucks"));
+                    Log.i("LOGIN", String.valueOf(balances.getEagleDollars()));
                     balances.setDiningDollars(balanceData.getDouble("diningDollars"));
                     balances.setEagleDollars(balanceData.getDouble("eagleDollars"));
                     balances.setMealPlans(balanceData.getInt("mealPlans"));
@@ -113,7 +116,7 @@ public class loginPage extends AppCompatActivity {
 
                         Intent intent = new Intent(loginPage.this, HomeScreen.class);
                         intent.putExtra("id", id);
-                        intent.putExtra("Balances", (Serializable) balances);
+                        intent.putExtra("balances", (Serializable) balances);
                         startActivity(intent);
                     }
 
