@@ -18,13 +18,19 @@ import android.widget.Spinner;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.eaglewallet.models.Balances;
+import com.example.eaglewallet.models.Transaction;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class AddPaymentFromPaymentScreen extends AppCompatActivity {
 
@@ -38,6 +44,8 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
     LinearLayout fundOptionsLayout,mealOptionsLayout,ExistCardPScreen_CardLayout; //within the spinners
     Button AddPScreen_Back, AddPScreen_Submit;
     EditText credCardNum,CVC,ExpDate,FullName,StreetAddr, City,State,Zip, amountText;
+    List<Transaction> userTransactions;
+    Balances balances;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +55,8 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
         findEditText();
         findSpinnerAndLayouts();
         findBtns();
+
+        userTransactions = (List<Transaction>) getIntent().getSerializableExtra("Transactions");
 
 //        //Testing - Will need to be removed
 //        ArrayList<String> cards = new ArrayList<>();
@@ -132,6 +142,47 @@ public class AddPaymentFromPaymentScreen extends AppCompatActivity {
     }
 
     private void clickedSubmit() {
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        String url = "https://eaglewallet.wise-net.xyz/api/Card/create";
+        JSONObject jsonBody = new JSONObject();
+
+        findEditText();
+
+        try {
+            jsonBody.put("userId", userTransactions.get(0).getUserId());
+            jsonBody.put("cardNumber", credCardNum);
+            jsonBody.put("cvc", CVC);
+            jsonBody.put("expirationDate", ExpDate);
+            jsonBody.put("fullName", FullName);
+            jsonBody.put("streetAddress", StreetAddr);
+            jsonBody.put("city", City);
+            jsonBody.put("state", State);
+            jsonBody.put("zipCode", Zip);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        JsonObjectRequest req = new JsonObjectRequest(url, jsonBody, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                Log.i("VOLLEY", response.toString());
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("VOLLEY", error.toString());
+            }
+        }) {
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+
+        };
+
+        queue.add(req);
+
         if(addCard.isChecked())
         {
             //Add the card to database
