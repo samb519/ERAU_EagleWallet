@@ -33,20 +33,92 @@
 
     </androidx.cardview.widget.CardView>
 
-    <EditText
-        android:id="@+id/editTextTextPersonLastName"
-        android:layout_width="264dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="320dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/last_name_CreateAccount"
-        android:inputType="textPersonName"
-        android:textColor="#000000"
-        android:textColorHint="@color/grey"
+    <ScrollView
+        android:layout_width="379dp"
+        android:layout_height="489dp"
+        android:layout_marginTop="133dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editStudentID"
+                android:layout_width="264dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="0dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/studentIDCreateAccount"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:textColorHint="@color/grey" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonFirstName"
+                android:layout_width="264dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="20dp"
+                android:ems="10"
+                android:hint="@string/first_nameCreateAccount"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textColorHint="@color/grey" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonLastName"
+                android:layout_width="264dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="20dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/last_name_CreateAccount"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textColorHint="@color/grey" />
+
+            <EditText
+                android:id="@+id/editTextTextEmailAddress2"
+                android:layout_width="264dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="50dp"
+                android:ems="10"
+                android:hint="@string/email_CreateAccount"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:textColor="#000000"
+                android:textColorHint="@color/grey" />
+
+            <EditText
+                android:id="@+id/editTextTextPassword2"
+                android:layout_width="264dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="50dp"
+                android:ems="10"
+                android:hint="@string/prompt_Password"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textColorHint="@color/grey" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+        </LinearLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/CreatAccountNext"
@@ -87,79 +159,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="#FFFFFF" />
-
-    <EditText
-        android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="264dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="480dp"
-        android:ems="10"
-        android:hint="@string/email_CreateAccount"
-        android:importantForAutofill="no"
-        android:inputType="textEmailAddress"
-        android:textColor="#000000"
-        android:textColorHint="@color/grey"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editStudentID"
-        android:layout_width="264dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="148dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="@string/studentIDCreateAccount"
-        android:inputType="number"
-        android:textColor="#000000"
-        android:textColorHint="@color/grey"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonFirstName"
-        android:layout_width="264dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="232dp"
-        android:ems="10"
-        android:hint="@string/first_nameCreateAccount"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:textColor="#000000"
-        android:textColorHint="@color/grey"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextPassword2"
-        android:layout_width="264dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="404dp"
-        android:ems="10"
-        android:hint="@string/prompt_Password"
-        android:importantForAutofill="no"
-        android:inputType="textPassword"
-        android:textColor="#000000"
-        android:textColorHint="@color/grey"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ProgressBar
-        android:id="@+id/pBarCreateAccount"
-        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Inverse"
-        android:layout_width="147dp"
-        android:layout_height="147dp"
-        android:layout_marginTop="228dp"
-        android:foregroundTint="@color/royal_Blue"
-        android:indeterminateTint="@color/royal_Blue"
-        android:progressTint="@color/royal_Blue"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonFirstName"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonFirstName"
-        app:layout_constraintTop_toTopOf="parent"></ProgressBar>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

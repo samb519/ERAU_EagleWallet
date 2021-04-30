@@ -50,38 +50,38 @@ public class PaymentHomeScreen extends AppCompatActivity {
                 clickedCalenderBtn( "https://eraudining.sodexomyway.com/dining-near-me/hours"));{}
 
         ArrayList<String> test = new ArrayList<>();
-
-
-
-            userTransactions = StorageClass.getInstance().getTransactionHistory(Volley.newRequestQueue(getApplicationContext()));
-            for (Transaction trans : userTransactions) {
-                if (trans.getSodexoBucks() > 0) {
-                    test.add("Deposit on " + trans.getDate() + ": $" + trans.getSodexoBucks() + " Sodexo Bucks");
-                }
-                if (trans.getSodexoBucks() < 0) {
-                    test.add("Spent on " + trans.getDate() + ": $" + trans.getSodexoBucks() + " Sodexo Bucks");
-                }
-                if (trans.getDiningDollars() > 0) {
-                    test.add("Deposit on " + trans.getDate() + ": $" + trans.getDiningDollars() + " Dining Dollars");
-                }
-                if (trans.getDiningDollars() < 0) {
-                    test.add("Spent on " + trans.getDate() + ": $" + trans.getDiningDollars() + " Dining Dollars");
-                }
-                if (trans.getEagleDollars() > 0) {
-                    test.add("Deposit on " + trans.getDate() + ": $" + trans.getEagleDollars() + " Eagle Dollars");
-                }
-                if (trans.getEagleDollars() < 0) {
-                    test.add("Spent on " + trans.getDate() + ": $" + trans.getEagleDollars() + " Eagle Dollars");
-                }
-                if (trans.getMealPlans() > 0) {
-                    test.add("Deposit on " + trans.getDate() + ": " + trans.getMealPlans() + " Meal Plans");
-                }
-                if (trans.getMealPlans() < 0) {
-                    test.add("Spent on " + trans.getDate() + ": $" + trans.getMealPlans() + " Meal Plans");
-                }
-            }
-
-        createHistoryTable(test);
+//
+//
+//
+//            userTransactions = StorageClass.getInstance().getTransactionHistory(Volley.newRequestQueue(getApplicationContext()));
+//            for (Transaction trans : userTransactions) {
+//                if (trans.getSodexoBucks() > 0) {
+//                    test.add("Deposit on " + trans.getDate() + ": $" + trans.getSodexoBucks() + " Sodexo Bucks");
+//                }
+//                if (trans.getSodexoBucks() < 0) {
+//                    test.add("Spent on " + trans.getDate() + ": $" + trans.getSodexoBucks() + " Sodexo Bucks");
+//                }
+//                if (trans.getDiningDollars() > 0) {
+//                    test.add("Deposit on " + trans.getDate() + ": $" + trans.getDiningDollars() + " Dining Dollars");
+//                }
+//                if (trans.getDiningDollars() < 0) {
+//                    test.add("Spent on " + trans.getDate() + ": $" + trans.getDiningDollars() + " Dining Dollars");
+//                }
+//                if (trans.getEagleDollars() > 0) {
+//                    test.add("Deposit on " + trans.getDate() + ": $" + trans.getEagleDollars() + " Eagle Dollars");
+//                }
+//                if (trans.getEagleDollars() < 0) {
+//                    test.add("Spent on " + trans.getDate() + ": $" + trans.getEagleDollars() + " Eagle Dollars");
+//                }
+//                if (trans.getMealPlans() > 0) {
+//                    test.add("Deposit on " + trans.getDate() + ": " + trans.getMealPlans() + " Meal Plans");
+//                }
+//                if (trans.getMealPlans() < 0) {
+//                    test.add("Spent on " + trans.getDate() + ": $" + trans.getMealPlans() + " Meal Plans");
+//                }
+//            }
+//
+//        createHistoryTable(test);
     }
 
     private void createHistoryTable(ArrayList<String> history)
@@ -103,21 +103,21 @@ public class PaymentHomeScreen extends AppCompatActivity {
 
     private void clickedAddFundBtn() {
         Intent intent = new Intent(PaymentHomeScreen.this, AddPaymentFromPaymentScreen.class);
-        intent.putExtra("Transactions", (Serializable) userTransactions);
-        intent.putExtra("Cards", (Serializable) cards);
-        intent.putExtra("balances", (Serializable) balances);
+//        intent.putExtra("Transactions", (Serializable) userTransactions);
+//        intent.putExtra("Cards", (Serializable) cards);
+//        intent.putExtra("balances", (Serializable) balances);
         startActivity(intent);
     }
 
     private void clickedHomeBtn() {
         Intent intent = new Intent(PaymentHomeScreen.this, HomeScreen.class);
-        intent.putExtra("balances", (Serializable) balances);
+       // intent.putExtra("balances", (Serializable) balances);
         startActivity(intent);
     }
 
     private void clickedCalenderBtn(String url){
         Intent intent=new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(url));
+        //intent.setData(Uri.parse(url));
         startActivity(intent);
 
     }

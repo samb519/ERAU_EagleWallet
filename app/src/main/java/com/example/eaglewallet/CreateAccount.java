@@ -39,15 +39,15 @@ public class CreateAccount extends AppCompatActivity {
     SharedPreferences regDetails;
     SharedPreferences.Editor editor;
     AlertDialog.Builder builder;
-    ProgressBar pgsBar;
+    //ProgressBar pgsBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
         builder = new AlertDialog.Builder(this);
 
-        pgsBar = (ProgressBar)findViewById(R.id.pBarCreateAccount);
-        pgsBar.setVisibility(View.GONE);
+        //pgsBar = (ProgressBar)findViewById(R.id.pBarCreateAccount);
+       //pgsBar.setVisibility(View.GONE);
 
         regDetails = getSharedPreferences("userdetails", MODE_PRIVATE);
         editor = regDetails.edit();
@@ -73,75 +73,75 @@ public class CreateAccount extends AppCompatActivity {
     }
 
     private void postUserRegistration() {
-        pgsBar.setVisibility(View.VISIBLE);
-        final String[] code = {""};
-
-        EditText firstNameText = (EditText) findViewById(R.id.editTextTextPersonFirstName);
-        String firstName = firstNameText.getText().toString();
-
-        EditText lastNameText = (EditText) findViewById(R.id.editTextTextPersonLastName);
-        String lastName = lastNameText.getText().toString();
-
-        EditText studentIDText = (EditText) findViewById(R.id.editStudentID);
-        int studentID = Integer.parseInt(studentIDText.getText().toString());
-
-        EditText passwordText = (EditText) findViewById(R.id.editTextTextPassword2);
-        String password = passwordText.getText().toString();
-
-        EditText emailText = (EditText) findViewById(R.id.editTextTextEmailAddress2);
-        String email = emailText.getText().toString();
-
-        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        String url ="https://eaglewallet.wise-net.xyz/api/Auth/register";
-        JSONObject jsonBody = new JSONObject();
-        try {
-            jsonBody.put("studentID", studentID);
-            jsonBody.put("firstName", firstName);
-            jsonBody.put("lastName", lastName);
-            jsonBody.put("password", password);
-            jsonBody.put("email", email);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        JsonObjectRequest req = new JsonObjectRequest(url, jsonBody, new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
-                Log.i("VOLLEY", response.toString());
-
-                try {
-                    String id = response.getString("id");
-                    String email = response.getString("email");
-
-                    if (!id.isEmpty()) {
-                        editor.putString("issignedin", "true");
-                        editor.putString("userid", id);
-                        editor.putString("email", email);
-
+//        pgsBar.setVisibility(View.VISIBLE);
+//        final String[] code = {""};
+//
+//        EditText firstNameText = (EditText) findViewById(R.id.editTextTextPersonFirstName);
+//        String firstName = firstNameText.getText().toString();
+//
+//        EditText lastNameText = (EditText) findViewById(R.id.editTextTextPersonLastName);
+//        String lastName = lastNameText.getText().toString();
+//
+//        EditText studentIDText = (EditText) findViewById(R.id.editStudentID);
+//        int studentID = Integer.parseInt(studentIDText.getText().toString());
+//
+//        EditText passwordText = (EditText) findViewById(R.id.editTextTextPassword2);
+//        String password = passwordText.getText().toString();
+//
+//        EditText emailText = (EditText) findViewById(R.id.editTextTextEmailAddress2);
+//        String email = emailText.getText().toString();
+//
+//        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+//        String url ="https://eaglewallet.wise-net.xyz/api/Auth/register";
+//        JSONObject jsonBody = new JSONObject();
+//        try {
+//            jsonBody.put("studentID", studentID);
+//            jsonBody.put("firstName", firstName);
+//            jsonBody.put("lastName", lastName);
+//            jsonBody.put("password", password);
+//            jsonBody.put("email", email);
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//
+//        JsonObjectRequest req = new JsonObjectRequest(url, jsonBody, new Response.Listener<JSONObject>() {
+//            @Override
+//            public void onResponse(JSONObject response) {
+//                Log.i("VOLLEY", response.toString());
+//
+//                try {
+//                    String id = response.getString("id");
+//                    String email = response.getString("email");
+//
+//                    if (!id.isEmpty()) {
+//                        editor.putString("issignedin", "true");
+//                        editor.putString("userid", id);
+//                        editor.putString("email", email);
+//
                         Intent intent = new Intent(CreateAccount.this, loginPage.class );
                         startActivity(intent);
-                    }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
-
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e("VOLLEY", error.toString());
-                alert(error.toString());
-            }
-        }) {
-            @Override
-            public String getBodyContentType() {
-                return "application/json; charset=utf-8";
-            }
-
-        };
-
-        queue.add(req);
+//                    }
+//
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//
+//                }
+//            }
+//        }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                Log.e("VOLLEY", error.toString());
+//                alert(error.toString());
+//            }
+//        }) {
+//            @Override
+//            public String getBodyContentType() {
+//                return "application/json; charset=utf-8";
+//            }
+//
+//        };
+//
+//        queue.add(req);
     }
 
     private  void alert(String error)
@@ -154,7 +154,7 @@ public class CreateAccount extends AppCompatActivity {
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
-                        pgsBar.setVisibility(View.GONE);
+                        //pgsBar.setVisibility(View.GONE);
                     }
                 });
         //Creating dialog box

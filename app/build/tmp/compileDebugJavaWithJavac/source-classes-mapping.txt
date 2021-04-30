@@ -19,15 +19,6 @@ com/example/eaglewallet/StorageClass.java
 com/example/eaglewallet/AddPaymentFromPaymentScreen.java
  com.example.eaglewallet.AddPaymentFromPaymentScreen
  com.example.eaglewallet.AddPaymentFromPaymentScreen$1
- com.example.eaglewallet.AddPaymentFromPaymentScreen$10
- com.example.eaglewallet.AddPaymentFromPaymentScreen$2
- com.example.eaglewallet.AddPaymentFromPaymentScreen$3
- com.example.eaglewallet.AddPaymentFromPaymentScreen$4
- com.example.eaglewallet.AddPaymentFromPaymentScreen$5
- com.example.eaglewallet.AddPaymentFromPaymentScreen$6
- com.example.eaglewallet.AddPaymentFromPaymentScreen$7
- com.example.eaglewallet.AddPaymentFromPaymentScreen$8
- com.example.eaglewallet.AddPaymentFromPaymentScreen$9
 com/example/eaglewallet/models/Balances.java
  com.example.eaglewallet.models.Balances
 com/example/eaglewallet/loginPage.java
@@ -46,9 +37,6 @@ com/example/eaglewallet/CreateAccount.java
  com.example.eaglewallet.CreateAccount$1
  com.example.eaglewallet.CreateAccount$2
  com.example.eaglewallet.CreateAccount$3
- com.example.eaglewallet.CreateAccount$4
- com.example.eaglewallet.CreateAccount$5
- com.example.eaglewallet.CreateAccount$6
 com/example/eaglewallet/BuildConfig.java
  com.example.eaglewallet.BuildConfig
 com/example/eaglewallet/models/Transaction.java

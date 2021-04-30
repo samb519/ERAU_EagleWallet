@@ -60,7 +60,11 @@ public class loginPage extends AppCompatActivity {
         loginButton = (Button) findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                postUserLogin();
+                //postUserLogin();
+                Intent intent = new Intent(loginPage.this, HomeScreen.class);
+//                intent.putExtra("id", id);
+//                intent.putExtra("balances", (Serializable) balances);
+                startActivity(intent);
                 pgsBar.setVisibility(View.GONE);
             }
         });

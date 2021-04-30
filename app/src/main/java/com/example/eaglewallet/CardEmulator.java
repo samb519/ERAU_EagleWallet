@@ -4,24 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.PendingIntent;
 import android.content.Intent;
-import android.nfc.FormatException;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.nfc.tech.MifareClassic;
 import android.nfc.tech.MifareUltralight;
-import android.nfc.tech.Ndef;
-import android.nfc.tech.NdefFormatable;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
 
-import kotlin.jvm.Throws;
-
 public class CardEmulator extends AppCompatActivity {
-
+    ImageButton homePScreenBtn, calenderPScreenBtn, addFundBtnPScreen;
     //Intialize attributes
     NfcAdapter nfcAdapter;
     PendingIntent pendingIntent;
@@ -30,6 +26,21 @@ public class CardEmulator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_emulator);
+
+        addFundBtnPScreen = (ImageButton) findViewById(R.id.emulPagePayBtn);
+        addFundBtnPScreen.setOnClickListener(v ->
+                clickedPaymentBtn());{}
+        homePScreenBtn = (ImageButton) findViewById(R.id.emulPageHomeBtn);
+        homePScreenBtn.setOnClickListener(v ->
+                clickedHomeBtn());{}
+
+        calenderPScreenBtn = (ImageButton) findViewById(R.id.emulPageCalBtn);
+        calenderPScreenBtn.setOnClickListener(v ->
+                clickedCalenderBtn( "https://eraudining.sodexomyway.com/dining-near-me/hours"));{}
+
+
+
+
         //Initialise NfcAdapter
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
         //If no NfcAdapter, display that the device has no NFC
@@ -45,6 +56,28 @@ public class CardEmulator extends AppCompatActivity {
 
         pendingIntent = PendingIntent.getActivity(this,0,new Intent(this,this.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP),0);
     }
+
+    private void clickedPaymentBtn() {
+        Intent intent = new Intent(CardEmulator.this, PaymentHomeScreen.class);
+//        intent.putExtra("Transactions", (Serializable) userTransactions);
+//        intent.putExtra("Cards", (Serializable) cards);
+//        intent.putExtra("balances", (Serializable) balances);
+        startActivity(intent);
+    }
+
+    private void clickedHomeBtn() {
+        Intent intent = new Intent(CardEmulator.this, HomeScreen.class);
+       // intent.putExtra("balances", (Serializable) balances);
+        startActivity(intent);
+    }
+
+    private void clickedCalenderBtn(String url){
+        Intent intent=new Intent(Intent.ACTION_VIEW);
+        //intent.setData(Uri.parse(url));
+        startActivity(intent);
+
+    }
+
 
     @Override
     protected void onResume() {
