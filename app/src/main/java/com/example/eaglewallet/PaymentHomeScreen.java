@@ -49,7 +49,14 @@ public class PaymentHomeScreen extends AppCompatActivity {
         calenderPScreenBtn.setOnClickListener(v ->
                 clickedCalenderBtn( "https://eraudining.sodexomyway.com/dining-near-me/hours"));{}
 
-        ArrayList<String> test = new ArrayList<>();
+        ArrayList<String> history = new ArrayList<>();
+        history.add("4/21/2021: Added 100 Sodexo Bucks");
+        history.add("4/21/2021: Added 125 Dinning Dollars");
+        history.add("4/21/2021: Added 100 Eagle Bucks");
+        history.add("4/22/2021: -10 Dinning Dollars : Props");
+        history.add("4/22/2021: -5 Dinning Dollars : Cafeteria");
+        history.add("4/23/2021: -10 Dinning Dollars : Buffet");
+        createHistoryTable(history);
 //
 //
 //
